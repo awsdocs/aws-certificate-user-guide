@@ -1,13 +1,10 @@
-# Troubleshooting<a name="troubleshooting"></a>
+# Troubleshooting AWS CloudHSM<a name="troubleshooting"></a>
 
-Consult the following topics if you encounter problems using AWS Certificate Manager\.
+If you encounter problems with AWS CloudHSM, the following topics can help you resolve them\.
 
 
-+ [Troubleshoot Certification Authority Authorization \(CAA\) Problems](troubleshooting-caa.md)
-+ [Troubleshoot Email Problems](troubleshooting-email.md)
-+ [Troubleshoot Certificate Importing Problems](troubleshoot-import.md)
-+ [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)
-+ [Troubleshoot Certificate Request Problems](troubleshooting-requests.md)
-+ [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)
-+ [Troubleshoot Certificate Validation Problems](troubleshooting-validation.md)
-+ [Troubleshoot \.IO Domain Problems](troubleshoot-iodomains.md)
++ [Known Issues](KnownIssues.md)
++ [Lost Connection to the Cluster](troubleshooting-lost-connection.md)
++ [Keep HSM Users In Sync Across HSMs In The Cluster](troubleshooting-keep-hsm-users-in-sync.md)
++ [Verify the Performance of the HSM](troubleshooting-verify-hsm-performance.md)
++ [Resolving Cluster Creation Failures](troubleshooting-create-cluster.md)
