@@ -2,7 +2,7 @@
 
  Before renewing a certificate, ACM tries to automatically validate each domain name in the certificate\. For more information, see [How Automatic Domain Validation Works](#how-automatic-domain-validation-works)\. If ACM can't automatically validate a domain name, it notifies you that you need to take action to manually validate it\. For more information, see [When Automatic Validation Fails](#how-manual-domain-validation-works)\. If the certificate is in use \(associated with an AWS service that is integrated with ACM\) and if all of the domain names in the certificate can be validated, ACM renews the certificate\. 
 
-
+**Topics**
 + [How Automatic Domain Validation Works](#how-automatic-domain-validation-works)
 + [When Automatic Validation Fails](#how-manual-domain-validation-works)
 
@@ -30,9 +30,7 @@ If ACM successfully establishes an HTTPS connection, ACM examines the certificat
 ## When Automatic Validation Fails<a name="how-manual-domain-validation-works"></a>
 
 If ACM is unable to automatically validate one or more domain names in a certificate, ACM notifies you that you need to take action to manually validate the domain\. A domain can require manual validation for the following reasons: 
-
 + ACM can't establish an HTTPS connection with the domain\.
-
 + The certificate that is returned in the response to the HTTPS requests doesn't match the one that ACM is renewing\.
 
 When your certificate is 45 days from expiration and one or more domain names in the certificate requires manual validation, ACM notifies you in the following ways: 

@@ -26,15 +26,10 @@ If you see an expand arrow \(**↗**\) in the upper\-right corner of the table, 
 | host\.subdomain\.example\.com | subdomain\.example\.com | \_x9\.host\.subdomain\.example\.com | CNAME | \_x10\.acm\-validations\.aws | 
 
 DNS validation has a number of advantages over email validation:
-
 + DNS requires that you create only one CNAME record per domain name when you request an ACM Certificate\. Email validation sends up to eight email messages per domain name\. 
-
 + You can request additional ACM Certificates for your FQDN for as long as the DNS record remains in place\. That is, you can create multiple certificates that have the same domain name\. You do not need to get a new CNAME record\. There are many reasons to do this\. You might, for example, want new certificates that cover different subdomains\. You might want to create the same certificate in multiple regions \(the validation token works for any region\)\. You might want to replace a certificate that you deleted\. 
-
 + ACM automatically renews ACM Certificates that you validated by using DNS\. ACM renews each certificate before it expires as long as the certificate is in use and the DNS record is in place\. 
-
 + ACM can add the CNAME record for you if you use Route 53 to manage your public DNS records\.
-
 + You can more easily automate the DNS validation process than you can the email validation process\.
 
  Note however that you may be required to use email validation if you do not have permission to modify the DNS records for your domain\. <a name="gs-acm-use-dns"></a>
@@ -43,7 +38,7 @@ DNS validation has a number of advantages over email validation:
 
 1. Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. If the introductory page appears, choose **Get Started**\. Otherwise, choose **Request a certificate**\. 
 
-1. On the **Request a certificate** page, type your domain name\. For more information about typing domain names, see [Request a Certificate](gs-acm-request.md)\.
+1. On the **Request a certificate** page, type your domain name\. For more information about typing domain names, see [Request a Public Certificate](gs-acm-request-public.md)\.
 
 1. To add more domain names to the ACM Certificate, type other names as text boxes open beneath the name you just typed\.
 
@@ -59,13 +54,9 @@ DNS validation has a number of advantages over email validation:
 ![\[Console shows the CNAME for DNS validation.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/acm_dns_cname.png)
 
 1. The **Create record in Route 53** button appears if the following conditions are true:
-
    + You use Route 53 as your DNS provider\.
-
    + You are hosting the domain in Route 53\.
-
    + You have permission to write to the Route 53, hosted zone\.
-
    + Your FQDN has not already been validated\.
 
    If your FQDN has already been validated or if you don't have permission to write to the Route 53 hosted zone for the domain name you are requesting, the **Create record in Route 53** button will appear disabled\. For more information about Route 53 record sets, see [Working with Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)\. 

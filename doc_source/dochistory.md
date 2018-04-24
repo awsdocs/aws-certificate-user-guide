@@ -2,11 +2,12 @@
 
 The following table describes the documentation release history of AWS Certificate Manager\.
 
-**Latest documentation update**: November 21, 2017
+**Latest documentation update**: March 27, 2018
 
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| New content | Added certificate transparency logging to [Opting Out of Certificate Transparency Logging](acm-bestpractices.md#best-practices-transparency) and [Certificate Transparency Logging](acm-concepts.md#concept-transparency)\.  | March 27, 2018 | 
 | New content | Added DNS validation to [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.  | November 21, 2017 | 
 | New content | Added new Java code examples to [Using the ACM API](sdk.md)\.  | October 12, 2017 | 
 | New content | Added information about CAA records to [\(Optional\) Configure a CAA Record](setup-caa.md)\.  | September 21, 2017 | 

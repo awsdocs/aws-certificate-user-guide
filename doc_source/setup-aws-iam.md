@@ -29,9 +29,7 @@ With IAM, you can securely control access to AWS services and resources for user
 If you have multiple users that require access to your AWS account, you can create unique credentials for each user and define who has access to which resources\. You don't need to share credentials\. For example, you can create IAM users with read\-only access to resources in your AWS account and distribute those credentials to your users\. 
 
 ACM also provides two [AWS managed policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) that you can use:
-
 + **AWSCertificateManagerFullAccess**
-
 + **AWSCertificateManagerReadOnly**
 
 **Note**  

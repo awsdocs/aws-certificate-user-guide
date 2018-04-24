@@ -3,18 +3,13 @@
 If you imported a certificate and associated it with other AWS services, you can reimport that certificate before it expires while preserving the AWS service associations of the original certificate\. For more information about AWS services integrated with ACM, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
 
  The following conditions apply when you reimport a certificate: 
-
 + You can add or remove domain names\.
-
 + You cannot remove all of the domain names from a certificate\.
-
 + You can add new **Key Usage** extensions but existing extension values cannot be removed\.
-
 + You can add new **Extended Key Usage** extensions but existing extension values cannot be removed\.
-
 + The key type and size cannot be changed\.
 
-
+**Topics**
 + [Reimporting Using the Console](#reimport-certificate-api)
 + [Reimporting Using the AWS CLI](#reimport-certificate-cli)
 
@@ -43,13 +38,9 @@ The following example shows how to reimport a certificate using the AWS Manageme
 ## Reimporting Using the AWS CLI<a name="reimport-certificate-cli"></a>
 
 The following example shows how to reimport a certificate using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. The example assumes the following:
-
 + The PEM\-encoded certificate is stored in a file named `Certificate.pem`\.
-
 + The PEM\-encoded certificate chain is stored in a file named `CertificateChain.pem`\.
-
 + The PEM\-encoded, unencrypted private key is stored in a file named `PrivateKey.pem`\.
-
 + You have the ARN of the certificate you want to reimport\.
 
 To use the following example, replace the file names and the ARN with your own and type the command on one continuous line\. The following example includes line breaks and extra spaces to make it easier to read\.

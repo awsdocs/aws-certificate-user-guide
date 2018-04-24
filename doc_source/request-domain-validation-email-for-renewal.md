@@ -1,11 +1,8 @@
 # Request a Domain Validation Email for Certificate Renewal<a name="request-domain-validation-email-for-renewal"></a>
 
 After you have configured contact email addresses for your domain \(see [\(Optional\) Configure Email for Your Domain](setup-email.md)\), you can use the AWS Certificate Manager console or the ACM API to request that ACM send you a domain validation email for your certificate renewal\. You should do this in the following circumstances: 
-
 + You used email validation when initially requesting your ACM Certificate\.
-
 + Your certificate's renewal status is **pending validation**\. For information about determining a certificate's renewal status, see [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)\.
-
 + You didn't receive or can't find the original domain validation email that ACM sent for certificate renewal\.
 
 **To request that ACM resend the domain validation email \(console\)**

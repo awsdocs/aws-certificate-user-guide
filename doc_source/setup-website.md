@@ -6,7 +6,7 @@ You can install your website on an Amazon EC2 Linux or Windows instance\. For mo
 
 To get your website up and running quickly on either Windows or Linux, see the following topics\.
 
-
+**Topics**
 + [Linux Quickstart](#setup-website-linux)
 + [Windows Quickstart](#setup-website-win)
 

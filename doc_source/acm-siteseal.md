@@ -1,7 +1,5 @@
 # Site Seals and Trust Logos<a name="acm-siteseal"></a>
 
  Amazon doesn't provide a site seal or allow its trademark to be used as one:
-
 +  AWS Certificate Manager \(ACM\) doesn't provide a secure site seal that you can use on your website\. If you want to use a site seal, you can obtain one from a third\-party vendor\. We recommend choosing a vendor that evaluates and asserts the security of your website or business practices\. 
-
 +  Amazon doesn't allow its trademark or logo to be used as a certificate badge, site seal, or trust logo\. Seals and badges of this type can be copied to sites that don't use the ACM service, and can be used inappropriately to establish trust under false pretenses\. To protect our customers and the reputation of Amazon, we don't allow our trademark and logo to be used in this way\. 

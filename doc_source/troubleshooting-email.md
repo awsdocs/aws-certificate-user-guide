@@ -2,7 +2,7 @@
 
 Consult the following topics if you have trouble with validation email\.
 
-
+**Topics**
 + [Not Receiving Validation Email](#troubleshooting-no-mail)
 + [Email Sent to Subdomain](#troubleshooting-email-subdomains)
 + [Hidden Contact Information](#troubleshooting-email-obfuscation)

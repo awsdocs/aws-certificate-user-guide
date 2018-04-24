@@ -1,6 +1,6 @@
 # ACM Private Key Security<a name="kms"></a>
 
-When you [request a certificate](gs-acm-request.md), AWS Certificate Manager \(ACM\) generates a public/private key pair\. For [imported certificates](import-certificate.md), you generate the key pair\. The public key becomes part of the certificate\. ACM stores the certificate and its corresponding private key, and uses AWS Key Management Service \(AWS KMS\) to help protect the private key\. The process works like this:
+When you [request a public certificate](gs-acm-request-public.md), AWS Certificate Manager \(ACM\) generates a public/private key pair\. For [imported certificates](import-certificate.md), you generate the key pair\. The public key becomes part of the certificate\. ACM stores the certificate and its corresponding private key, and uses AWS Key Management Service \(AWS KMS\) to help protect the private key\. The process works like this:
 
 1. The first time you request or import a certificate in an AWS region, ACM creates an AWS\-managed customer master key \(CMK\) in AWS KMS with the alias **aws/acm**\. This CMK is unique in each AWS account and each AWS region\.
 

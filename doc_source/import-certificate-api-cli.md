@@ -2,7 +2,7 @@
 
 You can import a certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API\. The following topics show you how to use the AWS Management Console and the AWS CLI\. 
 
-
+**Topics**
 + [Import Using the Console](#import-certificate-api)
 + [Import Using the AWS CLI](#import-certificate-cli)
 
@@ -31,11 +31,8 @@ The following example shows how to import a certificate using the AWS Management
 ## Import Using the AWS CLI<a name="import-certificate-cli"></a>
 
 The following example shows how to import a certificate using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. The example assumes the following:
-
 + The PEM\-encoded certificate is stored in a file named `Certificate.pem`\.
-
 + The PEM\-encoded certificate chain is stored in a file named `CertificateChain.pem`\.
-
 + The PEM\-encoded, unencrypted private key is stored in a file named `PrivateKey.pem`\.
 
 To use the following example, replace the file names with your own and type the command on one continuous line\. The following example includes line breaks and extra spaces to make it easier to read\.

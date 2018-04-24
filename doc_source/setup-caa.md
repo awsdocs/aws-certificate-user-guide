@@ -16,13 +16,9 @@ Indicates that the ACM CA that you specified in the **value** field is authorize
 The value of this field depends on the value of the **tag** field\. You must enclose this value in quotation marks \(""\)\.     
 When **tag** is **issue**  
 The **value** field contains the CA domain name\. This field can contain the name of a CA other than an Amazon CA\. However, if you do not have a CAA record that specifies one of the following four Amazon CAs, ACM cannot issue a certificate to your domain or subdomain:   
-
 + amazon\.com
-
 + amazontrust\.com
-
 + awstrust\.com
-
 + amazonaws\.com
 The **value** field can also contain a semicolon \(;\) to indicate that no CA should be permitted to issue a certificate for your domain or subdomain\. Use this field if you decide at some point that you no longer want a certificate issued for a particular domain\.  
 When **tag** is **issuewild**  

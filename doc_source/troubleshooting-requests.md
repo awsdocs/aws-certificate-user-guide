@@ -2,7 +2,7 @@
 
 Consult the following topics if you have trouble requesting an ACM Certificate\.
 
-
+**Topics**
 + [Certificate Request Timed Out](#troubleshooting-timed-out)
 + [Certificate Request Failed](#troubleshooting-failed)
 
@@ -14,7 +14,7 @@ Requests for ACM Certificates time out if they are not validated within 72 hours
 
 A request for an ACM Certificate can fail\. If that happens, the following explanations can help you understand why the request failed and suggest steps you can take to fix the problem\. 
 
-
+**Topics**
 + [No Available Contacts](#failed-no-available-contacts)
 + [Domain Not Allowed](#failed-domain-not-allowed)
 + [Additional Verification Required](#failed-additional-verification-required)
@@ -24,9 +24,7 @@ A request for an ACM Certificate can fail\. If that happens, the following expla
 ### No Available Contacts<a name="failed-no-available-contacts"></a>
 
 You chose email validation when requesting a certificate, but ACM could not find an email address to use for validating one or more of the domain names in the request\. To correct this problem, you can do one of the following:
-
 + Ensure that you have a working email address that is registered in WHOIS and that the address is visible when performing a standard WHOIS lookup for the domain names in the certificate request\. Typically, you do this through your domain registrar\.
-
 + Ensure your domain is configured to receive email\. Your domain's name server must have a mail exchanger record \(MX record\) so ACM's email servers know where to send the [domain validation email](gs-acm-validate-email.md)\.
 
 Accomplishing one of the preceding tasks is enough to correct this problem; you don't need to do both\. After you correct the problem, request a new certificate\. You cannot resubmit a failed certificate request\.
@@ -36,9 +34,7 @@ For more information about how to ensure that you receive domain validation emai
 ### Domain Not Allowed<a name="failed-domain-not-allowed"></a>
 
 ACM did not allow you to request a certificate for one or more of the domain names you specified\. Typically, this is because one or more of the domain names in the certificate request was found in the Google Safe Browsing list of unsafe websites or the PhishTank list of valid phishes\. To correct this problem, you can do the following: 
-
 + Search for your domain name at the [Google Safe Browsing Site Status](https://www.google.com/transparencyreport/safebrowsing/diagnostic/) website\. If your domain is considered unsafe, see [Google Help for Hacked Websites](https://developers.google.com/webmasters/hacked/) to learn what you can do\. If you think your domain is safe, see [Request a review](https://developers.google.com/webmasters/hacked/docs/request_review) to request a review from Google\.
-
 + Search for your domain name on the [PhishTank home page](https://www.phishtank.com/index.php)\. If your domain is considered a phish, see [Google Help for Hacked Websites](https://developers.google.com/webmasters/hacked/) or [StopBadware Webmaster Help](https://www.stopbadware.org/webmaster-help) to learn what you can do\. If you think your domain is safe, see the [PhishTank FAQ](https://www.phishtank.com/faq.php) for information about how to report a false positive\.
 
 After you correct the problem, request a new certificate\. You cannot resubmit a failed certificate request\.

@@ -9,27 +9,16 @@ You can use the ACM console to get information about or delete an ACM Certificat
 ### Display ACM Certificate Information<a name="gs-acm-manage-console-display"></a>
 
 Each of the ACM Certificates occupies a row in the console\. By default, the following columns are displayed for each certificate: 
-
 + **Domain Name** – The fully qualified domain name for the certificate\.
-
 + **Additional Names** – Additional names that are supported by this certificate\.
-
 + **Status** – Certificate status\. This can be any of the following values:
-
   + Pending validation
-
   + Issued
-
   + Inactive
-
   + Expired
-
   + Revoked
-
   + Failed
-
   + Timed out
-
 + **In Use?** – Whether the ACM Certificate is actively associated with an AWS service such as Elastic Load Balancing or CloudFront\. The value can be **No** or **Yes**\.
 
 ### Customize the Console Display<a name="gs-acm-manage-console-customize"></a>

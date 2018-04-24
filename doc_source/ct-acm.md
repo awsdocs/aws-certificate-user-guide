@@ -7,25 +7,15 @@ To learn more about CloudTrail, including how to configure and enable it, see th
 When you enable CloudTrail logging in your AWS account, API calls made to ACM actions are tracked in CloudTrail log files\. The ACM records are written with other AWS service records\. CloudTrail determines when to create and write to a new log file based on a time period and file size\. 
 
 The following ACM actions are supported:
-
 + [AddTagsToCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html)
-
 + [DeleteCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html)
-
 + [DescribeCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html)
-
 + [GetCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html)
-
 + [ImportCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html)
-
 + [ListCertificates](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html)
-
 + [ListTagsForCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html)
-
 + [RemoveTagsFromCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html)
-
 + [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)
-
 + [ResendValidationEmail](http://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html)
 
 Every log entry contains information about who generated the request\. The user identity information in the log entry helps you determine whether the request was made with root or with IAM user credentials, with temporary security credentials for a role or federated user, or by another AWS service\. For more information, see the [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
@@ -40,7 +30,7 @@ CloudTrail log files contain one or more log entries where each entry lists mult
 
 For examples of possible ACM CloudTrail entries, see the following topics\.
 
-
+**Topics**
 + [Adding Tags to a Certificate](ct-acm-addtags.md)
 + [Deleting a Certificate](ct-acm-delete.md)
 + [Describing a Certificate](ct-acm-describe.md)

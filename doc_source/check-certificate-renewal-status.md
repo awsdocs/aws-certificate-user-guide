@@ -12,12 +12,12 @@ ACM couldn't automatically validate one or more domain names in the certificate\
 All domain names in the certificate are validated, and ACM renewed the certificate\. No further action is required\.
 
 **Failed**  
-One or more domain names were not validated before the certificate expired, and ACM did not renew the certificate\. You can [request a new certificate](gs-acm-request.md)\.
+One or more domain names were not validated before the certificate expired, and ACM did not renew the certificate\. You can [request a new certificate](gs-acm-request-public.md)\.
 
 **Note**  
 It can take up to several hours for changes to the certificate status to become available\.
 
-
+**Topics**
 + [Check the status \(console\)](#check-renewal-status-console)
 + [Check the status \(API\)](#check-renewal-status-api)
 + [Check the status \(CLI\)](#check-renewal-status-cli)

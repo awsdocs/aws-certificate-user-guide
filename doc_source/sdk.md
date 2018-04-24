@@ -6,7 +6,7 @@ In addition to the web API \(or HTTP API\), you can use the AWS SDKs and command
 
 The following topics show you how to use one of the AWS SDKs, the [AWS SDK for Java](https://aws.amazon.com/sdk-for-java/), to perform some of the available operations in the AWS Certificate Manager API\.
 
-
+**Topics**
 + [Adding Tags to a Certificate](sdk-addtag.md)
 + [Deleting a Certificate](sdk-delete.md)
 + [Describing a Certificate](sdk-describe.md)

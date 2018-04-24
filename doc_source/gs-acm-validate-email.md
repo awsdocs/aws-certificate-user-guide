@@ -8,26 +8,18 @@ Validation applies only to certificates provided by AWS Certificate Manager \(AC
 AWS Certificate Manager \(ACM\) sends email to the 3 contact addresses listed in WHOIS and to 5 common system addresses for each domain that you specify\. That is, up to 8 email messages will be sent for every domain name and subject alternative name that you include in your request\. For example, if you specify only 1 domain name, you will receive up to 8 email messages\. To validate, you must act on 1 of these 8 messages within 72 hours\. If you specify 3 domain names, you will receive up to 24 messages\. To validate, you must act on at least 3 of these emails, 1 for each name that you specified, within 72 hours\.
 
 Email is sent to the following three registered contact addresses in WHOIS:
-
 + Domain registrant
-
 + Technical contact
-
 + Administrative contact
 
 **Note**  
 Some registrars allow you to hide your contact information in your WHOIS listing, and others allow you to substitute your real email address with a privacy \(or proxy\) address\. To prevent problems with receiving the domain validation email from ACM, ensure that your contact information is visible in WHOIS\. If your WHOIS listing shows a privacy email address, ensure that email sent to that address is forwarded to your real email address\. Or simply list your real email address instead\.
 
 If you use the console to request a certificate, ACM performs an MX lookup to determine which servers accept email for your domain and sends mail to the following five common system addresses for first domain found\. If you use the [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API or the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command, ACM does not perform an MX lookup\. Instead, it sends email to the domain name you specify in the `DomainName` parameter or in the optional `ValidationDomain` parameter\. For more information, see [MX Record](setup-email.md#setup-email-mx)\. 
-
 + administrator@*your\_domain\_name*
-
 + hostmaster@*your\_domain\_name*
-
 + postmaster@*your\_domain\_name*
-
 + webmaster@*your\_domain\_name*
-
 + admin@*your\_domain\_name*
 
 For more information about how ACM determines the email addresses for your domains, see [\(Optional\) Configure Email for Your Domain](setup-email.md)\. 

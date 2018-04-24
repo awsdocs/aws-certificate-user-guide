@@ -13,7 +13,7 @@ Your ACM Certificate must be actively associated with a supported AWS service be
 
 For more information about managed certificate renewal, see the following topics\. If you encounter problems with managed renewal, see [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)\.
 
-
+**Topics**
 + [How Domain Validation Works](how-domain-validation-works.md)
 + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)
 + [Request a Domain Validation Email for Certificate Renewal](request-domain-validation-email-for-renewal.md)

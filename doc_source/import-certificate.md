@@ -12,13 +12,13 @@ After you import a certificate, you can use it with the [AWS services that are i
 **Important**  
  We recommend that you do not pin an ACM Certificate\. For more information, see [Certificate Pinning](acm-bestpractices.md#best-practices-pinning) and [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)\.
 
-To renew an imported certificate, you can obtain a new certificate from your certificate issuer and then import it to ACM, or you can [request a new certificate](gs-acm-request.md) from ACM\.
+To renew an imported certificate, you can obtain a new certificate from your certificate issuer and then import it to ACM, or you can [request a new certificate](gs-acm-request-public.md) from ACM\.
 
 All certificates in ACM are regional resources, including the certificates that you import\. To use the same certificate with Elastic Load Balancing load balancers in different AWS regions, you must import the certificate into each region where you want to use it\. To use a certificate with Amazon CloudFront, you must import it into the US East \(N\. Virginia\) region\. For more information, see [Supported Regions](acm-regions.md)\.
 
 For information about how to import certificates into ACM, see the following topics\. If you encounter problems importing a certificate, see [Troubleshoot Certificate Importing Problems](troubleshoot-import.md)\.
 
-
+**Topics**
 + [Prerequisites for Importing Certificates](import-certificate-prerequisites.md)
 + [Certificate and Key Format for Importing](import-certificate-format.md)
 + [Import a Certificate](import-certificate-api-cli.md)
