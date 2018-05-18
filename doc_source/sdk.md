@@ -10,6 +10,7 @@ The following topics show you how to use one of the AWS SDKs, the [AWS SDK for J
 + [Adding Tags to a Certificate](sdk-addtag.md)
 + [Deleting a Certificate](sdk-delete.md)
 + [Describing a Certificate](sdk-describe.md)
++ [Exporting a Certificate](sdk-export.md)
 + [Retrieve a Certificate and Certificate Chain](sdk-get.md)
 + [Importing a Certificate](sdk-import.md)
 + [Listing Certificates](sdk-list.md)

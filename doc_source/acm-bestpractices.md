@@ -63,7 +63,7 @@ The following example shows you how to use the [request\-certificate](http://doc
 aws acm request-certificate \
 --domain-name www.example.com \
 --validation-method DNS \
---certificate-options CertificateTransparencyLoggingPreference=DISABLED \
+--options CertificateTransparencyLoggingPreference=DISABLED \
 --idempotency-token 184627
 ```
 

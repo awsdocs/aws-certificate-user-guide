@@ -79,6 +79,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Adding Tags to a Certificate](sdk-addtag.md)
    + [Deleting a Certificate](sdk-delete.md)
    + [Describing a Certificate](sdk-describe.md)
+   + [Exporting a Certificate](sdk-export.md)
    + [Retrieve a Certificate and Certificate Chain](sdk-get.md)
    + [Importing a Certificate](sdk-import.md)
    + [Listing Certificates](sdk-list.md)
