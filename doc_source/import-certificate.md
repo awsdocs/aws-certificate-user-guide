@@ -2,7 +2,7 @@
 
 In addition to requesting SSL/TLS certificates provided by AWS Certificate Manager \(ACM\), you can import certificates that you obtained outside of AWS\. You might do this because you already obtained a certificate from a third\-party issuer, or because the certificates provided by ACM do not meet your requirements\.
 
-After you import an SSL/TLS certificate obtained outside of AWS and associated it with services integrated with ACM, you can reimport that certificate while preserving its associations\.
+After you import an SSL/TLS certificate obtained outside of AWS and have associated it with services integrated with ACM, you can reimport that certificate while preserving its associations\. Multiple certificates with the same domain name can be imported, but they must be imported one at a time\.
 
 After you import a certificate, you can use it with the [AWS services that are integrated with ACM](acm-services.md)\. The certificates that you import work the same as those provided by ACM, with one important exception: ACM does not provide [managed renewal](managed-renewal.md) for imported certificates\. 
 

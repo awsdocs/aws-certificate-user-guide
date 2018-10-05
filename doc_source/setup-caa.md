@@ -38,4 +38,4 @@ example.com.   CAA           0      issue   "amazonaws.com"
 example.com    CAA           0      issue   ";"
 ```
 
-For more information about how to add or modify DNS records, check with your DNS provider\. Route 53 supports CAA records\. If Route 53 is your DNS provider, see [CAA Format](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#CAAFormat) for more information about creating a record\. 
+For more information about how to add or modify DNS records, check with your DNS provider\. Route 53 supports CAA records\. If Route 53 is your DNS provider, see [CAA Format](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#CAAFormat) for more information about creating a record\. 

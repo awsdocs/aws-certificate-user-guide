@@ -75,13 +75,13 @@ Use the following procedure to show tags in columns in the ACM console\.
 ## Managing Tags \(AWS Command Line Interface\)<a name="tags-manage-cli"></a>
 
 Refer to the following topics to learn how to add, list, and delete tags by using the AWS CLI\.
-+  [add\-tags\-to\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/add-tags-to-certificate.html) 
-+  [list\-tags\-for\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/list-tags-for-certificate.html) 
-+  [remove\-tags\-from\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/remove-tags-from-certificate.html) 
++  [add\-tags\-to\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/add-tags-to-certificate.html) 
++  [list\-tags\-for\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/list-tags-for-certificate.html) 
++  [remove\-tags\-from\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/remove-tags-from-certificate.html) 
 
 ## Managing Tags \(AWS Certificate Manager API\)<a name="tags-manage-api"></a>
 
 Refer to the following topics to learn how to add, list, and delete tags by using the API\.
-+  [AddTagsToCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) 
-+  [ListTagsForCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) 
-+  [RemoveTagsFromCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) 
++  [AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) 
++  [ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) 
++  [RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) 

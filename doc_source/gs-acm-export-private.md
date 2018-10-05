@@ -32,7 +32,7 @@ openssl rsa -in encrypted_key.pem -out decrypted_key.pem
 
 ## Exporting a private certificate using the CLI<a name="export-cli"></a>
 
-Use the [export\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/export-certificate.html) command to export a private certificate and private key\. For added security, store your passphrase securely in a file before using this command\. This prevents your passphrase from being stored in command history and prevents others from seeing the passphrase as you type it in\. 
+Use the [export\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/export-certificate.html) command to export a private certificate and private key\. For added security, store your passphrase securely in a file before using this command\. This prevents your passphrase from being stored in command history and prevents others from seeing the passphrase as you type it in\. 
 
 ```
 aws acm export-certificate --certificate-arn \
@@ -41,19 +41,18 @@ certificate/12345678-1234-1234-1234-123456789012 \
 --passphrase --file://path-to-passphrase-file
 ```
 
-This command outputs the base64\-encoded, PEM format certificate, the certificate chain, and private key\. 
+This command outputs the base64\-encoded, PEM format certificate, the certificate chain, and private key\. The private key is output in PKCS \#8 syntax\. 
 
 ```
 {
     "PrivateKey": 
       "-----BEGIN ENCRYPTED PRIVATE KEY----- 
-        ...Base64-encoded private key ...
+        ...PKCS8 Base64-encoded encrypted private key ...
        -----END ENCRYPTED PRIVATE KEY-----",
     "CertificateChain": 
        "-----BEGIN CERTIFICATE-----   
         ...Base64-encoded certificate...
         -----END CERTIFICATE-----
-        ...Base64-encoded certificate...
         -----BEGIN CERTIFICATE-----
         ...Base64-encoded private key...
         -----END CERTIFICATE-----",
@@ -62,4 +61,14 @@ This command outputs the base64\-encoded, PEM format certificate, the certificat
         ...Base64-encoded certificate...
        -----END CERTIFICATE-----"
 }
+```
+
+To output everything to a file, use the `>` redirector as shown in the following example\. 
+
+```
+aws acm export-certificate --certificate-arn \
+arn:aws:acm:region:account:\
+certificate/12345678-1234-1234-1234-123456789012 \
+--passphrase file://path-to-passphrase-file\
+> c:\temp\export.txt
 ```

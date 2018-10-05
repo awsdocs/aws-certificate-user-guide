@@ -1,9 +1,9 @@
 # Describing a Certificate<a name="ct-acm-describe"></a>
 
-The following CloudTrail example shows the results of a call to the [DescribeCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) API\. 
 
 **Note**  
-The CloudTrail log for the `DescribeCertificate` action does not display information about the ACM Certificate you specify\. You can view information about the certificate by using the console, the AWS Command Line Interface, or the [DescribeCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) API\. 
+The CloudTrail log for the `DescribeCertificate` action does not display information about the ACM Certificate you specify\. You can view information about the certificate by using the console, the AWS Command Line Interface, or the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) API\. 
 
 ```
 {

@@ -1,9 +1,9 @@
 # Listing Certificates<a name="ct-acm-list"></a>
 
-The following CloudTrail example shows the results of a call to the [ListCertificates](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) API\. 
+The following CloudTrail example shows the results of a call to the [ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) API\. 
 
 **Note**  
-The CloudTrail log for the `ListCertificates` action does not display your ACM certificates\. You can view the certificate list by using the console, the AWS Command Line Interface, or the [ListCertificates](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) API\. 
+The CloudTrail log for the `ListCertificates` action does not display your ACM certificates\. You can view the certificate list by using the console, the AWS Command Line Interface, or the [ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) API\. 
 
 ```
 {

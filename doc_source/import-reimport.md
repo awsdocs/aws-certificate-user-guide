@@ -29,7 +29,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 **Important**  
  Currently, [Services Integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
 
-1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\. The certificate chain includes the end\-entity certificate, zero or more certificates for all intermediate issuing certification authorities, and the root certificate\.
+1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\. The certificate chain includes one or more certificates for all intermediate issuing certification authorities, and the root certificate\. If the certificate to be imported is self\-assigned, no certificate chain is necessary\.
 
 1. Choose **Review and import**\.
 
@@ -55,4 +55,4 @@ To reimport a certificate, you must specify the certificate ARN\.
                                  --certificate-arn arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-12345678901
 ```
 
-If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the certificate\. 
+If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the certificate\. 

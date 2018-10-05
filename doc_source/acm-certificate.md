@@ -32,7 +32,7 @@ A certificate must specify an algorithm and key size\. Currently, the following 
 + Elliptic Prime Curve 256 bit \(`EC_prime256v1`\)
 + Elliptic Prime Curve 384 bit \(`EC_secp384r1`\)
 + Elliptic Prime Curve 521 bit \(`EC_secp521r1`\)
-Note that [integrated services](http://docs.aws.amazon.com/acm/latest/userguide/acm-services.html) allow only algorithms and key sizes they support to be associated with their resources\. Further, their support differs depending on whether the certificate is imported into IAM or into ACM\. For more information, see the documentation for each service\.   
+Note that [integrated services](https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html) allow only algorithms and key sizes they support to be associated with their resources\. Further, their support differs depending on whether the certificate is imported into IAM or into ACM\. For more information, see the documentation for each service\.   
 + For Elastic Load Balancing, see [ HTTPS Listeners for Your Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)\.
 + For CloudFront, see [ Supported SSL/TLS Protocols and Ciphers](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html#secure-connections-supported-ciphers)\.
 

@@ -1,6 +1,6 @@
 # Deleting a Certificate<a name="sdk-delete"></a>
 
-The following example shows how to use the [DeleteCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html) function\. If succesful, the function returns an empty set `{}`\. 
+The following example shows how to use the [DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html) function\. If succesful, the function returns an empty set `{}`\. 
 
 ```
 package com.amazonaws.samples;

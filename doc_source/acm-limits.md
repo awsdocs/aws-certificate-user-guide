@@ -7,11 +7,11 @@ The following AWS Certificate Manager \(ACM\) limits apply to each AWS region an
 
 | Item | Default Limit | 
 | --- | --- | 
-| Number of ACM Certificates | 100 | 
-| Number of ACM Certificates per Year \(last 365 days\) | Twice your account limit | 
-| Number of imported certificates | 100 | 
+| Number of ACM Certificates | 1000 | 
+| Number of ACM Certificates per year \(last 365 days\) | Twice your account limit | 
+| Number of imported certificates | 1000 | 
 | Number of imported certificates per year \(last 365 days\) | Twice your account limit | 
-| Number of Domain Names per ACM Certificate | 10 | 
+| Number of domain names per ACM Certificate | 10 | 
 | Number of Private CAs | 10 | 
 | Number of Private Certificates per CA | 50,000 | 
 
@@ -22,10 +22,10 @@ The following AWS Certificate Manager \(ACM\) limits apply to each AWS region an
 
 ## Number of ACM Certificates per Year \(Last 365 Days\)<a name="limit-certs-yearly"></a>
 
- You can request up to twice your limit of ACM Certificates every year\. For example, if your limit is 25, you can request up to 50 ACM Certificates a year\. If you request 50 certificates, you must delete 25 during the year to stay within your limit\. If you need more than 25 certificates, in this example, you must contact the **AWS Support Center**\. 
+ You can request up to twice your limit of ACM Certificates every year\. For example, if your limit is 1,000, you can request up to 2,000 ACM Certificates a year\. You can only have 1,000 certificates at any given time\. To request 2,000 certificates in a year, you must delete 1,000 during the year to stay within the limit\. If you need more than 1,000 certificates at any given time, you must contact the **AWS Support Center**\. 
 
 **Note**  
-Although the preceding table indicates that an account can own up to 100 ACM Certificates, new AWS accounts might start with a lower limit\.
+Although the preceding table indicates that an account can own up to 1,000 ACM Certificates, new AWS accounts might start with a lower limit\.
 
 ## Number of Domain Names per ACM Certificate<a name="limit-domain-names"></a>
 
@@ -38,4 +38,7 @@ You can request up to 100 domain names\. To request an increase in your limit, c
 
 ## Number of Private CAs and Certificates<a name="limit-private-ca"></a>
 
-ACM is integrated with ACM PCA\. You can use the ACM console, AWS CLI, or ACM API to request private certificates from an existing private certificate authority \(CA\)\. The certificates are managed within the ACM environment and have the same restrictions as public certificates issued by ACM\. For more information, see [Request a Private Certificate](gs-acm-request-private.md)\. You can also issue private certificates by using the standalone ACM PCA service\. For more information, see [Issue a Private Certificate](http://docs.aws.amazon.com/acm-pca/latest/userguide/PcaIssueCert.html)\. You can create 10 private CAs and 50,000 private certificates for each\. 
+ACM is integrated with ACM PCA\. You can use the ACM console, AWS CLI, or ACM API to request private certificates from an existing private certificate authority \(CA\)\. The certificates are managed within the ACM environment and have the same restrictions as public certificates issued by ACM\. For more information, see [Request a Private Certificate](gs-acm-request-private.md)\. You can also issue private certificates by using the standalone ACM PCA service\. For more information, see [Issue a Private Certificate](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaIssueCert.html)\. You can create 10 private CAs and 50,000 private certificates for each\. 
+
+**Note**  
+A private CA that has been deleted will count towards your limit until the end of its restoration period\. For more information, see [Delete Your Private CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/PCADeleteCA.html)\.

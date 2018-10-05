@@ -1,6 +1,6 @@
 # Removing Tags from a Certificate<a name="ct-acm-removetag"></a>
 
-The following CloudTrail example shows the results of a call to the [RemoveTagsFromCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) API\. 
 
 ```
 {

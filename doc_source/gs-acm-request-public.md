@@ -31,7 +31,7 @@ If you are able to edit your DNS configuration, we recommend that you use DNS do
 
 ## Requesting a public certificate using the CLI<a name="request-public-cli"></a>
 
-Use the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a new public ACM certificate on the command line\. 
+Use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a new public ACM certificate on the command line\. 
 
 ```
 aws acm request-certificate \

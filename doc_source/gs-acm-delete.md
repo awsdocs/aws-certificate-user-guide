@@ -15,7 +15,7 @@ You cannot delete an ACM Certificate that is being used by another AWS service\.
 
 ## Delete Certificates \(CLI\)<a name="gs-acm-delete-cli"></a>
 
-You can use the [delete\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/delete-certificate.html) command list the metadata for a certificate\. 
+You can use the [delete\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/delete-certificate.html) command list the metadata for a certificate\. 
 
 ```
 aws acm delete-certificate --certificate-arn arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012

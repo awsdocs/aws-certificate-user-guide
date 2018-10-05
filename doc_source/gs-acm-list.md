@@ -31,7 +31,7 @@ You can select the columns that you want to display by choosing the gear icon \(
 
 ## List Certificates \(CLI\)<a name="gs-acm-list-cli"></a>
 
-You can use the [list\-certificates](http://docs.aws.amazon.com/cli/latest/reference/acm/list-certificates.html) command to list your ACM\-managed certificates\. 
+You can use the [list\-certificates](https://docs.aws.amazon.com/cli/latest/reference/acm/list-certificates.html) command to list your ACM\-managed certificates\. 
 
 ```
 aws acm list-certificates --max-items 10
@@ -54,7 +54,7 @@ The `list-certificates` command outputs the following information\.
 }
 ```
 
-By default, only certificates that are supported by [Services Integrated with AWS Certificate Manager](acm-services.md) are listed\. That is, only certificates with **keyTypes** `RSA_1024` and `RSA_2048` are returned\. To see other certificates that you own or control that use a different algorithm and bit size, use the `--includes` parameter as shown in the following example\. The parameter allows you to specify a member of the [Filters](http://docs.aws.amazon.com/acm/latest/APIReference/API_Filters.html) structure\. 
+By default, only certificates that are supported by [Services Integrated with AWS Certificate Manager](acm-services.md) are listed\. That is, only certificates with **keyTypes** `RSA_1024` and `RSA_2048` are returned\. To see other certificates that you own or control that use a different algorithm and bit size, use the `--includes` parameter as shown in the following example\. The parameter allows you to specify a member of the [Filters](https://docs.aws.amazon.com/acm/latest/APIReference/API_Filters.html) structure\. 
 
 ```
 aws acm list-certificates --max-items 10 --includes keyTypes=RSA_4096

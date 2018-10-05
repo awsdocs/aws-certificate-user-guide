@@ -10,5 +10,6 @@ Consult the following topics if you encounter problems using AWS Certificate Man
 + [Troubleshoot Certificate Request Problems](troubleshooting-requests.md)
 + [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)
 + [Troubleshoot Certificate Validation Problems](troubleshooting-validation.md)
++ [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)
 + [Troubleshoot \.IO Domain Problems](troubleshoot-iodomains.md)
 + [Troubleshoot API Gateway Problems](troubleshoot-apigateway.md)

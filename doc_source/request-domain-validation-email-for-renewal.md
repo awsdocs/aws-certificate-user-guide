@@ -12,7 +12,7 @@ After you have configured contact email addresses for your domain \(see [\(Optio
 1. Select the check box next to the certificate that requires manual domain validation\. Then choose **Actions**, **Resend validation email**\.
 
 **To request that ACM resend the domain validation email \(ACM API\)**  
-Use the [ResendValidationEmail](http://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) operation in the ACM API\. In doing so, pass the ARN of the certificate, the domain that requires manual validation, and domain where you want to receive the domain validation emails\. The following example shows how to do this with the AWS CLI\. This example contains line breaks to make it easier to read\.
+Use the [ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) operation in the ACM API\. In doing so, pass the ARN of the certificate, the domain that requires manual validation, and domain where you want to receive the domain validation emails\. The following example shows how to do this with the AWS CLI\. This example contains line breaks to make it easier to read\.
 
 ```
 $ aws acm resend-validation-email --certificate-arn arn:aws:acm:us-east-2:111122223333:certificate/97b4deb6-8983-4e39-918e-ef1378924e1e

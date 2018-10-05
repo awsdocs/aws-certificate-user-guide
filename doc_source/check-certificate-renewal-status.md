@@ -35,7 +35,7 @@ It can take up to several hours for changes to the certificate status to become 
 
 ## Check the status \(API\)<a name="check-renewal-status-api"></a>
 
- For a Java example that shows how to use the [DescribeCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) action to check the status, see [Describing a Certificate](sdk-describe.md)\. 
+ For a Java example that shows how to use the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) action to check the status, see [Describing a Certificate](sdk-describe.md)\. 
 
 ## Check the status \(CLI\)<a name="check-renewal-status-cli"></a>
 
@@ -49,7 +49,7 @@ In the response, note the value in the `RenewalStatus` field\. If you don't see 
 
 ## Check the status \(PHD\)<a name="check-renewal-status-phd"></a>
 
-ACM attempts to automatically renew your ACM Certificate sixty days prior to expiration\. See [How Domain Validation Works](how-domain-validation-works.md)\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](http://docs.aws.amazon.com/health/latest/ug/)\. 
+ACM attempts to automatically renew your ACM Certificate sixty days prior to expiration\. See [How Domain Validation Works](how-domain-validation-works.md)\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](https://docs.aws.amazon.com/health/latest/ug/)\. 
 
 **To use the Personal Health Dashboard:**
 

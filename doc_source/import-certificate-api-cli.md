@@ -43,4 +43,4 @@ To use the following example, replace the file names with your own and type the 
                                  --private-key file://PrivateKey.pem
 ```
 
-If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the imported certificate\. 
+If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the imported certificate\. 

@@ -1,6 +1,6 @@
 # Inline Policies<a name="authen-inlinepolicies"></a>
 
- Inline policies are policies that you create and manage and embed directly into a single user, group, or role\. The following policy examples show how to assign permissions to perform ACM actions\. For more information about attaching inline policies, see [Working with Inline Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_inline-using.html) in the [IAM User Guide](http://docs.aws.amazon.com/IAM/latest/UserGuide/)\. You can use the AWS Management Console, the AWS Command Line Interface \(AWS CLI\), or the IAM API to create and embed inline policies\. 
+ Inline policies are policies that you create and manage and embed directly into a single user, group, or role\. The following policy examples show how to assign permissions to perform ACM actions\. For more information about attaching inline policies, see [Working with Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_inline-using.html) in the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\. You can use the AWS Management Console, the AWS Command Line Interface \(AWS CLI\), or the IAM API to create and embed inline policies\. 
 
 **Topics**
 + [Listing Certificates](#policy-list-certificates)

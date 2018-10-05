@@ -1,6 +1,6 @@
 # Deleting a Certificate<a name="ct-acm-delete"></a>
 
-The following CloudTrail example shows the results of a call to the [DeleteCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html) API\. 
 
 ```
 {

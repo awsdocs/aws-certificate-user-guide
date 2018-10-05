@@ -1,6 +1,6 @@
 # Import a Certificate<a name="ct-acm-import"></a>
 
-The following example shows the CloudTrail log entry that records a call to the ACM [ImportCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html) API operation\. 
+The following example shows the CloudTrail log entry that records a call to the ACM [ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html) API operation\. 
 
 ```
 {

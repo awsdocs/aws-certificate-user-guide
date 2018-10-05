@@ -1,6 +1,6 @@
 # Requesting a Certificate<a name="ct-acm-request"></a>
 
-The following CloudTrail example shows the results of a call to the [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\. 
 
 ```
 {

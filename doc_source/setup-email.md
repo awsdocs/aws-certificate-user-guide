@@ -24,7 +24,7 @@ For example, if you use the console to request a certificate for abc\.xyz\.examp
 + webmaster@*your\_domain\_name*
 + admin@*your\_domain\_name*
 
-If you are using the [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API operation or the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command, AWS does not perform an MX lookup\. Instead, `RequestCertificate` lets you specify both your domain name and the name of a validation domain\. If you specify the optional `ValidationDomain` parameter, AWS sends the preceding five email messages there rather than to your domain\. 
+If you are using the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API operation or the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command, AWS does not perform an MX lookup\. Instead, `RequestCertificate` lets you specify both your domain name and the name of a validation domain\. If you specify the optional `ValidationDomain` parameter, AWS sends the preceding five email messages there rather than to your domain\. 
 
 ACM always sends validation email to the five common addresses listed previously whether you are using the console, the API, or the AWS CLI\. However, AWS performs an MX lookup only when you use the console to request a certificate\. 
 

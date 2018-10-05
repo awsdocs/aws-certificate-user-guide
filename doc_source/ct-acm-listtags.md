@@ -1,9 +1,9 @@
 # Listing Tags for a Certificate<a name="ct-acm-listtags"></a>
 
-The following CloudTrail example shows the results of a call to the [ListTagsForCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) API\. 
 
 **Note**  
-The CloudTrail log for the `ListTagsForCertificate` action does not display your tags\. You can view the tag list by using the console, the AWS Command Line Interface, or the [ListTagsForCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) API\. 
+The CloudTrail log for the `ListTagsForCertificate` action does not display your tags\. You can view the tag list by using the console, the AWS Command Line Interface, or the [ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) API\. 
 
 ```
 {

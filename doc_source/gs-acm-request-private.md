@@ -1,6 +1,6 @@
 # Request a Private Certificate<a name="gs-acm-request-private"></a>
 
-The following sections discuss how to use the ACM console or the ACM PCA CLI request a private certificate from an existing private certificate authority \(CA\)\. For more information about creating a private CA, see [Create a Private Certificate Authority](http://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
+The following sections discuss how to use the ACM console or the ACM PCA CLI to request a private certificate from an existing private certificate authority \(CA\)\. For more information about creating a private CA, see [Create a Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
 
 Private certificates issued by ACM resemble public certificates issued by ACM\. The certificates have the following restrictions: 
 + You must use DNS subject names\. For more information, see [Domain Names](acm-concepts.md#concept-dn)
@@ -10,7 +10,10 @@ Private certificates issued by ACM resemble public certificates issued by ACM\. 
 + The private CA must be Active, and the CA private key type must be RSA 2048 or RSA 4096\.
 + ACM renews the certificate automatically, if possible, after 11 months\.
 
-Private certificates issued by ACM PCA do not have the preceding restrictions\. You can use your private CA to create certificates that have any subject name, use any of the supported private key algorithms, any signing algorithm, and any validity period\. This is beneficial if you must identify a subject by a specific name or if you cannot rotate certificates easily\. For more information, see [Issue a Private Certificate](http://docs.aws.amazon.com/acm-pca/latest/userguide/PcaIssueCert.html)\. 
+Private certificates issued by ACM PCA do not have the preceding restrictions\. You can use your private CA to create certificates that have any subject name, use any of the supported private key algorithms, any signing algorithm, and any validity period\. This is beneficial if you must identify a subject by a specific name or if you cannot rotate certificates easily\. For more information, see [Issue a Private Certificate](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaIssueCert.html)\. 
+
+**Note**  
+The end date of the CA certificate for a private CA must exceed the end date of the requested certificate, or else the certificate request will fail\.
 
 **Topics**
 + [Requesting a private certificate using the console](#request-private-console)
@@ -42,7 +45,7 @@ You do not need to validate a private certificate\.
 
 ## Requesting a private certificate using the CLI<a name="request-private-cli"></a>
 
-Use the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a private certificate in ACM\. 
+Use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a private certificate in ACM\. 
 
 ```
 aws acm request-certificate \

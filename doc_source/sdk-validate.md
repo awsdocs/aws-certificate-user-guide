@@ -1,6 +1,6 @@
 # Resending Validation Email<a name="sdk-validate"></a>
 
-The following example shows you how to use the [ResendValidationEmail](http://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) function\. 
+The following example shows you how to use the [ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) function\. 
 
 ```
 package com.amazonaws.samples;

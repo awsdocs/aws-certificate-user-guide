@@ -18,11 +18,11 @@ Resending validation email applies only to certificates that use email validatio
 
 ## Resend Email \(CLI\)<a name="gs-acm-resend-cli"></a>
 
-You can use the [resend\-validation\-email](http://docs.aws.amazon.com/cli/latest/reference/acm/resend-validation-email.html) command to resend email\. 
+You can use the [resend\-validation\-email](https://docs.aws.amazon.com/cli/latest/reference/acm/resend-validation-email.html) command to resend email\. 
 
 ```
 aws acm resend-validation-email --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 --validation-domain example.com
 ```
 
 **Note**  
-The [resend\-validation\-email](http://docs.aws.amazon.com/cli/latest/reference/acm/resend-validation-email.html) command applies only to ACM certificates for which you are using email validation\. Validation is not required for certificates that you have imported into ACM or for private certificates that you manage using ACM\.
+The [resend\-validation\-email](https://docs.aws.amazon.com/cli/latest/reference/acm/resend-validation-email.html) command applies only to ACM certificates for which you are using email validation\. Validation is not required for certificates that you have imported into ACM or for private certificates that you manage using ACM\.

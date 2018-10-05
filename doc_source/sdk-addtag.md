@@ -1,6 +1,6 @@
 # Adding Tags to a Certificate<a name="sdk-addtag"></a>
 
-The following example shows how to use the [AddTagsToCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) function\.
+The following example shows how to use the [AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) function\.
 
 ```
 package com.amazonaws.samples;

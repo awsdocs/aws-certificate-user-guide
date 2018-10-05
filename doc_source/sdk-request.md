@@ -1,6 +1,6 @@
 # Requesting a Certificate<a name="sdk-request"></a>
 
-The following example shows how to use the [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) function\. 
+The following example shows how to use the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) function\. 
 
 ```
 package com.amazonaws.samples;

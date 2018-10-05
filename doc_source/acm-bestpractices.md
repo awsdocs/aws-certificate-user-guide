@@ -24,12 +24,12 @@ Certificate pinning, sometimes known as SSL pinning, is a process that you can u
 We recommend that your application **not** pin an ACM Certificate\. ACM performs [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md) to automatically renew your Amazon\-issued SSL/TLS certificates before they expire\. To renew a certificate, ACM generates a new public\-private key pair\. If your application pins the ACM Certificate and the certificate is successfully renewed with a new public key, the application might be unable to connect to your domain\.
 
 If you decide to pin a certificate, the following options will not hinder your application from connecting to your domain:
-+ [Import your own certificate](http://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) into ACM and then pin your application to the imported certificate\. ACM doesn't try to automatically renew imported certificates\.
++ [Import your own certificate](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) into ACM and then pin your application to the imported certificate\. ACM doesn't try to automatically renew imported certificates\.
 + Pin your application to an [ Amazon root certificate](https://www.amazontrust.com/repository/)\.
 
 ## Domain Validation<a name="best-practices-validating"></a>
 
-Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all the domains that you specified in your request\. You can perform verification using either email or DNS\. For more information, see [Use Email to Validate Domain Ownership](gs-acm-validate-email.md) and [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all the domains that you specified in your request\. You can perform verification using either email or DNS\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md) and [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
 
 ## Adding or Deleting Domain Names<a name="best-practices-add-delete"></a>
 
@@ -48,16 +48,16 @@ Beginning April 30 2018, Google Chrome will stop trusting public SSL/TLS certifi
 
 Logging is performed automatically when you request a certificate or when a certificate is renewed, but you can choose to opt out\. Common reasons for doing so include concerns about security and privacy\. For example, logging internal host domain names gives potential attackers information about internal networks that would otherwise not be public\. In addition, logging could leak the names of new or unreleased products and websites\. 
 
-To opt out of transparency logging when you are requesting a certificate, use the **Options** parameter of the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command or the [RequestCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\. 
+To opt out of transparency logging when you are requesting a certificate, use the **Options** parameter of the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command or the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\. 
 
-If your certificate was issued before April 24 2018 and you want to make sure that it is not logged during renewal, you can call the `update-certificate-options` command or the [UpdateCertificateOptions](http://docs.aws.amazon.com/acm/latest/APIReference/API_UpdateCertificateOptions.html) API to opt out\. 
+If your certificate was issued before April 24 2018 and you want to make sure that it is not logged during renewal, you can call the `update-certificate-options` command or the [UpdateCertificateOptions](https://docs.aws.amazon.com/acm/latest/APIReference/API_UpdateCertificateOptions.html) API to opt out\. 
 
 Once a certificate has been logged, it cannot be removed from the log\. Opting out at that point will have no effect\. If you opt out of logging when you request a certificate and then choose later to opt back in, your certificate will not be logged until it is renewed\. If you want the certificate to be logged immediately, we recommend that you issue a new one\. 
 
 **Note**  
 You cannot currently use the console to opt out of or in to transparency logging\.
 
-The following example shows you how to use the [request\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to disable certificate transparency when you request a new certificate\. 
+The following example shows you how to use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to disable certificate transparency when you request a new certificate\. 
 
 ```
 aws acm request-certificate \
@@ -75,7 +75,7 @@ The preceding command outputs the ARN of your new certificate\.
 }
 ```
 
-If you already have a certificate, and you don't want it to be logged when it is renewed, use the [update\-certificate\-options](http://docs.aws.amazon.com/cli/latest/reference/acm/update-certificate-options.html) command\. This command does not return a value\. 
+If you already have a certificate, and you don't want it to be logged when it is renewed, use the [update\-certificate\-options](https://docs.aws.amazon.com/cli/latest/reference/acm/update-certificate-options.html) command\. This command does not return a value\. 
 
 ```
 aws acm update-certificate-options \
@@ -86,4 +86,4 @@ certificate/12345678-1234-1234-1234-123456789012 \
 
 ## Turn on AWS CloudTrail<a name="best-practices-ct"></a>
 
-Turn on CloudTrail logging before you begin using ACM\. CloudTrail enables you to monitor your AWS deployments by retrieving a history of AWS API calls for your account, including API calls made via the AWS Management Console, the AWS SDKs, the AWS Command Line Interface, and higher\-level AWS services\. You can also identify which users and accounts called the ACM APIs, the source IP address the calls were made from, and when the calls occurred\. You can integrate CloudTrail into applications using the API, automate trail creation for your organization, check the status of your trails, and control how administrators turn CloudTrail logging on and off\. For more information, see [Creating a Trail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)\. Go to [Using AWS CloudTrail](cloudtrail.md) to see example trails for ACM actions\. 
+Turn on CloudTrail logging before you begin using ACM\. CloudTrail enables you to monitor your AWS deployments by retrieving a history of AWS API calls for your account, including API calls made via the AWS Management Console, the AWS SDKs, the AWS Command Line Interface, and higher\-level AWS services\. You can also identify which users and accounts called the ACM APIs, the source IP address the calls were made from, and when the calls occurred\. You can integrate CloudTrail into applications using the API, automate trail creation for your organization, check the status of your trails, and control how administrators turn CloudTrail logging on and off\. For more information, see [Creating a Trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)\. Go to [Using AWS CloudTrail](cloudtrail.md) to see example trails for ACM actions\. 

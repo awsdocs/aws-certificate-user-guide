@@ -1,6 +1,6 @@
 # Adding Tags to a Certificate<a name="ct-acm-addtags"></a>
 
-The following CloudTrail example shows the results of a call to the [AddTagsToCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) API\. 
+The following CloudTrail example shows the results of a call to the [AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) API\. 
 
 ```
 {

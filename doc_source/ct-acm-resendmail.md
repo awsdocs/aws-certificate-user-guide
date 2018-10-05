@@ -1,6 +1,6 @@
 # Resending Validation Email<a name="ct-acm-resendmail"></a>
 
-The following CloudTrail example shows the results of a call to the [ResendValidationEmail](http://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) API\. 
+The following CloudTrail example shows the results of a call to the [ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) API\. 
 
 ```
 {

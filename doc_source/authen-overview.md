@@ -3,7 +3,7 @@
 Every AWS resource belongs to an AWS account, and permissions to create or access the resources are defined in permissions policies in that account\. An account administrator can attach permissions policies to IAM identities \(that is, users, groups, and roles\)\. Some services \(including ACM\) also support attaching permissions policies to resources\. 
 
 **Note**  
-An *account administrator* \(or administrator user\) is a user with administrator permissions\. For more information, see [Creating an Admin User and Group](http://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\. 
+An *account administrator* \(or administrator user\) is a user with administrator permissions\. For more information, see [Creating an Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\. 
 
 When managing permissions, you decide who gets the permissions, the resources they get permissions for, and the specific actions allowed\.
 
@@ -37,7 +37,7 @@ In ACM, the primary resource is a *certificate*\. Certificates have unique Amazo
 A *permissions policy* describes who has access to what\. This section explains the available options for creating permissions policies\. 
 
 **Note**  
-This section discusses using IAM in the context of ACM\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see the [IAM User Guide](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. For information about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)\. 
+This section discusses using IAM in the context of ACM\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. For information about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)\. 
 
  You can use IAM to create policies that apply permissions to IAM users, groups, and roles\. These are called *identity–based policies*\. IAM offers the following types of identity–based policies: 
 +  **AWS–managed policies** – Policies that are created and managed by AWS\. These are standalone policies that you can attach to multiple users, groups, and roles in your AWS account\. 
