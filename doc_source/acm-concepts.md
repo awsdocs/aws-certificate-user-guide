@@ -145,7 +145,7 @@ Certificate transparency logging is automatic when you request or renew a certif
 
 ## Domain Name System<a name="concept-dns"></a>
 
-The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.222.333.444`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 ## Domain Names<a name="concept-dn"></a>
 

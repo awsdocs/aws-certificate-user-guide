@@ -41,7 +41,7 @@ aws acm request-certificate \
 --options CertificateTransparencyLoggingPreference=DISABLED
 ```
 
-This command outputs the Amazon Resource Name \(ARN\) of your new private certificate\.
+This command outputs the Amazon Resource Name \(ARN\) of your new public certificate\.
 
 ```
 {

@@ -1,6 +1,6 @@
 # Troubleshoot Certification Authority Authorization \(CAA\) Problems<a name="troubleshooting-caa"></a>
 
-You can use CAA DNS records to specify that the Amazon certificate authority \(CA\) can issue ACM Certificates for your domain or subdomain\. If you receive an error during certificate issuance that says **One or more domain names have failed validation due to a Certification Authority Authentication \(CAA\) error**, check your CAA DNS records\. If you receive this error after your ACM Certificate request has been successfully validated, you must update your CAA records and request a certificate again\. The **value** field in at least one of your CAA records must contain one the following domain names:
+You can use CAA DNS records to specify that the Amazon certificate authority \(CA\) can issue ACM Certificates for your domain or subdomain\. If you receive an error during certificate issuance that says **One or more domain names have failed validation due to a Certification Authority Authentication \(CAA\) error**, check your CAA DNS records\. If you receive this error after your ACM Certificate request has been successfully validated, you must update your CAA records and request a certificate again\. The **value** field in at least one of your CAA records must contain one of the following domain names:
 + amazon\.com
 + amazontrust\.com
 + awstrust\.com
