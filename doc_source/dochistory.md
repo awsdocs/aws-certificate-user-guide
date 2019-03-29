@@ -27,7 +27,7 @@ The following table describes the documentation release history of AWS Certifica
 | Update | Added information about checking certificate renewal status in the console\. See [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)\.  | March 28, 2017 | 
 | Update | Updated the documentation for using Elastic Load Balancing\. | March 21, 2017 | 
 | New content | Added support for AWS Elastic Beanstalk and Amazon API Gateway\. See [Services Integrated with AWS Certificate Manager](acm-services.md)\. | March 21, 2017 | 
-| Update | Updated the documentation about [Managed Renewal](managed-renewal.md)\. | February 20, 2017 | 
+| Update | Updated the documentation about [Managed RenewalTesting Managed Renewal](managed-renewal.md)\. | February 20, 2017 | 
 |  New content  |  Added documentation about [Importing Certificates](import-certificate.md)\.  |  October 13, 2016  | 
 |  New content  |  Added AWS CloudTrail support for ACM actions\. See [Logging AWS Certificate Manager API Calls with AWS CloudTrail](ct-acm.md)\.  |  March 25, 2016  | 
 |  New guide  |  This release introduces AWS Certificate Manager\.  |  January 21, 2016  | 

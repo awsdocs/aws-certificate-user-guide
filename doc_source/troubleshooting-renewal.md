@@ -2,29 +2,17 @@
 
 ACM tries to automatically renew your ACM certificates before they expire so that no action is required from you\. Consult the following topics if you have trouble with [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md)\. 
 
-**Topics**
-+ [Preparing for Automatic Domain Validation](#troubleshooting-renewal-domain-validation)
-+ [Handling Failures in Managed Certificate Renewal](#troubleshooting-automatic-renewal)
-+ [Understanding Renewal Timing](#troubleshooting-renewal-domain-async)
-
 ## Preparing for Automatic Domain Validation<a name="troubleshooting-renewal-domain-validation"></a>
 
 Before ACM can renew your certificates automatically, the following must be true:
-+ ACM must be able to establish an HTTPS connection with each domain in the certificate\.
-+ For each connection, the certificate that is returned must match the one that ACM is renewing\.
-+ Your certificate must be associated with an AWS service that is integrated with ACM\.
++ Your certificate must be associated with an AWS service that is integrated with ACM\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\.
 + ACM must be able to validate each domain name listed in your certificate\.
 
-To increase the likelihood that ACM can renew your certificate automatically, do the following: 
+**For email\-validated certificates:**  
+Configure the AWS resource that has your ACM certificate to [accept HTTPS requests from the internet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)\. Make sure that HTTPS requests to the domain names in your certificate are routed to the resource that has your certificate\.
 
-**Use the certificate with an AWS resource**  
-Make sure that your certificate is in use with a supported AWS resource\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
-
-**Configure the resource to accept HTTPS requests from the internet**  
-Make sure that the AWS resource that has your ACM certificate is [configured to accepts HTTPS requests from the internet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)\.
-
-**Configure DNS to route your domain name to the resource that hosts your ACM certificate**  
-Make sure that HTTPS requests to the domain names in your certificate are routed to the resource that has your certificate\.
+**For DNS\-validated certificates:**  
+Make sure that your DNS configuration contains the correct CNAME records\.
 
 ## Handling Failures in Managed Certificate Renewal<a name="troubleshooting-automatic-renewal"></a>
 
@@ -32,7 +20,7 @@ When a certificate is 60 days away from expiration, ACM automatically attempts t
 
 ### Managed Certificate Renewal for Email\-Validated Certificates<a name="troubleshooting-renewal-email-validation-failure"></a>
 
-If ACM fails to renew a certificate you originally validated by email, ACM sends an email for each domain name remaining in the `PENDING_VALIDATION` state\. The domain owner or an authorized representative of the domain owner must take action to validate each domain name that failed validation\. See [Validate with Email](gs-acm-validate-email.md) for instructions on identifying which domains are in the `PENDING_VALIDATION` state and repeating the validation process for those domains\.
+Email\-validated certificates require domain validation every 825 days\. In order to proceed with renewal, ACM sends an email for each domain name remaining in the `PENDING_VALIDATION` state\. The domain owner or an authorized representative of the domain owner must take action to validate each domain name that failed validation\. See [Validate with Email](gs-acm-validate-email.md) for instructions on identifying which domains are in the `PENDING_VALIDATION` state and repeating the validation process for those domains\.
 
 ### Managed Certificate Renewal for DNS\-Validated Certificates<a name="troubleshooting-renewal-domain-validation-failure"></a>
 

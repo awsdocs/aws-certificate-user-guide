@@ -1,7 +1,7 @@
 # AWS Certificate Manager User Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -44,6 +44,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How Domain Validation Works](how-domain-validation-works.md)
    + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)
    + [Request a Domain Validation Email for Certificate Renewal](request-domain-validation-email-for-renewal.md)
+   + [Testing ACM's Managed Renewal Configuration](manual-renewal.md)
 + [Importing Certificates into AWS Certificate Manager](import-certificate.md)
    + [Prerequisites for Importing Certificates](import-certificate-prerequisites.md)
    + [Certificate and Key Format for Importing](import-certificate-format.md)
@@ -73,6 +74,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Retrieve a Certificate and Certificate Chain](sdk-get.md)
    + [Importing a Certificate](sdk-import.md)
    + [Listing Certificates](sdk-list.md)
+   + [Renewing a Certificate](sdk-renew.md)
    + [Listing Certificate Tags](sdk-listtag.md)
    + [Removing Tags to a Certificate](sdk-tagremove.md)
    + [Requesting a Certificate](sdk-request.md)

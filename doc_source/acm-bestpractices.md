@@ -25,7 +25,7 @@ We recommend that your application **not** pin an ACM Certificate\. ACM performs
 
 If you decide to pin a certificate, the following options will not hinder your application from connecting to your domain:
 + [Import your own certificate](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) into ACM and then pin your application to the imported certificate\. ACM doesn't try to automatically renew imported certificates\.
-+ Pin your application to an [ Amazon root certificate](https://www.amazontrust.com/repository/)\.
++ If you're using a public certificate, pin your application to an [ Amazon root certificate](https://www.amazontrust.com/repository/)\. If you're using a private certificate, pin your application to the CA's root certificate\.
 
 ## Domain Validation<a name="best-practices-validating"></a>
 

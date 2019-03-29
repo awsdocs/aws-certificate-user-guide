@@ -14,6 +14,7 @@ The following topics show you how to use one of the AWS SDKs, the [AWS SDK for J
 + [Retrieve a Certificate and Certificate Chain](sdk-get.md)
 + [Importing a Certificate](sdk-import.md)
 + [Listing Certificates](sdk-list.md)
++ [Renewing a Certificate](sdk-renew.md)
 + [Listing Certificate Tags](sdk-listtag.md)
 + [Removing Tags to a Certificate](sdk-tagremove.md)
 + [Requesting a Certificate](sdk-request.md)

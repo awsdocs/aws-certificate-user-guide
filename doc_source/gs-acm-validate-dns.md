@@ -30,9 +30,10 @@ If you see an expand arrow \(**↗**\) in the upper\-right corner of the table, 
 DNS validation has a number of advantages over email validation:
 + DNS requires that you create only one CNAME record per domain name when you request an ACM Certificate\. Email validation sends up to eight email messages per domain name\. 
 + You can request additional ACM Certificates for your FQDN for as long as the DNS record remains in place\. That is, you can create multiple certificates that have the same domain name\. You do not need to get a new CNAME record\. There are many reasons to do this\. You might, for example, want new certificates that cover different subdomains\. You might want to create the same certificate in multiple regions \(the validation token works for any region\)\. You might want to replace a certificate that you deleted\. 
-+ ACM automatically renews ACM Certificates that you validated by using DNS\. ACM renews each certificate before it expires as long as the certificate is in use and the DNS record is in place\. 
++ ACM automatically renews ACM Certificates that you validated by using DNS\. ACM renews each certificate before it expires as long as the certificate is in use and the DNS record is in place\.
 + ACM can add the CNAME record for you if you use Route 53 to manage your public DNS records\. If you do not use Route 53 as your DNS provider, contact your DNS provider to find out how to add records\.
 + You can more easily automate the DNS validation process than you can the email validation process\.
++ Email\-validated certificates are only renewable up to 825 days after their original validation date\. After 825 days, the domain owner or an authorized representative must request a new certificate, while DNS\-validated certificates are renewable indefinitely\.
 
 Note however that you may be required to use email validation if you do not have permission to modify the DNS records for your domain\. <a name="gs-acm-use-dns"></a>
 
@@ -79,7 +80,7 @@ Adding a CNAME record that contains a domain name \(such as *`.example.com`*\) m
 
 To use DNS validation, you must be able to add a CNAME record to the DNS configuration for your domain\. If Route 53 is not your DNS provider, contact your provider to find out how to add records\. If Route 53 is your provider, ACM can create the CNAME record for you as discussed previously in step 9\. If you want to add the record yourself, see [Editing Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-editing.html) in the *Route 53 Developer Guide*\. 
 
-If your DNS providor does not support CNAME values with leading underscore, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
+If your DNS provider does not support CNAME values with leading underscore, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
 
 **Note**  
 If you do not have permission to edit your DNS configuration, you must use email validation\.
