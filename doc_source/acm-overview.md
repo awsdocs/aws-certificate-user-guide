@@ -13,6 +13,6 @@ You cannot install public ACM certificates directly on your website or applicati
 + [Supported Regions](acm-regions.md)
 + [Integrated Services](acm-services.md)
 + [Site Seals and Trust Logos](acm-siteseal.md)
-+ [Limits](acm-limits.md)
++ [Quotas](acm-limits.md)
 + [Best Practices](acm-bestpractices.md)
 + [Pricing](acm-billing.md)

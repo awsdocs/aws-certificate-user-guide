@@ -10,7 +10,7 @@ You can import a certificate into ACM by using the AWS Management Console, the A
 
 The following example shows how to import a certificate using the AWS Management Console\.
 
-1. Open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\.
+1. Open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. If this is your first time using ACM, look for the **AWS Certificate Manager** heading and choose the **Get started** button under it\.
 
 1. Choose **Import a certificate**\.
 

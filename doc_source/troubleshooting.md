@@ -2,14 +2,11 @@
 
 Consult the following topics if you encounter problems using AWS Certificate Manager\.
 
+**Note**  
+If you don't see your issue addressed in this section, we recommend visiting the [AWS Knowledge Center](https://aws.amazon.com/premiumsupport/knowledge-center/)\.
+
 **Topics**
-+ [Troubleshoot Certification Authority Authorization \(CAA\) Problems](troubleshooting-caa.md)
-+ [Troubleshoot Email Problems](troubleshooting-email.md)
-+ [Troubleshoot Certificate Importing Problems](troubleshoot-import.md)
-+ [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)
-+ [Troubleshoot Certificate Request Problems](troubleshooting-requests.md)
-+ [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)
-+ [Troubleshoot Certificate Validation Problems](troubleshooting-validation.md)
-+ [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)
-+ [Troubleshoot \.IO Domain Problems](troubleshoot-iodomains.md)
-+ [Troubleshoot API Gateway Problems](troubleshoot-apigateway.md)
++ [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)
++ [Troubleshooting Certificate Validation](certificate-validation.md)
++ [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)
++ [Troubleshooting Other Problems](misc-problems.md)

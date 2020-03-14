@@ -9,10 +9,9 @@ When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) re
 **Important**  
 Your ACM Certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
 
-For more information about managed certificate renewal, see the following topics\. If you encounter renewal problems, see [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)\.
+For more information about managed certificate renewal, see the following topics\. If you encounter renewal problems, see [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)\.
 
 **Topics**
 + [How Domain Validation Works](how-domain-validation-works.md)
 + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)
 + [Request a Domain Validation Email for Certificate Renewal](request-domain-validation-email-for-renewal.md)
-+ [Testing ACM's Managed Renewal Configuration](manual-renewal.md)

@@ -16,7 +16,7 @@ To renew an imported certificate, you can obtain a new certificate from your cer
 
 All certificates in ACM are regional resources, including the certificates that you import\. To use the same certificate with Elastic Load Balancing load balancers in different AWS regions, you must import the certificate into each region where you want to use it\. To use a certificate with Amazon CloudFront, you must import it into the US East \(N\. Virginia\) region\. For more information, see [Supported Regions](acm-regions.md)\.
 
-For information about how to import certificates into ACM, see the following topics\. If you encounter problems importing a certificate, see [Troubleshoot Certificate Importing Problems](troubleshoot-import.md)\.
+For information about how to import certificates into ACM, see the following topics\. If you encounter problems importing a certificate, see [Troubleshoot Certificate Import Problems](troubleshoot-import.md)\.
 
 **Topics**
 + [Prerequisites for Importing Certificates](import-certificate-prerequisites.md)

@@ -14,7 +14,7 @@
 
  With AWS CloudFormation you can create a template that describes the AWS resources that you want to use\. AWS CloudFormation then provisions and configures those resources for you\. AWS CloudFormation can provision resources that are supported by ACM such as Elastic Load Balancing, Amazon CloudFront, and Amazon API Gateway\. For more information, see [Services Integrated with AWS Certificate Manager](acm-services.md)\.
 
- If you use AWS CloudFormation to quickly create and delete multiple test environments, we recommend that you do not create a separate ACM Certificate for each environment\. Doing so will quickly exhaust your certificate limit\. For more information, see [Limits](acm-limits.md)\. Instead, create a wildcard certificate that covers all of the domain names that you are using for testing\. For example, if you repeatedly create ACM Certificates for domain names that vary by only a version number, such as *<version>*`.service.example.com`, create instead a single wildcard certificate for *<\*>*`.service.example.com`\. Include the wildcard certificate in the template that AWS CloudFormation uses to create your test environment\. 
+ If you use AWS CloudFormation to quickly create and delete multiple test environments, we recommend that you do not create a separate ACM Certificate for each environment\. Doing so will quickly exhaust your certificate quota\. For more information, see [Quotas](acm-limits.md)\. Instead, create a wildcard certificate that covers all of the domain names that you are using for testing\. For example, if you repeatedly create ACM Certificates for domain names that vary by only a version number, such as *<version>*`.service.example.com`, create instead a single wildcard certificate for *<\*>*`.service.example.com`\. Include the wildcard certificate in the template that AWS CloudFormation uses to create your test environment\. 
 
 ## Certificate Pinning<a name="best-practices-pinning"></a>
 
@@ -25,7 +25,7 @@ We recommend that your application **not** pin an ACM Certificate\. ACM performs
 
 If you decide to pin a certificate, the following options will not hinder your application from connecting to your domain:
 + [Import your own certificate](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) into ACM and then pin your application to the imported certificate\. ACM doesn't try to automatically renew imported certificates\.
-+ If you're using a public certificate, pin your application to an [ Amazon root certificate](https://www.amazontrust.com/repository/)\. If you're using a private certificate, pin your application to the CA's root certificate\.
++ If you're using a public certificate, pin your application to all available [ Amazon root certificates](https://www.amazontrust.com/repository/)\. If you're using a private certificate, pin your application to the CA's root certificate\.
 
 ## Domain Validation<a name="best-practices-validating"></a>
 
@@ -44,7 +44,7 @@ If you use DNS validation instead, you must write one new DNS record to the data
 **Important**  
 Regardless of the actions you take to opt out of certificate transparency logging, your certificate might still be logged by any client or individual that has access to the public or private endpoint to which you bind the certificate\. However, the certificate won't contain a signed certificate timestamp \(SCT\)\. Only the issuing CA can embed an SCT in a certificate\. 
 
-Beginning April 30 2018, Google Chrome will stop trusting public SSL/TLS certificates that are not recorded in a certificate transparency log\. Therefore, beginning April 24 2018, the Amazon CA will start publishing all new certificates and renewals to at least two public logs\. Once a certificate has been logged, it cannot be removed\. For more information, see [Certificate Transparency Logging](acm-concepts.md#concept-transparency)\. 
+As of April 30 2018, Google Chrome no longer trusts public SSL/TLS certificates that are not recorded in a certificate transparency log\. Therefore, beginning April 24 2018, the Amazon CA began publishing all new certificates and renewals to at least two public logs\. Once a certificate has been logged, it cannot be removed\. For more information, see [Certificate Transparency Logging](acm-concepts.md#concept-transparency)\. 
 
 Logging is performed automatically when you request a certificate or when a certificate is renewed, but you can choose to opt out\. Common reasons for doing so include concerns about security and privacy\. For example, logging internal host domain names gives potential attackers information about internal networks that would otherwise not be public\. In addition, logging could leak the names of new or unreleased products and websites\. 
 

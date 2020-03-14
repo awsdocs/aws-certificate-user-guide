@@ -22,7 +22,8 @@ The **value** field contains the CA domain name\. This field can contain the nam
 + amazonaws\.com
 The **value** field can also contain a semicolon \(;\) to indicate that no CA should be permitted to issue a certificate for your domain or subdomain\. Use this field if you decide at some point that you no longer want a certificate issued for a particular domain\.  
 When **tag** is **issuewild**  
-The **value** field is the same as that for when **tag** is **issue** except that the value applies to wildcard certificates\. 
+The **value** field is the same as that for when **tag** is **issue** except that the value applies to wildcard certificates\.   
+When there is an **issuewild** CAA record present that does not include an ACM CA value, then no wildcards can be issued by ACM\. If there is no **issuewild** present, but there is an **issue** CAA record for ACM, then wildcards may be issued by ACM\. 
 
 **Example CAA Record Examples**  
 In the following examples, your domain name comes first followed by the record type \(CAA\)\. The **flags** field is always 0\. The **tags** field can be **issue** or **issuewild**\. If the field is **issue** and you type the domain name of a CA server in the **value** field, the CAA record indicates that your specified server is permitted to issue your requested certificate\. If you type a semicolon ";" in the **value** field, the CAA record indicates that no CA is permitted to issue a certificate\. The configuration of CAA records varies by DNS provider\.   

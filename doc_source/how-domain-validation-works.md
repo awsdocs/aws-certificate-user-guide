@@ -7,12 +7,12 @@ Before renewing a certificate, ACM tries to automatically validate each domain n
 To validate a domain, ACM sends automated, periodic HTTPS requests to it\. For domains that start with `www.`, ACM also sends HTTPS requests to the parent domain\. For example, if your domain is `www.example.com`, ACM sends periodic requests to `www.example.com` and to `example.com`\. For domains that don't start with `www.`, ACM also sends HTTPS requests to `www.domain`\. ACM treats wildcard domain names \(for example, `*.example.com`\) the same as the parent domain\. For examples, see the following table\. 
 
 **Note**  
-If any HTTPS connection attempt is successful, ACM attempts to renew the certificate automatically\.
+If any HTTPS connection attempt is successful, ACM attempts to renew the certificate automatically\. Automatic renewal will not result in an email notification even if the certificate was originally validated by email\.
 
 
 **Example domain names that ACM uses for automatic validation**  
 
-|  Domain name in the certificate  |  Domain names that ACM use for automatic validation  | 
+|  Domain name in the certificate  |  Domain names that ACM uses for automatic validation  | 
 | --- | --- | 
 |  example\.com  |  example\.com www\.example\.com  | 
 |  www\.example\.com  |  www\.example\.com example\.com  | 

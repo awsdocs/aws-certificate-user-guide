@@ -1,7 +1,7 @@
 # AWS Certificate Manager User Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -20,7 +20,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Supported Regions](acm-regions.md)
    + [Services Integrated with AWS Certificate Manager](acm-services.md)
    + [Site Seals and Trust Logos](acm-siteseal.md)
-   + [Limits](acm-limits.md)
+   + [Quotas](acm-limits.md)
    + [Best Practices](acm-bestpractices.md)
    + [Pricing for AWS Certificate Manager](acm-billing.md)
 + [Setting Up](setup.md)
@@ -44,7 +44,6 @@ Amazon's trademarks and trade dress may not be used in
    + [How Domain Validation Works](how-domain-validation-works.md)
    + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)
    + [Request a Domain Validation Email for Certificate Renewal](request-domain-validation-email-for-renewal.md)
-   + [Testing ACM's Managed Renewal Configuration](manual-renewal.md)
 + [Importing Certificates into AWS Certificate Manager](import-certificate.md)
    + [Prerequisites for Importing Certificates](import-certificate-prerequisites.md)
    + [Certificate and Key Format for Importing](import-certificate-format.md)
@@ -81,14 +80,17 @@ Amazon's trademarks and trade dress may not be used in
    + [Resending Validation Email](sdk-validate.md)
 + [ACM Private Key Security](kms.md)
 + [Troubleshooting](troubleshooting.md)
-   + [Troubleshoot Certification Authority Authorization (CAA) Problems](troubleshooting-caa.md)
-   + [Troubleshoot Email Problems](troubleshooting-email.md)
-   + [Troubleshoot Certificate Importing Problems](troubleshoot-import.md)
-   + [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)
-   + [Troubleshoot Certificate Request Problems](troubleshooting-requests.md)
-   + [Troubleshoot Managed Certificate Renewal Problems](troubleshooting-renewal.md)
-   + [Troubleshoot Certificate Validation Problems](troubleshooting-validation.md)
-   + [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)
-   + [Troubleshoot .IO Domain Problems](troubleshoot-iodomains.md)
-   + [Troubleshoot API Gateway Problems](troubleshoot-apigateway.md)
+   + [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)
+      + [Certificate Request Times Out](troubleshooting-timed-out.md)
+      + [Certificate Request Fails](troubleshooting-failed.md)
+   + [Troubleshooting Certificate Validation](certificate-validation.md)
+      + [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)
+         + [Troubleshoot Problems with the .IO Domain](troubleshoot-iodomains.md)
+         + [ACM Console Does Not Display "Create record in Route 53" Button](troubleshooting-route53.md)
+      + [Troubleshoot Email Validation Problems](troubleshooting-email-validation.md)
+   + [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)
+   + [Troubleshooting Other Problems](misc-problems.md)
+      + [Troubleshoot Certificate Import Problems](troubleshoot-import.md)
+      + [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)
+      + [Troubleshoot API Gateway Problems](troubleshoot-apigateway.md)
 + [Document History](dochistory.md)

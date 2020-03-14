@@ -8,7 +8,7 @@ You can use email to validate that you own or control a domain\. Each email cont
 
 ## Resend Email \(Console\)<a name="gs-acm-resend-console"></a>
 
-Select the check box for the pending certificate, choose **Actions**, and then choose **Resend validation email**\. If the 72\-hour period has passed and the certificate status has changed to **Timed out**, you cannot resend validation email\. 
+Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. For a listed certificate showing a status of **Pending validation**, select its check box, choose **Actions**, and then choose **Resend validation email**\. If the 72\-hour period has passed and the certificate status has changed to **Timed out**, you cannot resend validation email\. 
 
 **Note**  
 The preceding information applies only to certificates provided by ACM and only to certificates that use email validation\. Validation email is not required for [certificates that you imported into ACM](import-certificate.md)\.

@@ -1,6 +1,6 @@
-# Troubleshoot Email Problems<a name="troubleshooting-email"></a>
+# Troubleshoot Email Validation Problems<a name="troubleshooting-email-validation"></a>
 
-Consult the following topics if you have trouble with validation email\.
+Consult the following guidance if you are having touble validating a certificate with email\.
 
 **Topics**
 + [Not Receiving Validation Email](#troubleshooting-no-mail)

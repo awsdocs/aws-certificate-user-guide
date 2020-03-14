@@ -1,4 +1,4 @@
-# Troubleshoot Managed Certificate Renewal Problems<a name="troubleshooting-renewal"></a>
+# Troubleshooting Managed Certificate Renewal<a name="troubleshooting-renewal"></a>
 
 ACM tries to automatically renew your ACM certificates before they expire so that no action is required from you\. Consult the following topics if you have trouble with [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md)\. 
 
@@ -24,7 +24,7 @@ Email\-validated certificates require domain validation every 825 days\. In orde
 
 ### Managed Certificate Renewal for DNS\-Validated Certificates<a name="troubleshooting-renewal-domain-validation-failure"></a>
 
-If ACM fails to renew a certificate you originally validated with DNS validation, it is most likely due to missing or inaccurate CNAME records in your DNS configuration\. If this occurs, ACM notifies you that the certificate could not be renewed automatically\. You must insert the correct CNAME records into your DNS database\. You can find the CNAME records for your domains by expanding your certificate and its domain entries in the ACM console\. Refer to the figures below for details\. You can also retrieve CNAME records by using the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) operation in the ACM API or the [describe\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/describe-certificate.html) command in the ACM CLI\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
+ACM does not attempt TLS validation for DNS\-validated certificates\. If ACM fails to renew a certificate you validated with DNS validation, it is most likely due to missing or inaccurate CNAME records in your DNS configuration\. If this occurs, ACM notifies you that the certificate could not be renewed automatically\. You must insert the correct CNAME records into your DNS database\. You can find the CNAME records for your domains by expanding your certificate and its domain entries in the ACM console\. Refer to the figures below for details\. You can also retrieve CNAME records by using the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) operation in the ACM API or the [describe\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/describe-certificate.html) command in the ACM CLI\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
 
 ![\[Select the target certificate from the console.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/Dns-renewal-1.png)
 
@@ -32,6 +32,6 @@ If ACM fails to renew a certificate you originally validated with DNS validation
 
 If the problem persists, contact the [Support Center](https://console.aws.amazon.com/support)\.
 
-## Understanding Renewal Timing<a name="troubleshooting-renewal-domain-async"></a>
+### Understanding Renewal Timing<a name="troubleshooting-renewal-domain-async"></a>
 
 [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md) is an asynchronous process\. This means that the steps don't occur in immediate succession\. After all domain names in an ACM certificate have been validated, there might be a delay before ACM obtains the new certificate\. An additional delay can occur between the time when ACM obtains the renewed certificate and the time when that certificate is deployed to the AWS resources that use it\. Therefore, changes to the certificate status can take up to several hours to appear in the console\. 
