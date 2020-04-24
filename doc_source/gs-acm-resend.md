@@ -21,7 +21,7 @@ Resending validation email applies only to certificates that use email validatio
 You can use the [resend\-validation\-email](https://docs.aws.amazon.com/cli/latest/reference/acm/resend-validation-email.html) command to resend email\. 
 
 ```
-aws acm resend-validation-email --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 --validation-domain example.com
+aws acm resend-validation-email --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 --domain www.example.com --validation-domain example.com
 ```
 
 **Note**  

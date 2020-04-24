@@ -4,10 +4,10 @@ ACM provides managed renewal for your Amazon\-issued SSL/TLS certificates\. This
 
 Automatic renewal is not available for ACM Private CA certificates for which ACM does not create the private key and certificate signing request \(CSR\), such as certificates issued directly from your ACM Private CA without ACM certificate management\. Additionally, automatic renewal is not available for [imported certificates](import-certificate.md)\. For more information, see [How Manual Domain Validation Works](http://docs.aws.amazon.com/acm/latest/userguide/how-domain-validation-works.html#how-manual-domain-validation-works)\.
 
-When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) remains the same\. Also, ACM Certificates are [regional resources](acm-regions.md)\. If you have certificates for the same domain name in multiple AWS Regions, ACM renews each of these certificates independently\.
+When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) remains the same\. Also, ACM certificates are [regional resources](acm-regions.md)\. If you have certificates for the same domain name in multiple AWS Regions, ACM renews each of these certificates independently\.
 
 **Important**  
-Your ACM Certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
+Your ACM certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
 
 For more information about managed certificate renewal, see the following topics\. If you encounter renewal problems, see [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)\.
 

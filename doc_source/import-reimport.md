@@ -26,7 +26,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 
 1. For **Certificate body**, paste the PEM\-encoded end\-entity certificate\.
 
-1. \(Private certificates only\) For **Certificate private key**, paste the unencrypted PEM\-encoded private key associated with the certificate's public key\.
+1. For **Certificate private key**, paste the unencrypted PEM\-encoded private key associated with the certificate's public key\.
 **Important**  
  Currently, [Services Integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
 

@@ -3,7 +3,7 @@
 Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domains that you specified in your request\. You can perform verification using either email or DNS\. This topic discusses email validation\. For information about DNS validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 **Note**  
-Validation applies only to certificates provided by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md)\. If you have trouble validating an ACM Certificate, see [Troubleshooting Certificate Validation](certificate-validation.md)\. If you are not receiving email, see [Not Receiving Validation Email](troubleshooting-email-validation.md#troubleshooting-no-mail)\.
+Validation applies only to certificates provided by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md)\. If you have trouble validating an ACM certificate, see [Troubleshooting Certificate Validation](certificate-validation.md)\. If you are not receiving email, see [Not Receiving Validation Email](troubleshooting-email-validation.md#troubleshooting-no-mail)\.
 
 AWS Certificate Manager \(ACM\) sends email to the 3 contact addresses listed in WHOIS and to 5 common system addresses for each domain that you specify\. That is, up to 8 email messages will be sent for every domain name and subject alternative name that you include in your request\. For example, if you specify only 1 domain name, you will receive up to 8 email messages\. To validate, you must act on 1 of these 8 messages within 72 hours\. If you specify 3 domain names, you will receive up to 24 messages\. To validate, you must act on at least 3 of these emails, 1 for each name that you specified, within 72 hours\.
 
@@ -29,7 +29,7 @@ The console shows where the validation email messages have been sent for the fir
 ![\[Console showing where validation emails were sent.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/PendingValidationEmail.png)
 
 **Note**  
-There is an exception to the process described above\. If you request an ACM Certificate for a domain name that begins with **www** or a wild card asterisk \(**\***\), ACM removes the leading **www** or asterisk and sends email to the administrative addresses\. These addresses are formed by prepending admin@, administrator@, hostmaster@, postmaster@, and webmaster@ to the remaining portion of the domain name\. For example, if you request an ACM Certificate for www\.example\.com, email is sent to admin@example\.com rather than to admin@www\.example\.com\. Likewise, if you request an ACM Certificate for \*\.test\.example\.com, email is sent to admin@test\.example\.com\. The remaining common administrative addresses are similarly formed\.
+There is an exception to the process described above\. If you request an ACM certificate for a domain name that begins with **www** or a wild card asterisk \(**\***\), ACM removes the leading **www** or asterisk and sends email to the administrative addresses\. These addresses are formed by prepending admin@, administrator@, hostmaster@, postmaster@, and webmaster@ to the remaining portion of the domain name\. For example, if you request an ACM certificate for www\.example\.com, email is sent to admin@example\.com rather than to admin@www\.example\.com\. Likewise, if you request an ACM certificate for \*\.test\.example\.com, email is sent to admin@test\.example\.com\. The remaining common administrative addresses are similarly formed\.
 
 **Note**  
 Ensure that email is sent to the administrative addresses for an apex domain, such as `example.com`, rather than to the administrative addresses for a subdomain, such as `test.example.com`\. To do that, specify the `ValidationDomain` option in the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API or the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command\. This feature is not currently supported when you use the console to request a certificate\. 
@@ -40,7 +40,7 @@ The following example shows the validation email that is sent for every domain n
 
 Choose the link that sends you to the Amazon Certificate Approvals website and then choose **I Approve**\. 
 
-![\[Approve your request for an ACM Certificate.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/acm-validation-website.png)
+![\[Approve your request for an ACM certificate.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/acm-validation-website.png)
 
 After choosing **I Approve**, a website opens to indicate that your request was successful\. 
 

@@ -2,6 +2,12 @@
 
 Consult the following guidance if you are having touble validating a certificate with DNS\.
 
+**Tip**  
+The first step in DNS troubleshooting is to check the current status of your domain with tools such as the following:  
+**dig** — [Linux](https://linux.die.net/man/1/dig), [Windows](https://help.dyn.com/how-to-use-binds-dig-tool/)
+**nslookup** — [Linux](https://linux.die.net/man/1/nslookup), [Windows](https://linux.die.net/man/1/nslookup)
+**whois** — [Linux](https://linux.die.net/man/1/whois), [Windows](https://docs.microsoft.com/en-us/sysinternals/downloads/whois)
+
 **Topics**
 + [Troubleshoot Certification Authority Authorization \(CAA\) Problems](#troubleshooting-caa)
 + [Underscores Prohibited by DNS Provider](#underscores-prohibited)
@@ -11,7 +17,7 @@ Consult the following guidance if you are having touble validating a certificate
 
 ## Troubleshoot Certification Authority Authorization \(CAA\) Problems<a name="troubleshooting-caa"></a>
 
-You can use CAA DNS records to specify that the Amazon certificate authority \(CA\) can issue ACM Certificates for your domain or subdomain\. If you receive an error during certificate issuance that says **One or more domain names have failed validation due to a Certification Authority Authentication \(CAA\) error**, check your CAA DNS records\. If you receive this error after your ACM Certificate request has been successfully validated, you must update your CAA records and request a certificate again\. The **value** field in at least one of your CAA records must contain one of the following domain names:
+You can use CAA DNS records to specify that the Amazon certificate authority \(CA\) can issue ACM certificates for your domain or subdomain\. If you receive an error during certificate issuance that says **One or more domain names have failed validation due to a Certification Authority Authentication \(CAA\) error**, check your CAA DNS records\. If you receive this error after your ACM certificate request has been successfully validated, you must update your CAA records and request a certificate again\. The **value** field in at least one of your CAA records must contain one of the following domain names:
 + amazon\.com
 + amazontrust\.com
 + awstrust\.com

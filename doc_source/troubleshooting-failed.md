@@ -38,7 +38,7 @@ You cannot request a certificate for Amazon\-owned domain names such as those en
 
 ## Error Message: Invalid Public Domain<a name="failed-invalid-domain"></a>
 
-One or more of the domain names in the certificate request is not valid\. Typically, this is because a domain name in the request is not a valid top\-level domain\. Try again to request a certificate, correcting any spelling errors or typos that were in the failed request, and ensure that all domain names in the request are for valid top\-level domains\. For example, you cannot request an ACM Certificate for example\.invalidpublicdomain because "invalidpublicdomain" is not a valid top\-level domain\. If you continue to receive this failure reason, contact the [Support Center](https://console.aws.amazon.com/support/home)\. If you don't have a support plan, post a new thread in the [ACM Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=206)\.
+One or more of the domain names in the certificate request is not valid\. Typically, this is because a domain name in the request is not a valid top\-level domain\. Try again to request a certificate, correcting any spelling errors or typos that were in the failed request, and ensure that all domain names in the request are for valid top\-level domains\. For example, you cannot request an ACM certificate for example\.invalidpublicdomain because "invalidpublicdomain" is not a valid top\-level domain\. If you continue to receive this failure reason, contact the [Support Center](https://console.aws.amazon.com/support/home)\. If you don't have a support plan, post a new thread in the [ACM Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=206)\.
 
 ## Error Message: Other<a name="failed-other"></a>
 

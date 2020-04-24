@@ -21,7 +21,7 @@ Each certificates occupies a row in the console\. By default, the following colu
   + Revoked
   + Failed
   + Timed out
-+ **In Use?** – Whether the ACM Certificate is actively associated with an AWS service such as Elastic Load Balancing or CloudFront\. The value can be **No** or **Yes**\.
++ **In Use?** – Whether the ACM certificate is actively associated with an AWS service such as Elastic Load Balancing or CloudFront\. The value can be **No** or **Yes**\.
 
 ### Customize the Console Display<a name="gs-acm-list-console-customize"></a>
 

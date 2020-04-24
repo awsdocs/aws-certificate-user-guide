@@ -29,7 +29,7 @@ The following example pipes the command output to `jq` to apply PEM formatting\.
 ```
 aws acm export-certificate \
 --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase --file://path-to-passphrase-file  \
+--passphrase file://path-to-passphrase-file  \
 | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"'
 ```
 
@@ -71,7 +71,7 @@ To output everything to a file, append the `>` redirector to the previous exampl
 ```
 aws acm export-certificate \
 --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase --file://path-to-passphrase-file \
+--passphrase file://path-to-passphrase-file \
 | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"' \
 > /tmp/export.txt
 ```

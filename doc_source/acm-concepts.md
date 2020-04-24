@@ -128,7 +128,7 @@ See [Domain Names](#concept-dn)\.
 
 Unlike [Symmetric Key Cryptography](#concept-symmetric), asymmetric cryptography uses different but mathematically related keys to encrypt and decrypt content\. One of the keys is public and is typically made available in an X\.509 v3 certificate\. The other key is private and is stored securely\. The X\.509 certificate binds the identity of a user, computer, or other resource \(the certificate subject\) to the public key\. 
 
-ACM Certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM uses the your customer master key \(CMK\) to encrypt the private key\. For more information, see [ACM Private Key Security](kms.md)\.
+ACM certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM uses the your customer master key \(CMK\) to encrypt the private key\. For more information, see [ACM Private Key Security](data-protection.md#kms)\.
 
 ## Certificate Authority<a name="concept-ca"></a>
 

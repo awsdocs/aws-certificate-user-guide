@@ -10,7 +10,7 @@ After you import a certificate, you can use it with the [AWS services that are i
  You are responsible for monitoring the expiration date of your imported certificates and for renewing them before they expire\. If you import a new certificate with the same ARN as the expiring certificate, the new certificate replaces the old one\. In addition, ACM associates the new certificate with the same services and resources as the old certificate\. 
 
 **Important**  
- We recommend that you do not pin an ACM Certificate\. For more information, see [Certificate Pinning](acm-bestpractices.md#best-practices-pinning) and [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)\.
+ We recommend that you do not pin an ACM certificate\. For more information, see [Certificate Pinning](acm-bestpractices.md#best-practices-pinning) and [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)\.
 
 To renew an imported certificate, you can obtain a new certificate from your certificate issuer and then import it to ACM, or you can [request a new certificate](gs-acm-request-public.md) from ACM\.
 
