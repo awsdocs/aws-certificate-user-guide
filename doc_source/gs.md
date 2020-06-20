@@ -4,7 +4,7 @@ Sign into the AWS Management Console and open the ACM console at [https://consol
 
 ACM supports SSL/TLS certificates that can be used to enable secure communication across the internet or over an internal network\. You can request a publicly trusted certificate issued by ACM or import a certificate\. Imported certificates can be issued by a third party and publicly trusted, or they can be self\-signed\. You can also use the ACM console to request that a private certificate be issued by a private certificate authority \(CA\) in your organization\. Private certificates are not trusted by default\. Administrators must install them in client trust stores\. 
 
-This documentation primarily discusses public ACM and third party certificates\. It also discusses how to issue a private certificate using an existing private CA\. To learn more about creating and using a private CA, see [AWS Certificate Manager Private Certificate Authority](http://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\. 
+This documentation primarily discusses public ACM and third party certificates\. It also discusses how to issue a private certificate using an existing private CA\. To learn more about creating and using a private CA, see [AWS Certificate Manager Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\. 
 
 **Topics**
 + [Request a Public Certificate](gs-acm-request-public.md)

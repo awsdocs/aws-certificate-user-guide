@@ -8,6 +8,7 @@ If you imported a certificate and associated it with other AWS services, you can
 + You can add new **Key Usage** extensions but existing extension values cannot be removed\.
 + You can add new **Extended Key Usage** extensions but existing extension values cannot be removed\.
 + The key type and size cannot be changed\.
++ You cannot apply resource tags when reimporting a certificate\.
 
 **Topics**
 + [Reimporting Using the Console](#reimport-certificate-api)
@@ -29,7 +30,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 **Important**  
  Currently, [Services Integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
 
-1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\. The certificate chain includes the end\-entity certificate, zero or more certificates for all intermediate issuing certification authorities, and the root certificate\.
+1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\. The certificate chain includes one or more certificates for all intermediate issuing certification authorities, and the root certificate\. If the certificate to be imported is self\-assigned, no certificate chain is necessary\.
 
 1. Choose **Review and import**\.
 
@@ -40,7 +41,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 The following example shows how to reimport a certificate using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. The example assumes the following:
 + The PEM\-encoded certificate is stored in a file named `Certificate.pem`\.
 + The PEM\-encoded certificate chain is stored in a file named `CertificateChain.pem`\.
-+ The PEM\-encoded, unencrypted private key is stored in a file named `PrivateKey.pem`\.
++ \(Private certificates only\) The PEM\-encoded, unencrypted private key is stored in a file named `PrivateKey.pem`\.
 + You have the ARN of the certificate you want to reimport\.
 
 To use the following example, replace the file names and the ARN with your own and type the command on one continuous line\. The following example includes line breaks and extra spaces to make it easier to read\.
@@ -55,4 +56,4 @@ To reimport a certificate, you must specify the certificate ARN\.
                                  --certificate-arn arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-12345678901
 ```
 
-If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the certificate\. 
+If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the certificate\. 

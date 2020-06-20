@@ -1,4 +1,4 @@
-# Troubleshoot \.IO Domain Problems<a name="troubleshoot-iodomains"></a>
+# Troubleshoot Problems with the \.IO Domain<a name="troubleshoot-iodomains"></a>
 
 The \.IO domain is assigned to the British Indian Ocean Territory\. Currently, the domain registry does not display your public information from the WHOIS database\. This is true whether you have privacy protection for the domain enabled or disabled\. When a WHOIS lookup is performed, only obfuscated registrar information is returned\. Therefore, ACM is unable to send validation email to the following three registered contact addresses that are usually available in WHOIS\.
 + Domain registrant

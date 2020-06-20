@@ -4,6 +4,7 @@ This section introduces basic terms and concepts related to AWS Certificate Mana
 
 **Topics**
 + [ACM Certificate](#concept-acm-cert)
++ [ACM Root CAs](#ACM-root-CAs)
 + [Apex Domain](#concept-apex)
 + [Asymmetric Key Cryptography](#concept-asymmetric)
 + [Certificate Authority](#concept-ca)
@@ -30,6 +31,8 @@ ACM generates X\.509 version 3 certificates\. Each is valid for 13 months and co
 + **Key Usage**\- defines the purpose of the public key embedded in the certificate\. 
 + **Extended Key Usage**\- specifies one or more purposes for which the public key may be used in addition to the purposes specified by the **Key Usage** extension\. 
 + **CRL Distribution Points**\- specifies where CRL information can be obtained\. 
+
+The plaintext of an ACM\-issued certificate resembles the following example:
 
 ```
 Certificate:
@@ -99,6 +102,24 @@ Certificate:
          12:b9:35:d5
 ```
 
+## ACM Root CAs<a name="ACM-root-CAs"></a>
+
+The public end\-entity certificates issued by ACM derive their trust from the following Amazon root CAs:
+
+
+****  
+
+|  Distinguished name  | Encryption algorithm | 
+| --- | --- | 
+|  CN=Amazon Root CA 1,O=Amazon,C=US  | 2048\-bit RSA \(RSA\_2048\) | 
+|  CN=Amazon Root CA 2,O=Amazon,C=US  | 4096\-bit RSA \(RSA\_4096\) | 
+|  CN=Amazon Root CA 3,O=Amazon,C=US  | Elliptic Prime Curve 256 bit \(EC\_prime256v1\) | 
+|  CN=Amazon Root CA 4,O=Amazon,C=US  | Elliptic Prime Curve 384 bit \(EC\_secp384r1\) | 
+
+The default root of trust for ACM\-issued certificates is CN=Amazon Root CA 1,O=Amazon,C=US, which offers 2048\-bit RSA security\. The other roots are reserved for future use\. All of the roots are cross\-signed by the Starfield Services Root Certificate Authority certificate\.
+
+For more information, see [Amazon Trust Services](https://www.amazontrust.com/repository/)\.
+
 ## Apex Domain<a name="concept-apex"></a>
 
 See [Domain Names](#concept-dn)\.
@@ -107,7 +128,7 @@ See [Domain Names](#concept-dn)\.
 
 Unlike [Symmetric Key Cryptography](#concept-symmetric), asymmetric cryptography uses different but mathematically related keys to encrypt and decrypt content\. One of the keys is public and is typically made available in an X\.509 v3 certificate\. The other key is private and is stored securely\. The X\.509 certificate binds the identity of a user, computer, or other resource \(the certificate subject\) to the public key\. 
 
-ACM Certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM stores the associated private key in a hardware security module \(HSM\)\. 
+ACM certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM uses the your customer master key \(CMK\) to encrypt the private key\. For more information, see [ACM Private Key Security](data-protection.md#kms)\.
 
 ## Certificate Authority<a name="concept-ca"></a>
 
@@ -145,7 +166,7 @@ Certificate transparency logging is automatic when you request or renew a certif
 
 ## Domain Name System<a name="concept-dns"></a>
 
-The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.222.333.444`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 ## Domain Names<a name="concept-dn"></a>
 

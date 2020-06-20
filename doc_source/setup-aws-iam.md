@@ -17,18 +17,18 @@ Part of the sign\-up procedure includes receiving an automated telephone call an
 
 ## Create an IAM User<a name="setup-iam"></a>
 
-All AWS accounts have root user credentials \(that is, the credentials of the account owner\)\. These credentials allow full access to all resources in the account\. Because you can't restrict permissions for root user credentials, we recommend that you delete your root user access keys\. Then create AWS Identity and Access Management \(IAM\) user credentials for everyday interaction with AWS\. For more information, see [Lock away your AWS account \(root\) access keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials) in the *IAM User Guide*\.
+All AWS accounts have root user credentials \(that is, the credentials of the account owner\)\. These credentials allow full access to all resources in the account\. Because you can't restrict permissions for root user credentials, we recommend that you delete your root user access keys\. Then create AWS Identity and Access Management \(IAM\) user credentials for everyday interaction with AWS\. For more information, see [Lock away your AWS account \(root\) access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials) in the *IAM User Guide*\.
 
 **Note**  
-You may need AWS account root user access for specific tasks, such as changing an AWS support plan or closing your account\. In these cases, sign in to the AWS Management Console with your email and password\. See [Email and Password \(Root User\)](http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#email-and-password-for-your-AWS-account)\.
+You may need AWS account root user access for specific tasks, such as changing an AWS support plan or closing your account\. In these cases, sign in to the AWS Management Console with your email and password\. See [Email and Password \(Root User\)](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#email-and-password-for-your-AWS-account)\.
 
-For a list of tasks that require root user access, see [AWS Tasks That Require AWS Account Root User](http://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
+For a list of tasks that require root user access, see [AWS Tasks That Require AWS Account Root User](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 
 With IAM, you can securely control access to AWS services and resources for users in your AWS account\. For example, if you require administrator\-level permissions, you can create an IAM user, grant that user full access, and then use those credentials to interact with AWS\. If you need to modify or revoke your permissions, you can delete or modify the policies that are associated with that IAM user\.
 
 If you have multiple users that require access to your AWS account, you can create unique credentials for each user and define who has access to which resources\. You don't need to share credentials\. For example, you can create IAM users with read\-only access to resources in your AWS account and distribute those credentials to your users\. 
 
-ACM also provides two [AWS managed policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) that you can use:
+ACM also provides two [AWS managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) that you can use:
 + **AWSCertificateManagerFullAccess**
 + **AWSCertificateManagerReadOnly**
 

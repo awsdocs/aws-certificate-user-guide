@@ -10,7 +10,7 @@ You can import a certificate into ACM by using the AWS Management Console, the A
 
 The following example shows how to import a certificate using the AWS Management Console\.
 
-1. Open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\.
+1. Open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. If this is your first time using ACM, look for the **AWS Certificate Manager** heading and choose the **Get started** button under it\.
 
 1. Choose **Import a certificate**\.
 
@@ -43,4 +43,4 @@ To use the following example, replace the file names with your own and type the 
                                  --private-key file://PrivateKey.pem
 ```
 
-If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the imported certificate\. 
+If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the imported certificate\. 

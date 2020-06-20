@@ -18,7 +18,7 @@ You can use the AWS CLI to get information about an issued certificate, delete a
 
 ### Retrieve ACM Certificate Fields<a name="gs-acm-manage-cli-describe"></a>
 
-You can use the [describe\-certificate](http://docs.aws.amazon.com/cli/latest/reference/acm/describe-certificate.html) command list the metadata for a certificate\. 
+You can use the [describe\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/describe-certificate.html) command list the metadata for a certificate\. 
 
 ```
 aws acm describe-certificate --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012

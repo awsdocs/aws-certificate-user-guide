@@ -1,10 +1,6 @@
-# Authentication and Access Control<a name="authen-toplevel"></a>
+# Identity and Access Management for AWS Certificate Manager<a name="security-iam"></a>
 
- Access to ACM requires credentials that AWS can use to authenticate your requests\. The credentials must have permissions to access AWS resources such as ACM Certificates\. The following sections provide details on how you can use [AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) and ACM to help secure your resources by controlling who can access them\. 
-
-**Topics**
-+ [Authentication](#authentication)
-+ [Access Control](#authorization)
+ Access to AWS Certificate Manager \(ACM\) requires credentials that AWS can use to authenticate your requests\. The following topics provide details on how you can use [AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) to help secure your private certificate authorities \(CAs\) by controlling who can access them\. 
 
 ## Authentication<a name="authentication"></a>
 
@@ -30,11 +26,11 @@ You can access AWS as any of the following types of identities:
 
 ## Access Control<a name="authorization"></a>
 
-You can have valid credentials to authenticate your requests, but unless you have permissions you cannot create or access ACM resources\. For example, you must have permission to create, import, retrieve, or list certificates\. 
+You can have valid credentials to authenticate your requests, but unless you have permissions you cannot create or access AWS Certificate Manager resources\. For example, you must have permission to create, import, retrieve, or list certificates\. 
 
  The following topics describe how to manage permissions\. We recommend that you read the overview first\. 
 + [Overview of Managing Access to Your ACM Resources](authen-overview.md)
-+ [AWS–Managed Policies](authen-awsmanagedpolicies.md)
++ [AWS Managed Policies](authen-awsmanagedpolicies.md)
 + [Customer Managed Policies](authen-custmanagedpolicies.md)
 + [Inline Policies](authen-inlinepolicies.md)
 + [ACM API Permissions: Actions and Resources Reference](authen-apipermissions.md)

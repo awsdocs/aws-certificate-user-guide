@@ -1,6 +1,6 @@
 # Removing Tags to a Certificate<a name="sdk-tagremove"></a>
 
-The following example shows how to use the [RemoveTagsFromCertificate](http://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) function\.
+The following example shows how to use the [RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) function\.
 
 ```
 package com.amazonaws.samples;
