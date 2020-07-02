@@ -1,8 +1,12 @@
 # Managed Renewal for ACM's Amazon\-Issued Certificates<a name="managed-renewal"></a>
 
-ACM provides managed renewal for your Amazon\-issued SSL/TLS certificates\. This includes both public and private certificates issued by using ACM\. If possible, ACM renews your certificates automatically with no action required from you\. A certificate is eligible for renewal if it is associated with another AWS service, such as Elastic Load Balancing or CloudFront, or if it has been exported since being issued or last renewed\.
-
-Automatic renewal is not available for ACM Private CA certificates for which ACM does not create the private key and certificate signing request \(CSR\), such as certificates issued directly from your ACM Private CA without ACM certificate management\. Additionally, automatic renewal is not available for [imported certificates](import-certificate.md)\. For more information, see [How Manual Domain Validation Works](http://docs.aws.amazon.com/acm/latest/userguide/how-domain-validation-works.html#how-manual-domain-validation-works)\.
+ACM provides managed renewal for your Amazon\-issued SSL/TLS certificates\. This includes both public and private certificates issued by using ACM\. If possible, ACM renews your certificates automatically with no action required from you\. A certificate is eligible for automatic renewal subject to the following considerations:
++ ELIGIBLE if associated with another AWS service, such as Elastic Load Balancing or CloudFront\.
++ ELIGIBLE if exported since being issued or last renewed\.
++ ELIGIBLE if it is a private certificate issued by calling the ACM [https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\.
++ ELIGIBLE if it is a private certificate issued through the [management console](gs-acm-request-private.md)\.
++ NOT ELIGIBLE if it is a private certificate issued by calling the ACM Private CA [https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html) API\.
++ NOT ELIGIBLE if [imported](import-certificate.md)\.
 
 When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) remains the same\. Also, ACM certificates are [regional resources](acm-regions.md)\. If you have certificates for the same domain name in multiple AWS Regions, ACM renews each of these certificates independently\.
 

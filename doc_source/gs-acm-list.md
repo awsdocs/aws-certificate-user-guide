@@ -10,7 +10,7 @@ You can use the ACM console or AWS CLI to list the certificates managed by ACM
 
 ### Display Certificate Information<a name="gs-acm-list-console-display"></a>
 
-Each certificates occupies a row in the console\. By default, the following columns are displayed for each certificate: 
+Each certificate occupies a row in the console\. By default, the following columns are displayed for each certificate: 
 + **Domain Name** – The fully qualified domain name for the certificate\.
 + **Additional Names** – Additional names that are supported by this certificate\.
 + **Status** – Certificate status\. This can be any of the following values:
@@ -54,7 +54,7 @@ The `list-certificates` command outputs the following information\.
 }
 ```
 
-By default, only certificates that are supported by [Services Integrated with AWS Certificate Manager](acm-services.md) are listed\. That is, only certificates with **keyTypes** `RSA_1024` and `RSA_2048` are returned\. To see other certificates that you own or control that use a different algorithm and bit size, use the `--includes` parameter as shown in the following example\. The parameter allows you to specify a member of the [Filters](https://docs.aws.amazon.com/acm/latest/APIReference/API_Filters.html) structure\. 
+By default, only certificates that are supported by [Services Integrated with AWS Certificate Manager](acm-services.md) are listed\. That is, only certificates with **keyTypes** `RSA_1024` or `RSA_2048` and with at least one specified domain are returned\. To see other certificates that you control, such as domainless certificates or certificates using a different algorithm or bit size, provide the `--includes` parameter as shown in the following example\. The parameter allows you to specify a member of the [Filters](https://docs.aws.amazon.com/acm/latest/APIReference/API_Filters.html) structure\. 
 
 ```
 aws acm list-certificates --max-items 10 --includes keyTypes=RSA_4096

@@ -1,18 +1,29 @@
 # What Is AWS Certificate Manager?<a name="acm-overview"></a>
 
-Welcome to the AWS Certificate Manager \(ACM\) service\. ACM handles the complexity of creating and managing public SSL/TLS certificates for your AWS based websites and applications\. You can use public [certificates provided by ACM](gs-acm-request-public.md) \(ACM certificates\) or [ certificates that you import into ACM](import-certificate.md)\. ACM certificates can secure multiple domain names and multiple names within a domain\. You can also use ACM to create wildcard SSL certificates that can protect an unlimited number of subdomains\. 
+AWS Certificate Manager \(ACM\) handles the complexity of creating, storing, and renewing public SSL/TLS X\.509 certificates and keys that protect your AWS websites and applications\. You can provide certificates for supported AWS services either by issuing them directly with ACM or by importing third\-party certificates into the ACM management system\. ACM certificates can secure multiple domain names and multiple names within a domain\. You can also use ACM to create wildcard SSL certificates that can protect an unlimited number of subdomains\. You can also use ACM to export a private certificate and encrypted private key to use anywhere\. For more information, see [Export a Private Certificate](gs-acm-export-private.md)\.
 
-ACM is tightly linked with AWS Certificate Manager Private Certificate Authority\. You can use ACM PCA to create a private certificate authority \(CA\) and then use ACM to issue private certificates\. These are SSL/TLS X\.509 certificates that identify users, computers, applications, services, servers, and other devices internally\. Private certificates cannot be publicly trusted\. For more information about ACM PCA, see the [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\. Private certificates issued by using ACM are much like public ACM certificates\. They have similar benefits and restrictions\. The benefits include managing the private keys associated with the certificate, renewing certificates, and enabling you to use the console to deploy your private certificate with integrated services\. For more information about the restrictions associated with using ACM, see [Request a Private Certificate](gs-acm-request-private.md)\. You can also use ACM to export a private certificate and encrypted private key to use anywhere\. For more information, see [Export a Private Certificate](gs-acm-export-private.md)\. For information about the benefits of using ACM PCA as a standalone service to issue private certificates, see the introduction in the [ACM PCA User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\. 
+## Is ACM the Right Service for Me?<a name="service-options"></a>
 
-**Note**  
-You cannot install public ACM certificates directly on your website or application\. You must install your certificate by using one of the services integrated with ACM and ACM PCA\. For more information about these services, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
+AWS offers two options to customers deploying managed SSL/TLS X\.509 certificates\. Choose the best one for your needs\.
+
+1. **AWS Certificate Manager \(ACM\)**—This service is for enterprise customers who need a secure web presence using TLS\. ACM certificates are deployed through Elastic Load Balancing, Amazon CloudFront, Amazon API Gateway, and other [integrated services](acm-services.md)\. The most common application of this kind is a secure public website with significant traffic requirements\. *You are in the right place for this service\.*
+
+1. **ACM Private CA**—This service is for enterprise customers building a public key infrastructure \(PKI\) inside the AWS cloud and intended for private use within an organization\. With ACM Private CA, you can create your own certificate authority \(CA\) hierarchy and issue certificates with it for authenticating users, computers, applications, services, servers, and other devices\. Certificates issued by a private CA cannot be used on the internet\. For more information, see the [ACM Private CA User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\.
 
 **Topics**
-+ [Concepts](acm-concepts.md)
-+ [ACM Certificate Characteristics](acm-certificate.md)
-+ [Supported Regions](acm-regions.md)
-+ [Integrated Services](acm-services.md)
-+ [Site Seals and Trust Logos](acm-siteseal.md)
-+ [Quotas](acm-limits.md)
-+ [Best Practices](acm-bestpractices.md)
-+ [Pricing](acm-billing.md)
+
+[Concepts](acm-concepts.md)
+
+[ACM Certificate Characteristics](acm-certificate.md)
+
+[Supported Regions](acm-regions.md)
+
+[Services Integrated with AWS Certificate Manager](acm-services.md)
+
+[Site Seals and Trust Logos](acm-siteseal.md)
+
+[API Rate Quotas](acm-limits.md#api-rate-limits)
+
+[Best Practices](acm-bestpractices.md)
+
+[Pricing for AWS Certificate Manager](acm-billing.md)

@@ -22,7 +22,7 @@ For more information about how to ensure that you receive domain validation emai
 ## Error Message: Domain Not Allowed<a name="failed-domain-not-allowed"></a>
 
 One or more of the domain names in the certificate request was reported as an unsafe domain by [VirusTotal](https://www.virustotal.com/gui/home/url)\. To correct the problem, try the following:
-+ Search for your domain name on the [VirusTotal](https://www.virustotal.com/gui/home/url) website\. If your domain is reported as suspicious, see [Google Help for Hacked Websites]() to learn what you can do\.
++ Search for your domain name on the [VirusTotal](https://www.virustotal.com/gui/home/url) website\. If your domain is reported as suspicious, see [Google Help for Hacked Websites](https://www.google.com/webmasters/hacked/) to learn what you can do\.
 + If you believe that the result is a false positive, notify the organization that is reporting the domain\. VirusTotal is an aggregate of several antivirus and URL scanners and cannot remove your domain from a blacklist itself\.
 
 After you correct the problem and the VirusTotal registry has been updated, request a new certificate\.

@@ -2,6 +2,8 @@
 
 Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domain names that you specified in your request\. You can choose either email validation or DNS validation when you request a certificate\. This topic discusses DNS validation\. For information about email validation, see [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
 
+If you encounter problems using DNS validation, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
+
 **Note**  
 Validation applies only to certificates provided by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md)\. 
 
@@ -35,7 +37,7 @@ DNS validation has a number of advantages over email validation:
 + You can more easily automate the DNS validation process than you can the email validation process\.
 + Email\-validated certificates are only renewable up to 825 days after their original validation date\. After 825 days, the domain owner or an authorized representative must request a new certificate, while DNS\-validated certificates are renewable indefinitely\.
 
-Note however that you may be required to use email validation if you do not have permission to modify the DNS records for your domain\. <a name="gs-acm-use-dns"></a>
+However, you may be required to use email validation if you do not have permission to modify the DNS records for your domain\. <a name="gs-acm-use-dns"></a>
 
 # To use DNS validation:<a name="gs-acm-use-dns"></a>
 
@@ -73,9 +75,9 @@ However, the required CNAME information only includes the following:
    + You have permission to write to the zone hosted by Route 53\.
    + Your FQDN has *not* already been validated\.
 
-   If the **Create record in Route 53** button is missing or disabled, see [ACM Console Does Not Display "Create record in Route 53" Button](troubleshooting-route53.md)\. For more information about Route 53 record sets, see [Working with Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)\.
-**Note**  
-You cannot programmatically request that ACM automatically create your record in Route 53\. You can, however, make a AWS CLI or API call to Route 53 to create the record\.
+   If the **Create record in Route 53** button is missing or disabled, see [ACM Console Does Not Display "Create record in Route 53" Button](troubleshooting-DNS-validation.md#troubleshooting-route53-1)\. 
+
+   You cannot programmatically request that ACM automatically create your record in Route 53\. You can, however, make a AWS CLI or API call to Route 53 to create the record\. For more information about Route 53 record sets, see [Working with Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)\.
 
 1. Add the record from the console or the exported file to your database\. For more information about adding DNS records, see [Adding a CNAME to Your Database](#dns-add-cname)\. You can choose **Continue** to skip this step\. You can return to it later by opening the certificate request in the console\. 
 **Note**  

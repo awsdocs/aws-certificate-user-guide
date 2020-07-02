@@ -1,6 +1,10 @@
 # Export a Private Certificate<a name="gs-acm-export-private"></a>
 
-You can export a private certificate AWS Certificate Manager Private Certificate Authority \(ACM Private CA\) for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
+You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For more information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
+
+**Topics**
++ [Exporting a Private Certificate Using the Console](#export-console)
++ [Exporting a Private Certificate Using the CLI](#export-cli)
 
 ## Exporting a Private Certificate Using the Console<a name="export-console"></a>
 

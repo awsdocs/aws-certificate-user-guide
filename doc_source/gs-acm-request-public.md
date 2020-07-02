@@ -1,6 +1,10 @@
 # Request a Public Certificate<a name="gs-acm-request-public"></a>
 
-The following sections discuss how to use the ACM console or AWS CLI to request a public ACM certificate\. If you are having trouble requesting a certificate, see [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)\. If you are having trouble requesting a certificate for an \.IO domain, see [Troubleshoot Problems with the \.IO Domain ](troubleshoot-iodomains.md)\. To request a private certificate using your private certificate authority \(CA\), see [Request a Private Certificate](gs-acm-request-private.md)\. 
+The following sections discuss how to use the ACM console or AWS CLI to request a public ACM certificate\. 
+
+If you encounter problems when requesting a certificate, see [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)\. 
+
+To request a private certificate using your private certificate authority \(CA\), see [Request a Private Certificate](gs-acm-request-private.md)\. 
 
 **Topics**
 + [Requesting a Public Certificate Using the Console](#request-public-console)

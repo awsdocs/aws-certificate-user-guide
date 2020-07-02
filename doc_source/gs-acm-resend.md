@@ -2,6 +2,11 @@
 
 You can use email to validate that you own or control a domain\. Each email contains a validation token that you can use to approve a certificate request\. However, because the validation email required for the approval process can be blocked by spam filters or lost in transit, the validation token automatically expires after 72 hours\. If you do not receive the original email or the token has expired, you can request that the email be resent\. 
 
+For persistent problems with email validation, see the [Troubleshoot Email Validation Problems](troubleshooting-email-validation.md) section in [Troubleshooting](troubleshooting.md)\.
+
+**Note**  
+The following information applies only to certificates provided by ACM and only to certificates that use email validation\. Validation email is not required for [certificates that you imported into ACM](import-certificate.md)\. For information about DNS domain validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+
 **Topics**
 + [Resend Email \(Console\)](#gs-acm-resend-console)
 + [Resend Email \(CLI\)](#gs-acm-resend-cli)
@@ -9,12 +14,6 @@ You can use email to validate that you own or control a domain\. Each email cont
 ## Resend Email \(Console\)<a name="gs-acm-resend-console"></a>
 
 Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. For a listed certificate showing a status of **Pending validation**, select its check box, choose **Actions**, and then choose **Resend validation email**\. If the 72\-hour period has passed and the certificate status has changed to **Timed out**, you cannot resend validation email\. 
-
-**Note**  
-The preceding information applies only to certificates provided by ACM and only to certificates that use email validation\. Validation email is not required for [certificates that you imported into ACM](import-certificate.md)\.
-
-**Note**  
-Resending validation email applies only to certificates that use email validation, not DNS validation\. For more information about DNS domain validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 ## Resend Email \(CLI\)<a name="gs-acm-resend-cli"></a>
 

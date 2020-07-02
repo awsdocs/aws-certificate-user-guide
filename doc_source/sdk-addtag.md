@@ -5,99 +5,63 @@ The following example shows how to use the [AddTagsToCertificate](https://docs.a
 ```
 package com.amazonaws.samples;
 
-import com.amazonaws.services.certificatemanager.AWSCertificateManagerClientBuilder;
-import com.amazonaws.services.certificatemanager.AWSCertificateManager;
-import com.amazonaws.services.certificatemanager.model.AddTagsToCertificateRequest;
-import com.amazonaws.services.certificatemanager.model.AddTagsToCertificateResult;
-import com.amazonaws.services.certificatemanager.model.Tag;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-import com.amazonaws.services.certificatemanager.model.InvalidArnException;
-import com.amazonaws.services.certificatemanager.model.InvalidTagException;
-import com.amazonaws.services.certificatemanager.model.ResourceNotFoundException;
-import com.amazonaws.services.certificatemanager.model.TooManyTagsException;
-
-import com.amazonaws.AmazonClientException;
-
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
-
-import java.util.ArrayList;
-
+import com.amazonaws.services.certificatemanager.AWSCertificateManager;
+import com.amazonaws.services.certificatemanager.AWSCertificateManagerClientBuilder;
+import com.amazonaws.services.certificatemanager.model.ImportCertificateRequest;
+import com.amazonaws.services.certificatemanager.model.ImportCertificateResult;
 /**
- * This sample demonstrates how to use the AddTagsToCertificate function in the AWS Certificate
- * Manager service.
+ * This sample demonstrates how to use the ImportCertificate function in the AWS Certificate Manager 
+ * service.
  *
  * Input parameters:
- *   CertificateArn - The ARN of the certificate to which to add one or more tags.
- *   Tags - An array of Tag objects to add.
+ *   Accesskey - AWS access key
+ *   SecretKey - AWS secret key
+ *   CertificateArn - Use to reimport a certificate (not included in this example).
+ *   region - AWS region
+ *   Certificate - PEM file that contains the certificate to import. Ex: /data/certs/servercert.pem
+ *   CertificateChain - The certificate chain, not including the end-entity certificate.
+ *   PrivateKey - The private key that matches the public key in the certificate.
  *
-*/
+ * Output parameter:
+ *   CertificcateArn - The ARN of the imported certificate.
+ *
+ */
+public class AWSCertificateManagerSample {
 
-public class AWSCertificateManagerExample {
+	public static void main(String[] args) throws IOException {
+		String accessKey = "";
+		String secretKey = "";
+		String certificateArn = null;
+		Regions region = Regions.DEFAULT_REGION;
+		String serverCertFilePath = "";
+		String privateKeyFilePath = "";
+		String caCertFilePath = "";
 
-   public static void main(String[] args) throws Exception {
+		ImportCertificateRequest req = new ImportCertificateRequest()
+				.withCertificate(getCertContent(serverCertFilePath))
+				.withPrivateKey(getCertContent(privateKeyFilePath))
+				.withCertificateChain(getCertContent(caCertFilePath)).withCertificateArn(certificateArn);
 
-      // Retrieve your credentials from the C:\Users\name\.aws\credentials file in Windows
-      // or the ~/.aws/credentials file in Linux.
-      AWSCredentials credentials = null;
-      try {
-          credentials = new ProfileCredentialsProvider().getCredentials();
-      }
-      catch (Exception ex) {
-          throw new AmazonClientException("Cannot load your credentials from file.", ex);
-      }
+		AWSCertificateManager client = AWSCertificateManagerClientBuilder.standard().withRegion(region)
+				.withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
+				.build();
+		ImportCertificateResult result = client.importCertificate(req);
 
-      // Create a client.
-      AWSCertificateManager client = AWSCertificateManagerClientBuilder.standard()
-              .withRegion(Regions.US_EAST_1)
-              .withCredentials(new AWSStaticCredentialsProvider(credentials))
-              .build();
+		System.out.println(result.getCertificateArn());
+	}
 
-      // Create tags.
-      Tag tag1 = new Tag();
-      tag1.setKey("Short_Name");
-      tag1.setValue("My_Cert");
-
-      Tag tag2 = new Tag()
-            .withKey("Purpose")
-            .withValue("Test");
-
-      // Add the tags to a collection.
-      ArrayList<Tag> tags = new ArrayList<Tag>();
-      tags.add(tag1);
-      tags.add(tag2);
-
-      // Create a request object and specify the ARN of the certificate.
-      AddTagsToCertificateRequest req = new AddTagsToCertificateRequest();
-      req.setCertificateArn("arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012");
-      req.setTags(tags);
-
-      // Add tags to the specified certificate.
-      AddTagsToCertificateResult result = null;
-      try {
-         result = client.addTagsToCertificate(req);
-      }
-      catch(InvalidArnException ex)
-      {
-         throw ex;
-      }
-      catch(InvalidTagException ex)
-      {
-         throw ex;
-      }
-      catch(ResourceNotFoundException ex)
-      {
-         throw ex;
-      }
-      catch(TooManyTagsException ex)
-      {
-         throw ex;
-      }
-
-      // Display the result.
-      System.out.println(result);
-   }
+	private static ByteBuffer getCertContent(String filePath) throws IOException {
+		String fileContent = new String(Files.readAllBytes(Paths.get(filePath)));
+		return StandardCharsets.UTF_8.encode(fileContent);
+	}
 }
 ```

@@ -1,6 +1,6 @@
 # Request a Private Certificate<a name="gs-acm-request-private"></a>
 
-The following sections discuss how to use the ACM console request a private certificate from an existing private certificate authority \(CA\) that you have previously created using AWS Certificate Manager Private Certificate Authority\. For more information about creating a private CA, see [Create a Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
+The following sections discuss how to use the ACM console or an ACM CLI command to request a private certificate from an existing private certificate authority \(CA\) that you have previously created using AWS Certificate Manager Private Certificate Authority\. For more information about creating a private CA, see [Create a Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
 
 Private certificates issued by ACM resemble public certificates issued by ACM\. The certificates have the following restrictions: 
 + You must use DNS subject names\. For more information, see [Domain Names](acm-concepts.md#concept-dn)

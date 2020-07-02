@@ -10,3 +10,4 @@ If you don't see your issue addressed in this section, we recommend visiting the
 + [Troubleshooting Certificate Validation](certificate-validation.md)
 + [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)
 + [Troubleshooting Other Problems](misc-problems.md)
++ [Handling Exceptions](exceptions.md)

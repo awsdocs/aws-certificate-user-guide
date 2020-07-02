@@ -1,6 +1,6 @@
 # Troubleshoot Email Validation Problems<a name="troubleshooting-email-validation"></a>
 
-Consult the following guidance if you are having touble validating a certificate with email\.
+Consult the following guidance if you are having trouble validating a certificate with email\.
 
 **Topics**
 + [Not Receiving Validation Email](#troubleshooting-no-mail)
@@ -39,7 +39,7 @@ If, after reviewing the preceding guidance, you still don't receive the domain v
 
 ## Email Sent to Subdomain<a name="troubleshooting-email-subdomains"></a>
 
-If you are using the console and request a certificate for a subdomain name such as `sub.test.example.com`, then ACM checks to see if there is an MX record for `sub.test.example.com`\. If not, then the parent domain `test.example.com` is checked, and so on, up to the base domain `example.com`\. If an MX record is found, the search stops and a validation email is sent to the common administration addresses for the subdomain\. So for example, if an MX record is found for `test.example.com`, email is sent to admin@test\.example\.com, administrator@test\.example\.com, and the other administrative addresses specified in [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. If an MX record is not found in any of the subdomains, email is sent to the subdomain that you originally requested the certificate for\. For a thorough discussion of how to setup your email and how ACM works with DNS and the WHOIS database, see [\(Optional\) Configure Email for Your Domain](setup-email.md)\. 
+If you are using the console and request a certificate for a subdomain name such as `sub.test.example.com`, then ACM checks to see if there is an MX record for `sub.test.example.com`\. If not, then the parent domain `test.example.com` is checked, and so on, up to the base domain `example.com`\. If an MX record is found, the search stops and a validation email is sent to the common administration addresses for the subdomain\. So for example, if an MX record is found for `test.example.com`, email is sent to admin@test\.example\.com, administrator@test\.example\.com, and the other administrative addresses specified in [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. If an MX record is not found in any of the subdomains, email is sent to the subdomain that you originally requested the certificate for\. For a thorough discussion of how to set up your email and how ACM works with DNS and the WHOIS database, see [\(Optional\) Configure Email for Your Domain](setup-email.md)\. 
 
 Instead of using the console, you can use the `ValidationDomain` option in the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API or the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) AWS CLI command to specify the domain name to which ACM sends validation emails\. If you use the API or the AWS CLI, AWS does not perform an MX lookup\. 
 

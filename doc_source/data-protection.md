@@ -19,12 +19,10 @@ When you [request a public certificate](gs-acm-request-public.md), AWS Certifica
 
 1. The first time you request or import a certificate in an AWS Region, ACM creates an AWS managed customer master key \(CMK\) in AWS KMS with the alias **aws/acm**\. This CMK is unique in each AWS account and each AWS Region\.
 
-1. ACM uses this CMK to encrypt the certificate's private key\. ACM stores only an encrypted version of the private key \(ACM does not store the private key in plaintext form\)\. ACM uses the same CMK to encrypt the private keys for all certificates in a specific AWS account and a specific AWS Region\.
+1. ACM uses this CMK to encrypt the certificate's private key\. ACM stores only an encrypted version of the private key; ACM does not store the private key in plaintext form\. ACM uses the same CMK to encrypt the private keys for all certificates in a specific AWS account and a specific AWS Region\.
 
 1. When you associate the certificate with a service that is integrated with AWS Certificate Manager, ACM sends the certificate and the encrypted private key to the service\. You also implicitly create a grant in AWS KMS that allows the service to use the CMK in AWS KMS to decrypt the certificate's private key\. For more information about grants, see [ Using Grants ](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html) in the *AWS Key Management Service Developer Guide*\. For more information about services supported by ACM, see [Services Integrated with AWS Certificate Manager](acm-services.md)\.
 
 1. Integrated services use the CMK in AWS KMS to decrypt the private key\. Then the service uses the certificate and the decrypted \(plaintext\) private key to establish secure communication channels \(SSL/TLS sessions\) with its clients\.
 
 1. When the certificate is disassociated from an integrated service, the grant created in step 3 is retired\. This means the service can no longer use the CMK in AWS KMS to decrypt the certificate's private key\.
-
-1. Private keys are stored in AWS managed hardware security modules \(HSMs\)\. These adhere to [FIPS 140\-2 Level 3 security standards](https://csrc.nist.gov/projects/cryptographic-module-validation-program/standards)\. 
