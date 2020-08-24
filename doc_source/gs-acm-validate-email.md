@@ -1,11 +1,11 @@
-# Use Email to Validate Domain Ownership<a name="gs-acm-validate-email"></a>
+# Using Email to Validate Domain Ownership<a name="gs-acm-validate-email"></a>
 
-Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domains that you specified in your request\. You can perform verification using either email or DNS\. This topic discusses email validation\. For information about DNS validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domains that you specified in your request\. You can perform verification using either email or DNS\. This topic discusses email validation\. For information about DNS validation, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 If you encounter problems using email validation, see [Troubleshoot Email Validation Problems](troubleshooting-email-validation.md)\.
 
 **Note**  
-Validation applies only to certificates provided by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md)\.
+Validation applies only to public certificates issued by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md) or for certificates signed by a private CA\.
 
 AWS Certificate Manager \(ACM\) sends email to the 3 contact addresses listed in WHOIS and to 5 common system addresses for each domain that you specify\. That is, up to 8 email messages will be sent for every domain name and subject alternative name that you include in your request\. For example, if you specify only 1 domain name, you will receive up to 8 email messages\. To validate, you must act on 1 of these 8 messages within 72 hours\. If you specify 3 domain names, you will receive up to 24 messages\. To validate, you must act on at least 3 of these emails, 1 for each name that you specified, within 72 hours\.
 

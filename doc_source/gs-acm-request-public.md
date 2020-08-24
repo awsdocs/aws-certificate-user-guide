@@ -1,16 +1,16 @@
-# Request a Public Certificate<a name="gs-acm-request-public"></a>
+# Requesting a Public Certificate<a name="gs-acm-request-public"></a>
 
 The following sections discuss how to use the ACM console or AWS CLI to request a public ACM certificate\. 
 
 If you encounter problems when requesting a certificate, see [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)\. 
 
-To request a private certificate using your private certificate authority \(CA\), see [Request a Private Certificate](gs-acm-request-private.md)\. 
+To request a certificate for a private PKI using ACM Private CA, see [Requesting a Private Certificate](gs-acm-request-private.md)\. 
 
 **Topics**
-+ [Requesting a Public Certificate Using the Console](#request-public-console)
-+ [Requesting a Public Certificate Using the CLI](#request-public-cli)
++ [Request a Public Certificate Using the Console](#request-public-console)
++ [Request a Public Certificate Using the CLI](#request-public-cli)
 
-## Requesting a Public Certificate Using the Console<a name="request-public-console"></a>
+## Request a Public Certificate Using the Console<a name="request-public-console"></a>
 
 **To request an ACM public certificate \(console\)**
 
@@ -30,9 +30,9 @@ When you request a wild card certificate, the asterisk \(**\***\) must be in the
 
 1. On the **Select validation method** page, choose either **DNS validation** or **Email validation**, depending on your needs\.
 **Note**  
-If you are able to edit your DNS configuration, we recommend that you use DNS domain validation rather than email validation\. DNS validation has multiple benefits over email validation\. See [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+If you are able to edit your DNS configuration, we recommend that you use DNS domain validation rather than email validation\. DNS validation has multiple benefits over email validation\. See [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
-   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request\. You can use either email validation or DNS validation\. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name\. You or an authorized representative must reply to one of these email messages\. For more information, see [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. If you use DNS validation, you simply write a CNAME record provided by ACM to your DNS configuration\. For more information about DNS validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
+   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request\. You can use either email validation or DNS validation\. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name\. You or an authorized representative must reply to one of these email messages\. For more information, see [Using Email to Validate Domain Ownership](gs-acm-validate-email.md)\. If you use DNS validation, you simply add a CNAME record provided by ACM to your DNS configuration\. For more information about DNS validation, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
 
    After choosing a validation method, choose **Next**\.
 
@@ -46,7 +46,7 @@ Unless you choose to opt out, your certificate will be automatically recorded in
 
    Choose **Continue** to return to the ACM console\.
 
-## Requesting a Public Certificate Using the CLI<a name="request-public-cli"></a>
+## Request a Public Certificate Using the CLI<a name="request-public-cli"></a>
 
 Use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a new public ACM certificate on the command line\. 
 

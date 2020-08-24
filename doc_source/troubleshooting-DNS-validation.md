@@ -71,7 +71,7 @@ ACM does, however, send validation email to the following five common system add
 To receive validation mail for an \.IO domain, make sure that you have one of the preceding five email accounts enabled\. If you do not, you will not receive validation email and you will not be issued an ACM certificate\.
 
 **Note**  
-We recommend that you use DNS validation rather than email validation\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+We recommend that you use DNS validation rather than email validation\. For more information, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 ## ACM Console Does Not Display "Create record in Route 53" Button<a name="troubleshooting-route53-1"></a>
 

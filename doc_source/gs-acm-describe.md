@@ -1,4 +1,4 @@
-# Describe ACM Certificates<a name="gs-acm-describe"></a>
+# Describing ACM Certificates<a name="gs-acm-describe"></a>
 
 You can use the ACM console or the AWS CLI to list metadata about your certificates\.
 

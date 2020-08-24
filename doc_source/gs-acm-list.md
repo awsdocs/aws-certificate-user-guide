@@ -1,4 +1,4 @@
-# List ACM–Managed Certificates<a name="gs-acm-list"></a>
+# Listing Certificates Managed by ACM<a name="gs-acm-list"></a>
 
 You can use the ACM console or AWS CLI to list the certificates managed by ACM
 

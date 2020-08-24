@@ -1,0 +1,7 @@
+# Problems with the ACM Service\-Linked Role \(SLR\)<a name="slr-problems"></a>
+
+When you issue a certificate signed by a private CA that has been shared with you by another account, ACM attempts on first use to set up a service\-linked role \(SLR\) to interact as a principal with an ACM Private CA [resource\-based access policy](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-resource-sharing.html#pca-rbp)\. If you issue a private certificate from a shared CA and the SLR is not in place, ACM will be unable to automatically renew that certificate for you\.
+
+ACM may alert you that it cannot determine whether an SLR exists on your account\. If the required `iam:GetRole` permission has already been granted to the ACM SLR for your account, then the alert will not recur after the SLR is created\. If it does recur, then you or your account administrator may need to grant the `iam:GetRole` permission to ACM, or associate your account with the ACM managed policy `AWSCertificateManagerFullAccess`\.
+
+For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.

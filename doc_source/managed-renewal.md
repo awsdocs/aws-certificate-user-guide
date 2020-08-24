@@ -15,6 +15,9 @@ Your ACM certificate must be actively associated with a supported AWS service be
 
 For more information about managed certificate renewal, see the following topics\. If you encounter renewal problems, see [Troubleshooting Managed Certificate Renewal](troubleshooting-renewal.md)\.
 
+**Note**  
+If you encounter error messages when creating or renewing ACM Private CA certificates through ACM, consult the Troubleshooting section [Private Certificate Exception Handling](exceptions.md#private_certificate_exception_handling)\.
+
 **Topics**
 + [How Domain Validation Works](how-domain-validation-works.md)
 + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)

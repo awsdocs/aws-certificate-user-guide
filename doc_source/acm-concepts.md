@@ -1,6 +1,6 @@
 # Concepts<a name="acm-concepts"></a>
 
-This section introduces basic terms and concepts related to AWS Certificate Manager \(ACM\)\.
+This section provides definitions of concepts used by AWS Certificate Manager\.
 
 **Topics**
 + [ACM Certificate](#concept-acm-cert)
@@ -24,7 +24,7 @@ This section introduces basic terms and concepts related to AWS Certificate Mana
 
 ## ACM Certificate<a name="concept-acm-cert"></a>
 
-ACM generates X\.509 version 3 certificates\. Each is valid for 13 months and contains the following extensions\. 
+ACM generates X\.509 version 3 certificates\. Each is valid for 13 months \(395 days\) and contains the following extensions\. 
 + **Basic Constraints**\- specifies whether the subject of the certificate is a certification authority \(CA\)
 + **Authority Key Identifier**\- enables identification of the public key corresponding to the private key used to sign the certificate\. 
 + **Subject Key Identifier**\- enables identification of certificates that contain a particular public key\. 
@@ -166,7 +166,7 @@ Certificate transparency logging is automatic when you request or renew a certif
 
 ## Domain Name System<a name="concept-dns"></a>
 
-The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 ## Domain Names<a name="concept-dn"></a>
 

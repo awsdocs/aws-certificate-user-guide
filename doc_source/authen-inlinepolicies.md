@@ -16,14 +16,16 @@ Inline policies are policies that you create and manage and embed directly into 
 The following policy allows a user to list all of the ACM certificates in the user's account\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Action": "acm:ListCertificates",
-        "Resource": "*"
-      }]
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":"acm:ListCertificates",
+         "Resource":"*"
+      }
+   ]
+}
 ```
 
 **Note**  
@@ -34,14 +36,14 @@ This permission is required for ACM certificates to appear in the Elastic Load B
 The following policy allows a user to retrieve a specific ACM certificate\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": {
-        "Effect": "Allow",
-        "Action": "acm:GetCertificate",
-        "Resource": "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
-      }
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":{
+      "Effect":"Allow",
+      "Action":"acm:GetCertificate",
+      "Resource":"arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
+   }
+}
 ```
 
 ## Importing a Certificate<a name="policy-import-certificate"></a>
@@ -49,14 +51,14 @@ The following policy allows a user to retrieve a specific ACM certificate\.
 The following policy allows a user to import a certificate\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": {
-        "Effect": "Allow",
-        "Action": "acm:ImportCertificate",
-        "Resource": "arn:aws:acm:ap-northeast-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
-      }
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":{
+      "Effect":"Allow",
+      "Action":"acm:ImportCertificate",
+      "Resource":"arn:aws:acm:ap-northeast-1:123456789012:certificate/01234567-89ab-cdef-0123-456789abcdef"
+   }
+}
 ```
 
 ## Deleting a Certificate<a name="policy-delete-certificates"></a>
@@ -64,14 +66,14 @@ The following policy allows a user to import a certificate\.
 The following policy allows a user to delete a specific ACM certificate\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": {
-        "Effect": "Allow",
-        "Action": "acm:DeleteCertificate",
-        "Resource": "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
-      }
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":{
+      "Effect":"Allow",
+      "Action":"acm:DeleteCertificate",
+      "Resource":"arn:aws:acm:us-east-1:123456789012:certificate/fedcba98-7654-3210-fedc-ba9876543210"
+   }
+}
 ```
 
 ## Read\-Only Access to ACM<a name="policy-acm-read-only"></a>
@@ -79,19 +81,19 @@ The following policy allows a user to delete a specific ACM certificate\.
 The following policy allows a user to describe and list an ACM certificate and to retrieve the ACM certificate and certificate chain\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": {
-        "Effect": "Allow",
-        "Action": [
-          "acm:DescribeCertificate",
-          "acm:ListCertificates",
-          "acm:GetCertificate",
-          "acm:ListTagsForCertificate"
-        ],
-        "Resource": "*"
-      }
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":{
+      "Effect":"Allow",
+      "Action":[
+         "acm:DescribeCertificate",
+         "acm:ListCertificates",
+         "acm:GetCertificate",
+         "acm:ListTagsForCertificate"
+      ],
+      "Resource":"*"
+   }
+}
 ```
 
 **Note**  
@@ -102,14 +104,18 @@ This policy is available as an AWS managed policy in the AWS Management Console\
 The following policy allows a user to perform any ACM action\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Action": ["acm:*"],
-        "Resource": "*"
-      }]
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "acm:*"
+         ],
+         "Resource":"*"
+      }
+   ]
+}
 ```
 
 **Note**  
@@ -120,14 +126,16 @@ This policy is available as an AWS managed policy in the AWS Management Console\
 The following policy allows a user to perform any action on any AWS resource\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Action": "*",
-        "Resource": "*"
-      }]
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":"*",
+         "Resource":"*"
+      }
+   ]
+}
 ```
 
 **Note**  

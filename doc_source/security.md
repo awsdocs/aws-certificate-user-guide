@@ -14,3 +14,4 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Logging and Monitoring for AWS Certificate Manager](security-logging-and-monitoring.md)
 + [Resilience in AWS Certificate Manager](disaster-recovery-resiliency.md)
 + [Infrastructure Security in AWS Certificate Manager](infrastructure-security.md)
++ [Best Practices](acm-bestpractices.md)

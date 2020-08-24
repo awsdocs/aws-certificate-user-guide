@@ -13,19 +13,19 @@
 This policy provides read–only access to ACM certificates; it allows users to describe, list, and retrieve ACM certificates\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": {
-        "Effect": "Allow",
-        "Action": [
-          "acm:DescribeCertificate",
-          "acm:ListCertificates",
-          "acm:GetCertificate",
-          "acm:ListTagsForCertificate"
-        ],
-        "Resource": "*"
-      }
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":{
+      "Effect":"Allow",
+      "Action":[
+         "acm:DescribeCertificate",
+         "acm:ListCertificates",
+         "acm:GetCertificate",
+         "acm:ListTagsForCertificate"
+      ],
+      "Resource":"*"
+   }
+}
 ```
 
 To view this AWS managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly)\. 
@@ -35,14 +35,37 @@ To view this AWS managed policy in the console, go to [https://console\.aws\.ama
  This policy provides full access to all ACM actions and resources\. 
 
 ```
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Action": ["acm:*"],
-        "Resource": "*"
-      }]
-    }
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "acm:*"
+         ],
+         "Resource":"*"
+      },
+      {
+         "Effect":"Allow",
+         "Action":"iam:CreateServiceLinkedRole",
+         "Resource":"arn:aws:iam::*:role/aws-service-role/acm.amazonaws.com/AWSServiceRoleForCertificateManager*",
+         "Condition":{
+            "StringEquals":{
+               "iam:AWSServiceName":"acm.amazonaws.com"
+            }
+         }
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus",
+            "iam:GetRole"
+         ],
+         "Resource":"arn:aws:iam::*:role/aws-service-role/acm.amazonaws.com/AWSServiceRoleForCertificateManager*"
+      }
+   ]
+}
 ```
 
 To view this AWS managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess)\. 

@@ -1,4 +1,4 @@
-# Delete ACM–Managed Certificates<a name="gs-acm-delete"></a>
+# Deleting Certificates Managed by ACM<a name="gs-acm-delete"></a>
 
 You can use the ACM console or the AWS CLI to delete a certificate\.
 

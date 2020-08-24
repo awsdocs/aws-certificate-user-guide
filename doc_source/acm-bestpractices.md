@@ -29,7 +29,7 @@ If you decide to pin a certificate, the following options will not hinder your a
 
 ## Domain Validation<a name="best-practices-validating"></a>
 
-Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all the domains that you specified in your request\. You can perform verification using either email or DNS\. For more information, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md) and [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
+Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all the domains that you specified in your request\. You can perform verification using either email or DNS\. For more information, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md) and [Using Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
 
 ## Adding or Deleting Domain Names<a name="best-practices-add-delete"></a>
 

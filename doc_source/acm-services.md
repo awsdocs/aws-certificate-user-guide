@@ -1,6 +1,6 @@
 # Services Integrated with AWS Certificate Manager<a name="acm-services"></a>
 
-AWS Certificate Manager supports a growing number of AWS services\. You cannot install your ACM certificate or your private ACM PCA certificate directly on your AWS based website or application\. You must use one of the following services\. 
+AWS Certificate Manager supports a growing number of AWS services\. You cannot install your ACM certificate or your private ACM Private CA certificate directly on your AWS based website or application\. You must use one of the following services\. 
 
 **Elastic Load Balancing**  
  Elastic Load Balancing automatically distributes your incoming application traffic across multiple Amazon EC2 instances\. It detects unhealthy instances and reroutes traffic to healthy instances until the unhealthy instances have been restored\. Elastic Load Balancing automatically scales its request handling capacity in response to incoming traffic\. For more information about load balancing, see the [Elastic Load Balancing User Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/)\.  

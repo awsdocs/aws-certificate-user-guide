@@ -1,11 +1,11 @@
-# Resend Validation Email \(Optional\)<a name="gs-acm-resend"></a>
+# Resending Validation Email \(Optional\)<a name="gs-acm-resend"></a>
 
 You can use email to validate that you own or control a domain\. Each email contains a validation token that you can use to approve a certificate request\. However, because the validation email required for the approval process can be blocked by spam filters or lost in transit, the validation token automatically expires after 72 hours\. If you do not receive the original email or the token has expired, you can request that the email be resent\. 
 
 For persistent problems with email validation, see the [Troubleshoot Email Validation Problems](troubleshooting-email-validation.md) section in [Troubleshooting](troubleshooting.md)\.
 
 **Note**  
-The following information applies only to certificates provided by ACM and only to certificates that use email validation\. Validation email is not required for [certificates that you imported into ACM](import-certificate.md)\. For information about DNS domain validation, see [Use DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+The following information applies only to certificates provided by ACM and only to certificates that use email validation\. Validation email is not required for [certificates that you imported into ACM](import-certificate.md)\. For information about DNS domain validation, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
 
 **Topics**
 + [Resend Email \(Console\)](#gs-acm-resend-console)

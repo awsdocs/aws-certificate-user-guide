@@ -1,15 +1,18 @@
-# Use DNS to Validate Domain Ownership<a name="gs-acm-validate-dns"></a>
+# Using DNS to Validate Domain Ownership<a name="gs-acm-validate-dns"></a>
 
-Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domain names that you specified in your request\. You can choose either email validation or DNS validation when you request a certificate\. This topic discusses DNS validation\. For information about email validation, see [Use Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
+Before the Amazon certificate authority \(CA\) can issue a certificate for your site, AWS Certificate Manager \(ACM\) must verify that you own or control all of the domain names that you specified in your request\. You can choose either email validation or DNS validation when you request a certificate\. This topic discusses DNS validation\. For information about email validation, see [Using Email to Validate Domain Ownership](gs-acm-validate-email.md)\. 
 
 If you encounter problems using DNS validation, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
 
 **Note**  
-Validation applies only to certificates provided by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md)\. 
+Validation applies only to public certificates issued by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md) or for certificates signed by a private CA\.
 
 The Domain Name System \(DNS\) is a directory service for resources connected to a network\. On the internet, DNS servers are used primarily to translate from domain names to the numerical IP addresses that identify and locate resources such as computers and other devices\. The databases on DNS servers contain domain records that are used for this translation and to enable other functionality\. For example, A records are a type of DNS record used to map domain names to IPV4 addresses\. MX records are used to route email\. NS records list all of the name servers for the domain\. 
 
 ACM uses CNAME \(Canonical Name\) records to validate that you own or control a domain\. When you choose DNS validation, ACM provides you one or more CNAME records to insert into your DNS database\. For example, if you request a certificate for the `example.com` domain with `www.example.com` as an additional name, ACM creates two CNAME records for you\. Each record, created specifically for your domain and your account, contains a name and a value\. The value is an alias that points to a domain that ACM owns and which ACM uses to automatically renew your certificate\. You add the CNAME records to your DNS database only once\. ACM automatically renews your certificate as long as the certificate is in use and your CNAME record remains in place\. In addition, if you use Amazon Route 53 to create your domain, ACM can write the CNAME records for you\.
+
+**Note**  
+CNAME resolution will fail if more the five CNAMEs are chained together in your DNS configuration\. If you require a longer chaining, we recommend using [email validation](gs-acm-validate-email.md)\.
 
 If your DNS provider does not support CNAME values with leading underscore, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
 
@@ -43,7 +46,7 @@ However, you may be required to use email validation if you do not have permissi
 
 1. Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\. If the introductory page appears, choose **Get Started**\. Otherwise, choose **Request a certificate**\. 
 
-1. On the **Request a certificate** page, type your domain name\. For more information about typing domain names, see [Request a Public Certificate](gs-acm-request-public.md)\.
+1. On the **Request a certificate** page, type your domain name\. For more information about typing domain names, see [Requesting a Public Certificate](gs-acm-request-public.md)\.
 
 1. To add more domain names to the ACM certificate, type other names as text boxes open beneath the name you just typed\.
 
@@ -79,7 +82,7 @@ However, the required CNAME information only includes the following:
 
    You cannot programmatically request that ACM automatically create your record in Route 53\. You can, however, make a AWS CLI or API call to Route 53 to create the record\. For more information about Route 53 record sets, see [Working with Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)\.
 
-1. Add the record from the console or the exported file to your database\. For more information about adding DNS records, see [Adding a CNAME to Your Database](#dns-add-cname)\. You can choose **Continue** to skip this step\. You can return to it later by opening the certificate request in the console\. 
+1. Add the record from the console or the exported file to your database\. For more information about adding DNS records, see [Add a CNAME to Your Database](#dns-add-cname)\. You can choose **Continue** to skip this step\. You can return to it later by opening the certificate request in the console\. 
 **Note**  
 If your FQDN was validated when you requested a previous certificate and you are requesting another certificate for the same FQDN, you do not need to add another DNS record\.
 **Note**  
@@ -90,7 +93,7 @@ Adding a CNAME record that contains a domain name \(such as *`.example.com`*\) m
  If ACM is not able to validate the domain name within 72 hours from the time it generates a CNAME value for you, ACM changes the certificate status to **Validation timed out**\. The most likely reason for this result is that you did not update your DNS configuration with the value that ACM generated\. To remedy this issue, you must request a new certificate\.   
 ![\[Console shows the CNAME for DNS validation.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/acm_dns_table_view.png)
 
-## Adding a CNAME to Your Database<a name="dns-add-cname"></a>
+## Add a CNAME to Your Database<a name="dns-add-cname"></a>
 
 To use DNS validation, you must be able to add a CNAME record to the DNS configuration for your domain\. If Route 53 is not your DNS provider, contact your provider to find out how to add records\. If Route 53 is your provider, ACM can create the CNAME record for you as discussed previously in step 9\. If you want to add the record yourself, see [Editing Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-editing.html) in the *Route 53 Developer Guide*\. 
 
@@ -99,6 +102,6 @@ If your DNS provider does not support CNAME values with leading underscore, see 
 **Note**  
 If you do not have permission to edit your DNS configuration, you must use email validation\.
 
-## Deleting a CNAME from Your Database<a name="dns-delete-cname"></a>
+## Delete a CNAME from Your Database<a name="dns-delete-cname"></a>
 
 ACM automatically renews your certificate for as long as the certificate is in use and the CNAME record that ACM created for you remains in place in your DNS database\. You can stop automatic renewal by removing the certificate from the AWS service with which it is associated or by deleting the CNAME record\. If Route 53 is not your DNS provider, contact your provider to find out how to delete the record\. If Route 53 is your provider, see [Deleting Resource Record Sets](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-deleting.html) in the *Route 53 Developer Guide*\. For more information about managed certificate renewal, see [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md)\. 
