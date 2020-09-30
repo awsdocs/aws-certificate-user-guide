@@ -7,7 +7,7 @@ After you import an SSL/TLS certificate obtained outside of AWS and have associa
 After you import a certificate, you can use it with the [AWS services that are integrated with ACM](acm-services.md)\. The certificates that you import work the same as those provided by ACM, with one important exception: ACM does not provide [managed renewal](managed-renewal.md) for imported certificates\. 
 
 **Important**  
- You are responsible for monitoring the expiration date of your imported certificates and for renewing them before they expire\. If you import a new certificate with the same ARN as the expiring certificate, the new certificate replaces the old one\. In addition, ACM associates the new certificate with the same services and resources as the old certificate\. 
+You are responsible for monitoring the expiration date of your imported certificates and for renewing them before they expire\. If you import a new certificate with the same ARN as the expiring certificate, the new certificate replaces the old one\. In addition, ACM associates the new certificate with the same services and resources as the old certificate\. 
 
 **Important**  
  We recommend that you do not pin an ACM certificate\. For more information, see [Certificate Pinning](acm-bestpractices.md#best-practices-pinning) and [Troubleshoot Certificate Pinning Problems](troubleshooting-pinning.md)\.

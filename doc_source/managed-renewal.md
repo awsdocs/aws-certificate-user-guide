@@ -7,6 +7,7 @@ ACM provides managed renewal for your Amazon\-issued SSL/TLS certificates\. This
 + ELIGIBLE if it is a private certificate issued through the [management console](gs-acm-request-private.md)\.
 + NOT ELIGIBLE if it is a private certificate issued by calling the ACM Private CA [https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html) API\.
 + NOT ELIGIBLE if [imported](import-certificate.md)\.
++ NOT ELIGIBLE if already expired\.
 
 When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) remains the same\. Also, ACM certificates are [regional resources](acm-regions.md)\. If you have certificates for the same domain name in multiple AWS Regions, ACM renews each of these certificates independently\.
 
@@ -19,6 +20,6 @@ For more information about managed certificate renewal, see the following topics
 If you encounter error messages when creating or renewing ACM Private CA certificates through ACM, consult the Troubleshooting section [Private Certificate Exception Handling](exceptions.md#private_certificate_exception_handling)\.
 
 **Topics**
-+ [How Domain Validation Works](how-domain-validation-works.md)
++ [How Automatic Validation Works](how-domain-validation-works.md)
 + [Check a Certificate's Renewal Status](check-certificate-renewal-status.md)
 + [Request a Domain Validation Email for Certificate Renewal](request-domain-validation-email-for-renewal.md)

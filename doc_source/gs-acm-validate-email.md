@@ -7,6 +7,9 @@ If you encounter problems using email validation, see [Troubleshoot Email Valida
 **Note**  
 Validation applies only to public certificates issued by AWS Certificate Manager \(ACM\)\. ACM does not validate domain ownership for [imported certificates](import-certificate.md) or for certificates signed by a private CA\.
 
+**Note**  
+Public ACM certificates cannot be installed on Amazon EC2 instances\. For information about setting up a stand\-alone EC2\-based web server, see [Tutorial: Install a LAMP web server on Amazon Linux 2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html) or [Tutorial: Install a LAMP web server with the Amazon Linux AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html)\.
+
 AWS Certificate Manager \(ACM\) sends email to the 3 contact addresses listed in WHOIS and to 5 common system addresses for each domain that you specify\. That is, up to 8 email messages will be sent for every domain name and subject alternative name that you include in your request\. For example, if you specify only 1 domain name, you will receive up to 8 email messages\. To validate, you must act on 1 of these 8 messages within 72 hours\. If you specify 3 domain names, you will receive up to 24 messages\. To validate, you must act on at least 3 of these emails, 1 for each name that you specified, within 72 hours\.
 
 Email is sent to the following three registered contact addresses in WHOIS:

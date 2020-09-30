@@ -2,6 +2,9 @@
 
 You can import a certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API\. The following topics show you how to use the AWS Management Console and the AWS CLI\. 
 
+**Note**  
+The private key of an imported certificate must be no larger than 5 KB \(5,120 bytes\)\.
+
 **Topics**
 + [Import Using the Console](#import-certificate-api)
 + [Import Using the AWS CLI](#import-certificate-cli)
@@ -38,9 +41,9 @@ The following example shows how to import a certificate using the [AWS Command L
 To use the following example, replace the file names with your own and type the command on one continuous line\. The following example includes line breaks and extra spaces to make it easier to read\.
 
 ```
-  	$ aws acm import-certificate --certificate file://Certificate.pem
-                                 --certificate-chain file://CertificateChain.pem
-                                 --private-key file://PrivateKey.pem
+$ aws acm import-certificate --certificate fileb://Certificate.pem \
+      --certificate-chain fileb://CertificateChain.pem \
+      --private-key fileb://PrivateKey.pem
 ```
 
 If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the imported certificate\. 

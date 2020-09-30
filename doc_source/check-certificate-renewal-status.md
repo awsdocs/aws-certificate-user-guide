@@ -3,7 +3,7 @@
 You can use the AWS Certificate Manager console, the ACM API, the AWS CLI, or the Personal Health Dashboard to check the renewal status of an ACM certificate\. If you use the console, AWS CLI, or ACM API, certificate renewal can have one of the four possible status values listed below\. Similar values are displayed if you use the Personal Health Dashboard\. 
 
 **Pending automatic renewal**  
-ACM is attempting to automatically validate the domain names in the certificate\. For more information, see [How Domain Validation Works](how-domain-validation-works.md)\. No further action is required\. 
+ACM is attempting to automatically validate the domain names in the certificate\. For more information, see [How Automatic Validation Works](how-domain-validation-works.md)\. No further action is required\. 
 
 **Pending validation**  
 ACM couldn't automatically validate one or more domain names in the certificate\. You must take action to validate these domain names or the certificate won't be renewed\. If you originally used email validation for the certificate, look for an email from ACM and then follow the link in that email to perform the validation\. If you used DNS validation, check to make sure your DNS record exists and that your certificate remains in use\.
@@ -23,7 +23,7 @@ It can take up to several hours for changes to the certificate status to become 
 + [Check the status \(console\)](#check-renewal-status-console)
 + [Check the status \(API\)](#check-renewal-status-api)
 + [Check the status \(CLI\)](#check-renewal-status-cli)
-+ [Check the status \(PHD\)](#check-renewal-status-phd)
++ [Check the status Personal Health Dashboard \(PHD\)](#check-renewal-status-phd)
 
 ## Check the status \(console\)<a name="check-renewal-status-console"></a>
 
@@ -49,9 +49,12 @@ $ aws acm describe-certificate --certificate-arn arn:aws:acm:region:123456789012
 
 In the response, note the value in the `RenewalStatus` field\. If you don't see the `RenewalStatus` field, ACM hasn't started the managed renewal process for your certificate\. 
 
-## Check the status \(PHD\)<a name="check-renewal-status-phd"></a>
+## Check the status Personal Health Dashboard \(PHD\)<a name="check-renewal-status-phd"></a>
 
-ACM attempts to automatically renew your ACM certificate sixty days prior to expiration\. See [How Domain Validation Works](how-domain-validation-works.md)\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](https://docs.aws.amazon.com/health/latest/ug/)\. 
+ACM attempts to automatically renew your ACM certificate sixty days prior to expiration\. See [How Automatic Validation Works](how-domain-validation-works.md)\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](https://docs.aws.amazon.com/health/latest/ug/)\. 
+
+**Note**  
+ACM writes successive renewal event notices to a single event in your PHD timeline\. Each notice overwrites the previous one until the renewal succeeds\.
 
 **To use the Personal Health Dashboard:**
 

@@ -45,6 +45,9 @@ You can use ACM Private CA to sign your ACM certificates in either of two cases:
 
   For more information, see [Using a Service Linked Role with ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html)\. 
 
+**Important**  
+Your ACM certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
+
 ## Request a Private Certificate Using the ACM Console<a name="request-private-console"></a>
 
 1. Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\.

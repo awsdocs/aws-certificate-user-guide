@@ -5,6 +5,9 @@ If the ACM certificate request status is **Pending validation**, the request is 
 **Important**  
 You must validate that you own or control every domain name that you included in your certificate request\. If you chose email validation, you will receive validation email messages for each domain\. If you do not, then see [Not Receiving Validation Email](troubleshooting-email-validation.md#troubleshooting-no-mail)\. If you chose DNS validation, you must create one CNAME record for each domain\. 
 
+**Note**  
+Public ACM certificates cannot be installed on Amazon EC2 instances\. For information about setting up a stand\-alone EC2\-based web server, see [Tutorial: Install a LAMP web server on Amazon Linux 2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html) or [Tutorial: Install a LAMP web server with the Amazon Linux AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html)\.
+
 We recommend that you use DNS validation rather than email validation\.
 
 Consult the following topics if you experience DNS validation problems\.

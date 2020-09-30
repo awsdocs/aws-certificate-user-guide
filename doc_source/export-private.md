@@ -1,6 +1,9 @@
-# Exporting a Private Certificate<a name="gs-acm-export-private"></a>
+# Exporting a Private Certificate<a name="export-private"></a>
 
 You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For more information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
+
+**Note**  
+You cannot export the private key of a publicly trusted ACM certificate\.
 
 **Topics**
 + [Exporting a Private Certificate Using the Console](#export-console)
@@ -33,7 +36,7 @@ The following example pipes the command output to `jq` to apply PEM formatting\.
 ```
 aws acm export-certificate \
 --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase file://path-to-passphrase-file  \
+--passphrase fileb://path-to-passphrase-file  \
 | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"'
 ```
 
@@ -75,7 +78,7 @@ To output everything to a file, append the `>` redirector to the previous exampl
 ```
 aws acm export-certificate \
 --certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase file://path-to-passphrase-file \
+--passphrase fileb://path-to-passphrase-file \
 | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"' \
 > /tmp/export.txt
 ```

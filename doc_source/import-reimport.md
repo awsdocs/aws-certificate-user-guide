@@ -50,10 +50,10 @@ To use the following example, replace the file names and the ARN with your own a
 To reimport a certificate, you must specify the certificate ARN\.
 
 ```
-  	$ aws acm import-certificate --certificate file://Certificate.pem
-                                 --certificate-chain file://CertificateChain.pem
-                                 --private-key file://PrivateKey.pem
-                                 --certificate-arn arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-12345678901
+$ aws acm import-certificate --certificate fileb://Certificate.pem \
+      --certificate-chain fileb://CertificateChain.pem \
+      --private-key fileb://PrivateKey.pem \
+      --certificate-arn arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-12345678901
 ```
 
 If the `import-certificate` command is successful, it returns the [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the certificate\. 
