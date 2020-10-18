@@ -15,7 +15,7 @@ The Domain Name System \(DNS\) is a directory service for resources connected to
 ACM uses CNAME \(Canonical Name\) records to validate that you own or control a domain\. When you choose DNS validation, ACM provides you one or more CNAME records to insert into your DNS database\. For example, if you request a certificate for the `example.com` domain with `www.example.com` as an additional name, ACM creates two CNAME records for you\. Each record, created specifically for your domain and your account, contains a name and a value\. The value is an alias that points to a domain that ACM owns and which ACM uses to automatically renew your certificate\. You add the CNAME records to your DNS database only once\. ACM automatically renews your certificate as long as the certificate is in use and your CNAME record remains in place\. In addition, if you use Amazon Route 53 to create your domain, ACM can write the CNAME records for you\.
 
 **Note**  
-CNAME resolution will fail if more the five CNAMEs are chained together in your DNS configuration\. If you require a longer chaining, we recommend using [email validation](gs-acm-validate-email.md)\.
+CNAME resolution will fail if more than five CNAMEs are chained together in your DNS configuration\. If you require a longer chaining, we recommend using [email validation](gs-acm-validate-email.md)\.
 
 If your DNS provider does not support CNAME values with leading underscore, see [Troubleshoot DNS Validation Problems](troubleshooting-DNS-validation.md)\.
 
