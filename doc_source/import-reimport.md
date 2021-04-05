@@ -1,6 +1,6 @@
-# Reimport a Certificate<a name="import-reimport"></a>
+# Reimporting a certificate<a name="import-reimport"></a>
 
-If you imported a certificate and associated it with other AWS services, you can reimport that certificate before it expires while preserving the AWS service associations of the original certificate\. For more information about AWS services integrated with ACM, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
+If you imported a certificate and associated it with other AWS services, you can reimport that certificate before it expires while preserving the AWS service associations of the original certificate\. For more information about AWS services integrated with ACM, see [Services integrated with AWS Certificate Manager](acm-services.md)\. 
 
  The following conditions apply when you reimport a certificate: 
 + You can add or remove domain names\.
@@ -11,10 +11,10 @@ If you imported a certificate and associated it with other AWS services, you can
 + You cannot apply resource tags when reimporting a certificate\.
 
 **Topics**
-+ [Reimporting Using the Console](#reimport-certificate-api)
-+ [Reimporting Using the AWS CLI](#reimport-certificate-cli)
++ [Reimport \(console\)](#reimport-certificate-api)
++ [Reimport \(AWS CLI\)](#reimport-certificate-cli)
 
-## Reimporting Using the Console<a name="reimport-certificate-api"></a>
+## Reimport \(console\)<a name="reimport-certificate-api"></a>
 
 The following example shows how to reimport a certificate using the AWS Management Console\.
 
@@ -28,7 +28,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 
 1. For **Certificate private key**, paste the unencrypted PEM\-encoded private key associated with the certificate's public key\.
 **Important**  
- Currently, [Services Integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
+ Currently, [Services integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
 
 1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\. The certificate chain includes one or more certificates for all intermediate issuing certification authorities, and the root certificate\. If the certificate to be imported is self\-assigned, no certificate chain is necessary\.
 
@@ -36,7 +36,7 @@ The following example shows how to reimport a certificate using the AWS Manageme
 
 1. Review the information about your certificate\. If there are no errors, choose **Reimport**\.
 
-## Reimporting Using the AWS CLI<a name="reimport-certificate-cli"></a>
+## Reimport \(AWS CLI\)<a name="reimport-certificate-cli"></a>
 
 The following example shows how to reimport a certificate using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. The example assumes the following:
 + The PEM\-encoded certificate is stored in a file named `Certificate.pem`\.

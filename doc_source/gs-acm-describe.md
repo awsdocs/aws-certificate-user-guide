@@ -1,22 +1,22 @@
-# Describing ACM Certificates<a name="gs-acm-describe"></a>
+# Describing ACM certificates<a name="gs-acm-describe"></a>
 
 You can use the ACM console or the AWS CLI to list metadata about your certificates\.
 
 **Topics**
-+ [Describe Certificates \(Console\)](#gs-acm-describe-console)
-+ [Describe Certificates \(CLI\)](#gs-acm-describe-cli)
++ [Describe certificates \(console\)](#gs-acm-describe-console)
++ [Describe certificates \(CLI\)](#gs-acm-describe-cli)
 
-## Describe Certificates \(Console\)<a name="gs-acm-describe-console"></a>
+## Describe certificates \(console\)<a name="gs-acm-describe-console"></a>
 
 To show certificate metadata, select the arrow to the immediate left of the domain name\. The console displays information similar to the following\. 
 
 ![\[Certificate columns.\]](http://docs.aws.amazon.com/acm/latest/userguide/images/acm-metadata-console.png)
 
-## Describe Certificates \(CLI\)<a name="gs-acm-describe-cli"></a>
+## Describe certificates \(CLI\)<a name="gs-acm-describe-cli"></a>
 
 You can use the AWS CLI to get information about an issued certificate, delete a certificate, or resend validation email\.
 
-### Retrieve ACM Certificate Fields<a name="gs-acm-manage-cli-describe"></a>
+### Retrieve ACM certificate fields<a name="gs-acm-manage-cli-describe"></a>
 
 You can use the [describe\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/describe-certificate.html) command list the metadata for a certificate\. 
 

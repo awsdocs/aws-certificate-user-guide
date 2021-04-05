@@ -1,4 +1,4 @@
-# Troubleshoot DNS Validation Problems<a name="troubleshooting-DNS-validation"></a>
+# Troubleshoot DNS validation problems<a name="troubleshooting-DNS-validation"></a>
 
 Consult the following guidance if you are having trouble validating a certificate with DNS\.
 
@@ -9,24 +9,15 @@ The first step in DNS troubleshooting is to check the current status of your dom
 **whois** — [Linux](https://linux.die.net/man/1/whois), [Windows](https://docs.microsoft.com/en-us/sysinternals/downloads/whois)
 
 **Topics**
-+ [Troubleshoot Certification Authority Authorization \(CAA\) Problems](#troubleshooting-caa)
-+ [Underscores Prohibited by DNS Provider](#underscores-prohibited)
-+ [DNS Validation on GoDaddy Fails](#troubleshooting-DNS-GoDaddy)
-+ [Troubleshoot Problems with the \.IO Domain](#troubleshoot-iodomains)
-+ [ACM Console Does Not Display "Create record in Route 53" Button](#troubleshooting-route53-1)
-+ [Route 53 Validation Fails on Private Domains](#troubleshooting-route53-2)
++ [Underscores prohibited by DNS provider](#underscores-prohibited)
++ [Default trailing period added by DNS provider](#troubleshooting-trailing-period)
++ [DNS validation on GoDaddy fails](#troubleshooting-DNS-GoDaddy)
++ [Troubleshoot problems with the \.IO top\-level domain](#troubleshoot-iodomains)
++ [ACM Console does not display "Create record in Route 53" button](#troubleshooting-route53-1)
++ [Route 53 validation fails on private domains](#troubleshooting-route53-2)
++ [Validation fails for DNS server on a VPN](#troubleshooting-vpn)
 
-## Troubleshoot Certification Authority Authorization \(CAA\) Problems<a name="troubleshooting-caa"></a>
-
-You can use CAA DNS records to specify that the Amazon certificate authority \(CA\) can issue ACM certificates for your domain or subdomain\. If you receive an error during certificate issuance that says **One or more domain names have failed validation due to a Certification Authority Authentication \(CAA\) error**, check your CAA DNS records\. If you receive this error after your ACM certificate request has been successfully validated, you must update your CAA records and request a certificate again\. The **value** field in at least one of your CAA records must contain one of the following domain names:
-+ amazon\.com
-+ amazontrust\.com
-+ awstrust\.com
-+ amazonaws\.com
-
-If you do not want ACM to perform CAA checking, do not configure a CAA record for your domain or leave your CAA records blank\. For more information about creating a CAA record, see [\(Optional\) Configure a CAA Record](setup-caa.md)\.
-
-## Underscores Prohibited by DNS Provider<a name="underscores-prohibited"></a>
+## Underscores prohibited by DNS provider<a name="underscores-prohibited"></a>
 
 If your DNS provider prohibits leading underscores in CNAME values, you can remove the underscore from the ACM\-provided value and validate your domain without it\. For example, the CNAME value `_x2.acm-validations.aws` can be changed to `x2.acm-validations.aws` for validation purposes\. However, the CNAME name parameter must always begin with a leading underscore\.
 
@@ -38,7 +29,11 @@ You can use either of the values on the right side of the table below to validat
 |  \_<random value>\.example\.com\.  |  CNAME  |  \_<random value>\.acm\-validations\.aws\.  | 
 |  \_<random value>\.example\.com\.  |  CNAME  |  <random value>\.acm\-validations\.aws\.  | 
 
-## DNS Validation on GoDaddy Fails<a name="troubleshooting-DNS-GoDaddy"></a>
+## Default trailing period added by DNS provider<a name="troubleshooting-trailing-period"></a>
+
+Some DNS providers add by default a trailing period to the CNAME value that you provide\. As a result, adding the period yourself causes an error\. For example, "`<random_value>.acm-validations.aws.`" is rejected while "`<random_value>.acm-validations.aws`" is accepted\.
+
+## DNS validation on GoDaddy fails<a name="troubleshooting-DNS-GoDaddy"></a>
 
 DNS validation for domains registered with Godaddy and other registries may fail unless you modify the CNAME values provided by ACM\. Taking example\.com as the domain name, the issued CNAME record has the following form:
 
@@ -54,9 +49,9 @@ NAME: _ho9hv39800vb3examplew3vnewoib3u
     VALUE: _cjhwou20vhu2exampleuw20vuyb2ovb9.j9s73ucn9vy.acm-validations.aws.
 ```
 
-## Troubleshoot Problems with the \.IO Domain<a name="troubleshoot-iodomains"></a>
+## Troubleshoot problems with the \.IO top\-level domain<a name="troubleshoot-iodomains"></a>
 
-The \.IO domain is assigned to the British Indian Ocean Territory\. Currently, the domain registry does not display your public information from the WHOIS database\. This is true whether you have privacy protection for the domain enabled or disabled\. When a WHOIS lookup is performed, only obfuscated registrar information is returned\. Therefore, ACM is unable to send validation email to the following three registered contact addresses that are usually available in WHOIS\.
+The \.IO top\-level domain is assigned to the British Indian Ocean Territory\. Currently, the domain registry does not display your public information from the WHOIS database\. This is true whether you have privacy protection for the domain enabled or disabled\. When a WHOIS lookup is performed, only obfuscated registrar information is returned\. Therefore, ACM is unable to send validation email to the following three registered contact addresses that are usually available in WHOIS\.
 + Domain registrant
 + Technical contact
 + Administrative contact
@@ -71,17 +66,22 @@ ACM does, however, send validation email to the following five common system add
 To receive validation mail for an \.IO domain, make sure that you have one of the preceding five email accounts enabled\. If you do not, you will not receive validation email and you will not be issued an ACM certificate\.
 
 **Note**  
-We recommend that you use DNS validation rather than email validation\. For more information, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+We recommend that you use DNS validation rather than email validation\. For more information, see [Option 1: DNS validationDNS validation](dns-validation.md)\. 
 
-## ACM Console Does Not Display "Create record in Route 53" Button<a name="troubleshooting-route53-1"></a>
+## ACM Console does not display "Create record in Route 53" button<a name="troubleshooting-route53-1"></a>
 
 If you select Amazon Route 53 as your DNS provider, AWS Certificate Manager can interact directly with it to validation your domain ownership\. Under some circumstances, the console's **Create record in Route 53** button may not be available when you expect it\. If this happens, check for the following possible causes\.
++ On the **Validation** page, you did not click the down\-arrow next to your domain name\. 
 + You are not using Route 53 as your DNS provider\.
 + You are logged into ACM and Route 53 through different accounts\.
 + You lack IAM permissions to create records in a zone hosted by Route 53\.
 + You or someone else has already validated the domain\.
 + The domain is not publicly addressable\.
 
-## Route 53 Validation Fails on Private Domains<a name="troubleshooting-route53-2"></a>
+## Route 53 validation fails on private domains<a name="troubleshooting-route53-2"></a>
 
 Route 53 is exclusively a *public* DNS service\. You cannot use it to host DNS records for private domains, such as those supported by ACM Private CA\. During DNS validation, ACM searches for a CNAME in a publicly hosted zone\. When it doesn't find one, it times out after 72 hours with a status of **Validation timed out**\.
+
+## Validation fails for DNS server on a VPN<a name="troubleshooting-vpn"></a>
+
+If you locate a DNS server on a VPN and ACM fails to validate a certificate against it, check if the server is publicly accessible\. Public certificate issuance using ACM DNS validation requires that the domain records be resolvable over the public internet\.

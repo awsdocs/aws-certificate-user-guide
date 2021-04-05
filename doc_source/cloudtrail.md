@@ -14,5 +14,5 @@ For more information about CloudTrail, consult the following documentation:
 + [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
 **Topics**
-+ [ACM API Actions Supported in CloudTrail Logging](acm-supported-actions-in-cloudtrail.md)
-+ [Logging for ACM\-Related API Calls](ct-related.md)
++ [ACM API actions supported in CloudTrail logging](acm-supported-actions-in-cloudtrail.md)
++ [Logging API calls for integrated services](ct-related.md)

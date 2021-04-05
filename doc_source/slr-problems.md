@@ -1,4 +1,4 @@
-# Problems with the ACM Service\-Linked Role \(SLR\)<a name="slr-problems"></a>
+# Problems with the ACM service\-linked role \(SLR\)<a name="slr-problems"></a>
 
 When you issue a certificate signed by a private CA that has been shared with you by another account, ACM attempts on first use to set up a service\-linked role \(SLR\) to interact as a principal with an ACM Private CA [resource\-based access policy](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-resource-sharing.html#pca-rbp)\. If you issue a private certificate from a shared CA and the SLR is not in place, ACM will be unable to automatically renew that certificate for you\.
 

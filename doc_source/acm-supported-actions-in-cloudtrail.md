@@ -1,4 +1,4 @@
-# ACM API Actions Supported in CloudTrail Logging<a name="acm-supported-actions-in-cloudtrail"></a>
+# ACM API actions supported in CloudTrail logging<a name="acm-supported-actions-in-cloudtrail"></a>
 
 ACM supports logging the following actions as events in CloudTrail log files:
 
@@ -10,19 +10,19 @@ Every event or log entry contains information about who generated the request\. 
 For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
 The following sections provide example logs for the supported API operations\.
-+ [Adding Tags to a Certificate \([AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html)\)](#ct-acm-addtags)
-+ [Deleting a Certificate \([DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html)\)](#ct-acm-delete)
-+ [Describing a Certificate \([DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html)\)](#ct-acm-describe)
-+ [Exporting a Certificate \([ExportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExportCertificate.html)\)](#ct-acm-export)
-+ [Import a Certificate \([ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html)\)](#ct-acm-import)
-+ [Listing Certificates \([ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html)\)](#ct-acm-list)
-+ [Listing Tags for a Certificate \([ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html)\)](#ct-acm-listtags)
-+ [Removing Tags from a Certificate \([RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html)\)](#ct-acm-removetag)
-+ [Requesting a Certificate \([RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)\)](#ct-acm-request)
-+ [Resending Validation Email \([ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html)\)](#ct-acm-resendmail)
-+ [Retrieving a Certificate \([GetCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html)\)](#ct-acm-get)
++ [Adding tags to a certificate \([AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html)\)](#ct-acm-addtags)
++ [Deleting a certificate \([DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html)\)](#ct-acm-delete)
++ [Describing a certificate \([DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html)\)](#ct-acm-describe)
++ [Exporting a certificate \([ExportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExportCertificate.html)\)](#ct-acm-export)
++ [Import a certificate \([ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html)\)](#ct-acm-import)
++ [Listing certificates \([ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html)\)](#ct-acm-list)
++ [Listing tags for a certificate \([ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html)\)](#ct-acm-listtags)
++ [Removing tags from a certificate \([RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html)\)](#ct-acm-removetag)
++ [Requesting a certificate \([RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)\)](#ct-acm-request)
++ [Resending validation email \([ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html)\)](#ct-acm-resendmail)
++ [Retrieving a certificate \([GetCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html)\)](#ct-acm-get)
 
-## Adding Tags to a Certificate \([AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html)\)<a name="ct-acm-addtags"></a>
+## Adding tags to a certificate \([AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html)\)<a name="ct-acm-addtags"></a>
 
 The following CloudTrail example shows the results of a call to the [AddTagsToCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_AddTagsToCertificate.html) API\. 
 
@@ -64,7 +64,7 @@ The following CloudTrail example shows the results of a call to the [AddTagsToCe
 }
 ```
 
-## Deleting a Certificate \([DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html)\)<a name="ct-acm-delete"></a>
+## Deleting a certificate \([DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html)\)<a name="ct-acm-delete"></a>
 
 The following CloudTrail example shows the results of a call to the [DeleteCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteCertificate.html) API\. 
 
@@ -100,7 +100,7 @@ The following CloudTrail example shows the results of a call to the [DeleteCerti
 }
 ```
 
-## Describing a Certificate \([DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html)\)<a name="ct-acm-describe"></a>
+## Describing a certificate \([DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html)\)<a name="ct-acm-describe"></a>
 
 The following CloudTrail example shows the results of a call to the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) API\. 
 
@@ -139,7 +139,7 @@ The CloudTrail log for the `DescribeCertificate` operation does not display info
 }
 ```
 
-## Exporting a Certificate \([ExportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExportCertificate.html)\)<a name="ct-acm-export"></a>
+## Exporting a certificate \([ExportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExportCertificate.html)\)<a name="ct-acm-export"></a>
 
 The following CloudTrail example shows the results of a call to the [ExportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExportCertificate.html) API\. 
 
@@ -222,7 +222,7 @@ The following CloudTrail example shows the results of a call to the [ExportCerti
 }
 ```
 
-## Import a Certificate \([ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html)\)<a name="ct-acm-import"></a>
+## Import a certificate \([ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html)\)<a name="ct-acm-import"></a>
 
 The following example shows the CloudTrail log entry that records a call to the ACM [ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html) API operation\. 
 
@@ -306,7 +306,7 @@ The following example shows the CloudTrail log entry that records a call to the 
 }
 ```
 
-## Listing Certificates \([ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html)\)<a name="ct-acm-list"></a>
+## Listing certificates \([ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html)\)<a name="ct-acm-list"></a>
 
 The following CloudTrail example shows the results of a call to the [ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) API\. 
 
@@ -348,7 +348,7 @@ The CloudTrail log for the `ListCertificates` operation does not display your AC
 }
 ```
 
-## Listing Tags for a Certificate \([ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html)\)<a name="ct-acm-listtags"></a>
+## Listing tags for a certificate \([ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html)\)<a name="ct-acm-listtags"></a>
 
 The following CloudTrail example shows the results of a call to the [ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) API\. 
 
@@ -387,7 +387,7 @@ The CloudTrail log for the `ListTagsForCertificate` operation does not display y
 }
 ```
 
-## Removing Tags from a Certificate \([RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html)\)<a name="ct-acm-removetag"></a>
+## Removing tags from a certificate \([RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html)\)<a name="ct-acm-removetag"></a>
 
 The following CloudTrail example shows the results of a call to the [RemoveTagsFromCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RemoveTagsFromCertificate.html) API\. 
 
@@ -429,7 +429,7 @@ The following CloudTrail example shows the results of a call to the [RemoveTagsF
 }
 ```
 
-## Requesting a Certificate \([RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)\)<a name="ct-acm-request"></a>
+## Requesting a certificate \([RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)\)<a name="ct-acm-request"></a>
 
 The following CloudTrail example shows the results of a call to the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) API\. 
 
@@ -481,7 +481,7 @@ The following CloudTrail example shows the results of a call to the [RequestCert
 }
 ```
 
-## Resending Validation Email \([ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html)\)<a name="ct-acm-resendmail"></a>
+## Resending validation email \([ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html)\)<a name="ct-acm-resendmail"></a>
 
 The following CloudTrail example shows the results of a call to the [ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) API\. 
 
@@ -519,7 +519,7 @@ The following CloudTrail example shows the results of a call to the [ResendValid
 }
 ```
 
-## Retrieving a Certificate \([GetCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html)\)<a name="ct-acm-get"></a>
+## Retrieving a certificate \([GetCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html)\)<a name="ct-acm-get"></a>
 
 The following CloudTrail example shows the results of a call to the [GetCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html) API\. 
 

@@ -1,4 +1,4 @@
-# Overview of Managing Access to Your ACM Resources<a name="authen-overview"></a>
+# Overview of managing access to your ACM resources<a name="authen-overview"></a>
 
 Every AWS Certificate Manager \(ACM\) resource belongs to an AWS account, and permissions to create or access the resources are defined in permissions policies in that account\. An account administrator can attach permissions policies to IAM identities \(that is, users, groups, and roles\)\. Some services \(including ACM\) also support attaching permissions policies to resources\. 
 
@@ -8,11 +8,11 @@ An *account administrator* \(or administrator user\) is a user with administrato
 When managing permissions, you decide who gets the permissions, the resources they get permissions for, and the specific actions allowed\.
 
 **Topics**
-+ [ACM Resources and Operations](#acm-resources-operations)
-+ [Understanding Resource Ownership](#understand-resource-ownership)
-+ [Managing Access to ACM Certificates](#managing-access)
++ [ACM resources and operations](#acm-resources-operations)
++ [Understanding resource ownership](#understand-resource-ownership)
++ [Managing access to ACM certificates](#managing-access)
 
-## ACM Resources and Operations<a name="acm-resources-operations"></a>
+## ACM resources and operations<a name="acm-resources-operations"></a>
 
 In ACM, the primary resource is a *certificate*\. Certificates have unique Amazon Resource Names \(ARNs\) associated with them as shown in the following list\. 
 + **ACM Certificate**
@@ -25,14 +25,14 @@ In ACM, the primary resource is a *certificate*\. Certificates have unique Amazo
 
    ` arn:aws:acm:us-west-2:123456789012:certificate/12345678-12ab-34cd-56ef-12345678 ` 
 
-## Understanding Resource Ownership<a name="understand-resource-ownership"></a>
+## Understanding resource ownership<a name="understand-resource-ownership"></a>
 
 A *resource owner* is the AWS account that created a resource\. That is, the resource owner is the AWS account of the *principal entity* that authenticates the request that created the resource\. \(A principle entity can be an AWS account root user, an IAM user, or an IAM role\.\) The following examples illustrate how this works\. 
 +  If you use the credentials of your AWS account root user to create an ACM certificate, your AWS account owns the certificate\. 
 +  If you create an IAM user in your AWS account, you can grant that user permission to create an ACM certificate\. However, the account to which that user belongs owns the certificate\. 
 +  If you create an IAM role in your AWS account and grant it permission to create an ACM certificate, anyone who can assume the role can create a certificate\. However, the account to which the role belongs owns the certificate\. 
 
-## Managing Access to ACM Certificates<a name="managing-access"></a>
+## Managing access to ACM certificates<a name="managing-access"></a>
 
 A *permissions policy* describes who has access to what\. This section explains the available options for creating permissions policies\. 
 

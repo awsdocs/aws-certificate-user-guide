@@ -1,15 +1,15 @@
-# Exporting a Private Certificate<a name="export-private"></a>
+# Exporting a private certificate<a name="export-private"></a>
 
 You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For more information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
 
 **Note**  
-You cannot export the private key of a publicly trusted ACM certificate\.
+You cannot export a publicly trusted ACM certificate or it private key\.
 
 **Topics**
-+ [Exporting a Private Certificate Using the Console](#export-console)
-+ [Export a Private Certificate Using the CLI](#export-cli)
++ [Exporting a private certificate \(console\)](#export-console)
++ [Export a private certificate \(CLI\)](#export-cli)
 
-## Exporting a Private Certificate Using the Console<a name="export-console"></a>
+## Exporting a private certificate \(console\)<a name="export-console"></a>
 
 1. Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\.
 
@@ -27,7 +27,7 @@ You cannot export the private key of a publicly trusted ACM certificate\.
 
 1. Choose **Done**\.
 
-## Export a Private Certificate Using the CLI<a name="export-cli"></a>
+## Export a private certificate \(CLI\)<a name="export-cli"></a>
 
 Use the [export\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/export-certificate.html) command to export a private certificate and private key\. You must assign the passphrase when you run the command\. For added security, store your passphrase securely in a file before using the command\. This prevents your passphrase from being stored in the command history and prevents others from seeing the passphrase as you type it in\. 
 

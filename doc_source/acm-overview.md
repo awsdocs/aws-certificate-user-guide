@@ -2,7 +2,7 @@
 
 AWS Certificate Manager \(ACM\) handles the complexity of creating, storing, and renewing public and private SSL/TLS X\.509 certificates and keys that protect your AWS websites and applications\. You can provide certificates for your [integrated AWS services](acm-services.md) either by issuing them directly with ACM or by [importing](import-certificate.md) third\-party certificates into the ACM management system\. ACM certificates can secure singular domain names, multiple specific domain names, wildcard domains, or combinations of these\. ACM wildcard certificates can protect an unlimited number of subdomains\. You can also [export](export-private.md) ACM certificates signed by ACM Private CA for use anywhere in your internal PKI\. 
 
-## Is ACM the Right Service for Me?<a name="service-options"></a>
+## Is ACM the right service for me?<a name="service-options"></a>
 
 AWS offers two options to customers deploying managed X\.509 certificates\. Choose the best one for your needs\.
 
@@ -14,16 +14,16 @@ AWS offers two options to customers deploying managed X\.509 certificates\. Choo
 
 [Concepts](acm-concepts.md)
 
-[ACM Certificate Characteristics](acm-certificate.md)
+[ACM certificate characteristics](acm-certificate.md)
 
 [Supported Regions](acm-regions.md)
 
-[Services Integrated with AWS Certificate Manager](acm-services.md)
+[Services integrated with AWS Certificate Manager](acm-services.md)
 
-[Site Seals and Trust Logos](acm-siteseal.md)
+[Site seals and trust logos](acm-siteseal.md)
 
-[API Rate Quotas](acm-limits.md#api-rate-limits)
+[API rate quotas](acm-limits.md#api-rate-limits)
 
-[Best Practices](acm-bestpractices.md)
+[Best practices](acm-bestpractices.md)
 
 [Pricing for AWS Certificate Manager](acm-billing.md)

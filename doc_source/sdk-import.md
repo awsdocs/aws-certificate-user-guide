@@ -1,4 +1,4 @@
-# Importing a Certificate<a name="sdk-import"></a>
+# Importing a certificate<a name="sdk-import"></a>
 
 The following example shows how to use the [ImportCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ImportCertificate.html) function\. 
 

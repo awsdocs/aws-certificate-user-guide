@@ -1,6 +1,9 @@
-# Certificate and Key Format for Importing<a name="import-certificate-format"></a>
+# Certificate and key format for importing<a name="import-certificate-format"></a>
 
 The certificate, certificate chain, and private key \(if any\) are each imported separately and must be PEM–encoded\. PEM stands for Privacy Enhanced Mail\. The PEM format is often used to represent certificates, certificate requests, certificate chains, and keys\. The typical extension for a PEM–formatted file is `.pem`, but it doesn't need to be\. 
+
+**Note**  
+AWS does not provide utilities for manipulating PEM files or other certificate formats\. The following examples rely on a generic text editor for simple operations\. If you need to perform more complex tasks \(such as converting file formats or extracting keys\), free and open\-source tools such as [OpenSSL](https://www.openssl.org/docs/) are readily available\.
 
 The following examples illustrate the format of the files to be imported\. If the components come to you in a single file, use a text editor \(carefully\) to separate them into three files\. Note that if you edit any of the characters in a PEM file incorrectly or if you add one or more spaces to the end of any line, the certificate, certificate chain, or private key will be invalid\. 
 

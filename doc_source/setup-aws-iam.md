@@ -1,8 +1,8 @@
-# Set Up AWS and IAM<a name="setup-aws-iam"></a>
+# Set up AWS and IAM<a name="setup-aws-iam"></a>
 
 Before you can use ACM, you must sign up for Amazon Web Services\. As a best practice, you can create an IAM user to limit the actions your users can perform\. 
 
-## Sign Up for AWS<a name="setup-aws"></a>
+## Sign up for AWS<a name="setup-aws"></a>
 
 If you are not already an Amazon Web Services \(AWS\) customer, you must sign up to be able to use ACM\. Your account is automatically signed up for all available services, but you are charged for only the services that you use\. Also, if you are a new AWS customer, you can get started for free\. For more information, see [AWS Free Tier](https://aws.amazon.com/free/)\. 
 
@@ -15,7 +15,7 @@ If you are not already an Amazon Web Services \(AWS\) customer, you must sign up
 **Note**  
 Part of the sign\-up procedure includes receiving an automated telephone call and entering the supplied PIN on the telephone keypad\. You must also supply a credit card number even if you are signing up for the free tier\. 
 
-## Create an IAM User<a name="setup-iam"></a>
+## Create an IAM user<a name="setup-iam"></a>
 
 All AWS accounts have root user credentials \(that is, the credentials of the account owner\)\. These credentials allow full access to all resources in the account\. Because you can't restrict permissions for root user credentials, we recommend that you delete your root user access keys\. Then create AWS Identity and Access Management \(IAM\) user credentials for everyday interaction with AWS\. For more information, see [Lock away your AWS account \(root\) access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials) in the *IAM User Guide*\.
 

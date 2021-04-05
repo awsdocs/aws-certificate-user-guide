@@ -1,6 +1,6 @@
-# Requesting a Private Certificate<a name="gs-acm-request-private"></a>
+# Requesting a private certificate<a name="gs-acm-request-private"></a>
 
-The following sections discuss how to use the ACM console or an ACM CLI command to request a private certificate signed by a private certificate authority \(CA\) that was previously created using ACM Private CA\. The CA may either reside in your account or be shared with you by a different account\. For more information about creating a private CA, see [Create a Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
+The following sections discuss how to use the ACM console or an ACM CLI command to request a private PKI certificate signed by a private certificate authority \(CA\) that was previously created using ACM Private CA\. The CA may either reside in your account or be shared with you by a different account\. For more information about creating a private CA, see [Create a Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html)\. 
 
 Public and private ACM certificates both follow the X\.509 standard, but certificates intended for public use are subject to the following restrictions: 
 + You must use DNS subject names\. For more information, see [Domain Names](acm-concepts.md#concept-dn)
@@ -25,11 +25,11 @@ The private CA must have a status of Active, and the CA private key type must be
 Because certificates signed by a private CA are not trusted by default, administrators must install them in client trust stores\.
 
 **Topics**
-+ [Configuring Access to a Private CA](#ca-access)
-+ [Request a Private Certificate Using the ACM Console](#request-private-console)
-+ [Request a Private Certificate Using the CLI](#request-private-cli)
++ [Configuring access to a private CA](#ca-access)
++ [Request a private certificate using the ACM console](#request-private-console)
++ [Request a private certificate using the CLI](#request-private-cli)
 
-## Configuring Access to a Private CA<a name="ca-access"></a>
+## Configuring access to a private CA<a name="ca-access"></a>
 
 You can use ACM Private CA to sign your ACM certificates in either of two cases:
 + **Single account**: The signing CA and the ACM certificate that is issued reside in the same AWS account\.
@@ -46,9 +46,9 @@ You can use ACM Private CA to sign your ACM certificates in either of two cases:
   For more information, see [Using a Service Linked Role with ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html)\. 
 
 **Important**  
-Your ACM certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
+Your ACM certificate must be actively associated with a supported AWS service before it can be automatically renewed\. For information about the resources that ACM supports, see [Services integrated with AWS Certificate Manager](acm-services.md)\. 
 
-## Request a Private Certificate Using the ACM Console<a name="request-private-console"></a>
+## Request a private certificate using the ACM console<a name="request-private-console"></a>
 
 1. Sign into the AWS Management Console and open the ACM console at [https://console\.aws\.amazon\.com/acm/home](https://console.aws.amazon.com/acm/home)\.
 
@@ -83,7 +83,7 @@ You do not need to validate the domain of a private certificate\.
 
    When you finish adding names, choose **Next**\.
 
-1. On the **Add tags** page, you can optionally tag your certificate\. Tags are key/value pairs that serve as metadata for identifying and organizing AWS resources\. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager Certificates](tags.md)\. 
+1. On the **Add tags** page, you can optionally tag your certificate\. Tags are key/value pairs that serve as metadata for identifying and organizing AWS resources\. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager certificates](tags.md)\. 
 
    When you finish adding tags, choose **Review and request**\.
 
@@ -97,7 +97,7 @@ ACM may display one of two notices at this point\.
 That ACM cannot determine whether an SLR exists on your account\. This can result from incorrect permission settings\. The certificate request can proceed, but to enable automatic renewal, you or your administrator must supply the needed permission before the certificate expires\. For more information, see [Using a Service Linked Role with ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html)\. 
 That ACM determined that no SLR exists on your account, and that one will be created for you\.
 
-## Request a Private Certificate Using the CLI<a name="request-private-cli"></a>
+## Request a private certificate using the CLI<a name="request-private-cli"></a>
 
 Use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a private certificate in ACM\. 
 

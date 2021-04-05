@@ -1,4 +1,4 @@
-# Register a Domain Name<a name="setup-domain"></a>
+# Register a domain name<a name="setup-domain"></a>
 
 A fully qualified domain name \(FQDN\) is the unique name of an organization or individual on the Internet followed by a top\-level domain extension such as \.com or \.org\. If you do not already have a registered domain name, you can register one through Amazon Route 53 or dozens of other commercial registrars\. Typically you go to the registrar's website and request a domain name\. The registrar queries WHOIS to determine whether the requested FQDN is available\. If it is, the registrar usually lists related names that differ by domain extension and provides you an opportunity to acquire any of the available names\. Registration usually lasts for a set period of time such as one or two years before it must be renewed\.
 

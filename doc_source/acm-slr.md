@@ -1,4 +1,4 @@
-# Using a Service Linked Role \(SLR\) with ACM<a name="acm-slr"></a>
+# Using a service\-linked role \(SLR\) with ACM<a name="acm-slr"></a>
 
 AWS Certificate Manager uses an AWS Identity and Access Management \(IAM\)[ service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) to enable automatic renewals of managed ACM certificates\. A service\-linked role \(SLR\) is an IAM role that is linked directly to the ACM service\. SLRs are predefined by ACM and include all the permissions that the service requires to call other AWS services on your behalf\.
 
@@ -6,7 +6,7 @@ The SLR makes setting up ACM easier because you don’t have to manually add the
 
 For information about other services that support SLRs, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) and look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose a **Yes** with a link to view the SLR documentation for that service\.
 
-## SLR Permissions for ACM<a name="slr-permissions"></a>
+## SLR permissions for ACM<a name="slr-permissions"></a>
 
 ACM uses an SLR named Amazon Certificate Manager Service Role Policy\.
 
@@ -25,7 +25,7 @@ ACM may alert you that it cannot determine whether an SLR exists on your account
 
 You don't need to manually create the SLR that ACM uses\. When you issue an ACM certificate using the AWS Management Console, the AWS CLI, or the AWS API, ACM creates the SLR for you the first time that you choose a private CA to sign your certificate\.
 
-If you encounter messages stating that ACM cannot determine whether an SLR exists on your account, it may mean that your account has not granted a read permission that ACM Private CA requires\. This will not prevent the SLR from being installed, and you can still issue certificates, but ACM will be unable to renew the certificates automatically until you resolve the problem\. For more information, see [Problems with the ACM Service\-Linked Role \(SLR\)](slr-problems.md)\.
+If you encounter messages stating that ACM cannot determine whether an SLR exists on your account, it may mean that your account has not granted a read permission that ACM Private CA requires\. This will not prevent the SLR from being installed, and you can still issue certificates, but ACM will be unable to renew the certificates automatically until you resolve the problem\. For more information, see [Problems with the ACM service\-linked role \(SLR\)](slr-problems.md)\.
 
 **Important**  
 This SLR can appear in your account if you completed an action in another service that uses the features supported by this role\. Also, if you were using the ACM service before January 1, 2017, when it began supporting SLRs, then ACM created the AWSServiceRoleForCertificateManager role in your account\. To learn more, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
@@ -58,7 +58,7 @@ ACM supports using SLRs in all of the regions where both ACM and ACM Private CA 
 | US West \(N\. California\) | us\-west\-1 | Yes | 
 | US West \(Oregon\) | us\-west\-2 | Yes | 
 | Asia Pacific \(Mumbai\) | ap\-south\-1 | Yes | 
-| Asia Pacific \(Osaka\-Local\) | ap\-northeast\-3 | Yes | 
+| Asia Pacific \(Osaka\) | ap\-northeast\-3 | Yes | 
 | Asia Pacific \(Seoul\) | ap\-northeast\-2 | Yes | 
 | Asia Pacific \(Singapore\) | ap\-southeast\-1 | Yes | 
 | Asia Pacific \(Sydney\) | ap\-southeast\-2 | Yes | 

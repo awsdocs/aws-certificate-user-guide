@@ -1,4 +1,4 @@
-# Requesting a Certificate<a name="sdk-request"></a>
+# Requesting a certificate<a name="sdk-request"></a>
 
 The following example shows how to use the [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) function\. 
 

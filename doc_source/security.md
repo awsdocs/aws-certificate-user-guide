@@ -9,9 +9,8 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS Certificate Manager \(ACM\)\. The following topics show you how to configure ACM to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your ACM resources\. 
 
 **Topics**
-+ [Data Protection in AWS Certificate Manager](data-protection.md)
-+ [Identity and Access Management for AWS Certificate Manager](security-iam.md)
-+ [Logging and Monitoring for AWS Certificate Manager](security-logging-and-monitoring.md)
++ [Data protection in AWS Certificate Manager](data-protection.md)
++ [Identity and access management for AWS Certificate Manager](security-iam.md)
 + [Resilience in AWS Certificate Manager](disaster-recovery-resiliency.md)
-+ [Infrastructure Security in AWS Certificate Manager](infrastructure-security.md)
-+ [Best Practices](acm-bestpractices.md)
++ [Infrastructure security in AWS Certificate Manager](infrastructure-security.md)
++ [Best practices](acm-bestpractices.md)

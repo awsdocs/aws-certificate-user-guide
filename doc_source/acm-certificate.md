@@ -1,4 +1,4 @@
-# ACM Certificate Characteristics<a name="acm-certificate"></a>
+# ACM certificate characteristics<a name="acm-certificate"></a>
 
 Public certificates provided by ACM have the characteristics described on this page\.
 
@@ -6,19 +6,19 @@ Public certificates provided by ACM have the characteristics described on this p
 These characteristics apply only to certificates provided by ACM\. They might not apply to [certificates that you import into ACM](import-certificate.md)\.
 
 **Domain Validation \(DV\)**  <a name="domain-validation"></a>
-ACM certificates are domain validated\. That is, the subject field of an ACM certificate identifies a domain name and nothing more\. When you request an ACM certificate, you must validate that you own or control all of the domains that you specify in your request\. You can validate ownership by using email or DNS\. For more information, see [Using Email to Validate Domain Ownership](gs-acm-validate-email.md) and [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
+ACM certificates are domain validated\. That is, the subject field of an ACM certificate identifies a domain name and nothing more\. When you request an ACM certificate, you must validate that you own or control all of the domains that you specify in your request\. You can validate ownership by using email or DNS\. For more information, see [Option 2: Email validation](email-validation.md) and [Option 1: DNS validationDNS validation](dns-validation.md)\.
 
 **Validity Period**  <a name="validity"></a>
 The validity period for ACM certificates is 13 months \(395 days\)\.
 
 **Managed Renewal and Deployment**  <a name="renewal"></a>
-ACM manages the process of renewing ACM certificates and provisioning the certificates after they are renewed\. Automatic renewal can help you avoid downtime due to incorrectly configured, revoked, or expired certificates\. For more information, see [Managed Renewal for ACM's Amazon\-Issued Certificates](managed-renewal.md)\.
+ACM manages the process of renewing ACM certificates and provisioning the certificates after they are renewed\. Automatic renewal can help you avoid downtime due to incorrectly configured, revoked, or expired certificates\. For more information, see [Managed renewal for ACM certificates](managed-renewal.md)\.
 
 **Browser and Application Trust**  <a name="browser-trust"></a>
 ACM certificates are trusted by all major browsers including Google Chrome, Microsoft Internet Explorer and Microsoft Edge, Mozilla Firefox, and Apple Safari\. Browsers that trust ACM certificates display a lock icon in their status bar or address bar when connected by SSL/TLS to sites that use ACM certificates\. ACM certificates are also trusted by Java\.
 
 **Multiple Domain Names**  <a name="multiple-domains"></a>
-Each ACM certificate must include at least one fully qualified domain name \(FQDN\), and you can add additional names if you want\. For example, when you are creating an ACM certificate for `www.example.com`, you can also add the name `www.example.net` if customers can reach your site by using either name\. This is also true of bare domains \(also known as the zone apex or naked domains\)\. That is, you can request an ACM certificate for www\.example\.com and add the name example\.com\. For more information, see [Requesting a Public Certificate](gs-acm-request-public.md)\.
+Each ACM certificate must include at least one fully qualified domain name \(FQDN\), and you can add additional names if you want\. For example, when you are creating an ACM certificate for `www.example.com`, you can also add the name `www.example.net` if customers can reach your site by using either name\. This is also true of bare domains \(also known as the zone apex or naked domains\)\. That is, you can request an ACM certificate for www\.example\.com and add the name example\.com\. For more information, see [Requesting a public certificate](gs-acm-request-public.md)\.
 
 **Wildcard Names**  <a name="wildcard"></a>
 ACM allows you to use an asterisk \(\*\) in the domain name to create an ACM certificate containing a wildcard name that can protect several sites in the same domain\. For example, `*.example.com` protects `www.example.com` and `images.example.com`\.  
@@ -43,4 +43,4 @@ Note the following:
 + ACM does not currently permit you to opt out of [managed certificate renewal](managed-renewal.md) for ACM certificates\. Also, managed renewal is not available for certificates that you import into ACM\.
 + You cannot request certificates for Amazon\-owned domain names such as those ending in amazonaws\.com, cloudfront\.net, or elasticbeanstalk\.com\.
 + You cannot download the private key for an ACM certificate\.
-+ You cannot directly install ACM certificates on your Amazon Elastic Compute Cloud \(Amazon EC2\) website or application\. You can, however, use your certificate with any integrated service\. For more information, see [Services Integrated with AWS Certificate Manager](acm-services.md)\. 
++ You cannot directly install ACM certificates on your Amazon Elastic Compute Cloud \(Amazon EC2\) website or application\. You can, however, use your certificate with any integrated service\. For more information, see [Services integrated with AWS Certificate Manager](acm-services.md)\. 

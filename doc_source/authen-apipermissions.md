@@ -1,4 +1,4 @@
-# ACM API Permissions: Actions and Resources Reference<a name="authen-apipermissions"></a>
+# ACM API permissions: Actions and resources reference<a name="authen-apipermissions"></a>
 
 When you set up [access control](security-iam.md#authorization) and write permissions policies that you can attach to an IAM identity \(identity\-based policies\), you can use the following table as a reference\. The first column in the table lists each AWS Certificate Manager API operation\. You specify actions in a policy's `Action` element\. The remaining columns provide the additional information: 
 
@@ -10,7 +10,7 @@ When you set up [access control](security-iam.md#authorization) and write permis
 Use the scroll bars to see the rest of the table\.
 
 
-**ACM API Operations and Permissions**  
+**ACM API operations and permissions**  
 
 | ACM API Operations | Required Permissions \(API Operations\) | Resources | 
 | --- | --- | --- | 

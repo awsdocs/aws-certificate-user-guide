@@ -1,4 +1,4 @@
-# Resending Validation Email<a name="sdk-validate"></a>
+# Resending validation email<a name="sdk-validate"></a>
 
 The following example shows you how to use the [ResendValidationEmail](https://docs.aws.amazon.com/acm/latest/APIReference/API_ResendValidationEmail.html) function\. 
 
@@ -88,7 +88,3 @@ public class AWSCertificateManagerExample {
 ```
 
 The preceding sample resends your validation email and displays an empty set\.
-
-```
-{}
-```

@@ -1,10 +1,9 @@
-# Describing a Certificate<a name="sdk-describe"></a>
+# Describing a certificate<a name="sdk-describe"></a>
 
 The following example shows how to use the [DescribeCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html) function\.
 
 ```
 package com.amazonaws.samples;
-
 
 import com.amazonaws.services.certificatemanager.AWSCertificateManagerClientBuilder;
 import com.amazonaws.services.certificatemanager.AWSCertificateManager;

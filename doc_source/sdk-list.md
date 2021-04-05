@@ -1,4 +1,4 @@
-# Listing Certificates<a name="sdk-list"></a>
+# Listing certificates<a name="sdk-list"></a>
 
 The following example shows how to use the [ListCertificates](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html) function\.
 

@@ -1,4 +1,4 @@
-# Import a Certificate<a name="import-certificate-api-cli"></a>
+# Importing a certificate<a name="import-certificate-api-cli"></a>
 
 You can import a certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API\. The following topics show you how to use the AWS Management Console and the AWS CLI\. 
 
@@ -6,10 +6,10 @@ You can import a certificate into ACM by using the AWS Management Console, the A
 The private key of an imported certificate must be no larger than 5 KB \(5,120 bytes\)\.
 
 **Topics**
-+ [Import Using the Console](#import-certificate-api)
-+ [Import Using the AWS CLI](#import-certificate-cli)
++ [Import \(console\)](#import-certificate-api)
++ [Import \(AWS CLI\)](#import-certificate-cli)
 
-## Import Using the Console<a name="import-certificate-api"></a>
+## Import \(console\)<a name="import-certificate-api"></a>
 
 The following example shows how to import a certificate using the AWS Management Console\.
 
@@ -23,7 +23,7 @@ The following example shows how to import a certificate using the AWS Management
 
    1.  For **Certificate private key**, paste the PEM\-encoded, unencrypted private key that matches the certificate's public key\. 
 **Important**  
- Currently, [Services Integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
+ Currently, [Services integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
 
    1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\.
 
@@ -31,7 +31,7 @@ The following example shows how to import a certificate using the AWS Management
 
 1. Review the information about your certificate, then choose **Import**\.
 
-## Import Using the AWS CLI<a name="import-certificate-cli"></a>
+## Import \(AWS CLI\)<a name="import-certificate-cli"></a>
 
 The following example shows how to import a certificate using the [AWS Command Line Interface \(AWS CLI\)](https://aws.amazon.com/cli/)\. The example assumes the following:
 + The PEM\-encoded certificate is stored in a file named `Certificate.pem`\.

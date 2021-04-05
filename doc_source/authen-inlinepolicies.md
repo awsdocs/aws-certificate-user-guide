@@ -1,17 +1,17 @@
-# Inline Policies<a name="authen-inlinepolicies"></a>
+# Inline policies<a name="authen-inlinepolicies"></a>
 
 Inline policies are policies that you create and manage and embed directly into a single user, group, or role\. The following policy examples show how to assign permissions to perform ACM actions\. For more information about attaching inline policies, see [Working with Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_inline-using.html) in the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\. You can use the AWS Management Console, the AWS Command Line Interface \(AWS CLI\), or the IAM API to create and embed inline policies\. 
 
 **Topics**
-+ [Listing Certificates](#policy-list-certificates)
-+ [Retrieving a Certificate](#policy-retrieve-certificates)
-+ [Importing a Certificate](#policy-import-certificate)
-+ [Deleting a Certificate](#policy-delete-certificates)
-+ [Read\-Only Access to ACM](#policy-acm-read-only)
-+ [Full Access to ACM](#policy-acm-full-access)
-+ [Administrator Access to All AWS Resources](#policy-aws-administrator)
++ [Listing certificates](#policy-list-certificates)
++ [Retrieving a certificate](#policy-retrieve-certificates)
++ [Importing a certificate](#policy-import-certificate)
++ [Deleting a certificate](#policy-delete-certificates)
++ [Read\-only access to ACM](#policy-acm-read-only)
++ [Full access to ACM](#policy-acm-full-access)
++ [Administrator access to all AWS resources](#policy-aws-administrator)
 
-## Listing Certificates<a name="policy-list-certificates"></a>
+## Listing certificates<a name="policy-list-certificates"></a>
 
 The following policy allows a user to list all of the ACM certificates in the user's account\. 
 
@@ -31,7 +31,7 @@ The following policy allows a user to list all of the ACM certificates in the us
 **Note**  
 This permission is required for ACM certificates to appear in the Elastic Load Balancing and CloudFront consoles\. 
 
-## Retrieving a Certificate<a name="policy-retrieve-certificates"></a>
+## Retrieving a certificate<a name="policy-retrieve-certificates"></a>
 
 The following policy allows a user to retrieve a specific ACM certificate\. 
 
@@ -46,7 +46,7 @@ The following policy allows a user to retrieve a specific ACM certificate\.
 }
 ```
 
-## Importing a Certificate<a name="policy-import-certificate"></a>
+## Importing a certificate<a name="policy-import-certificate"></a>
 
 The following policy allows a user to import a certificate\. 
 
@@ -61,7 +61,7 @@ The following policy allows a user to import a certificate\.
 }
 ```
 
-## Deleting a Certificate<a name="policy-delete-certificates"></a>
+## Deleting a certificate<a name="policy-delete-certificates"></a>
 
 The following policy allows a user to delete a specific ACM certificate\. 
 
@@ -76,7 +76,7 @@ The following policy allows a user to delete a specific ACM certificate\.
 }
 ```
 
-## Read\-Only Access to ACM<a name="policy-acm-read-only"></a>
+## Read\-only access to ACM<a name="policy-acm-read-only"></a>
 
 The following policy allows a user to describe and list an ACM certificate and to retrieve the ACM certificate and certificate chain\. 
 
@@ -97,9 +97,9 @@ The following policy allows a user to describe and list an ACM certificate and t
 ```
 
 **Note**  
-This policy is available as an AWS managed policy in the AWS Management Console\. For more information, see [AWSCertificateManagerReadOnly](authen-awsmanagedpolicies.md#acm-read-only-managed-policy)\. To view the managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly)\. 
+This policy is available as an AWS managed policy in the AWS Management Console\. For more information, see [AWSCertificateManagerReadOnly](security-iam-awsmanpol.md#acm-read-only-managed-policy)\. To view the managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly)\. 
 
-## Full Access to ACM<a name="policy-acm-full-access"></a>
+## Full access to ACM<a name="policy-acm-full-access"></a>
 
 The following policy allows a user to perform any ACM action\. 
 
@@ -119,9 +119,9 @@ The following policy allows a user to perform any ACM action\.
 ```
 
 **Note**  
-This policy is available as an AWS managed policy in the AWS Management Console\. For more information, see [AWSCertificateManagerFullAccess](authen-awsmanagedpolicies.md#acm-full-access-managed-policy)\. To view the managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess)\. 
+This policy is available as an AWS managed policy in the AWS Management Console\. For more information, see [AWSCertificateManagerFullAccess](security-iam-awsmanpol.md#acm-full-access-managed-policy)\. To view the managed policy in the console, go to [https://console\.aws\.amazon\.com/iam/home\#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess)\. 
 
-## Administrator Access to All AWS Resources<a name="policy-aws-administrator"></a>
+## Administrator access to all AWS resources<a name="policy-aws-administrator"></a>
 
 The following policy allows a user to perform any action on any AWS resource\. 
 

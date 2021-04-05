@@ -1,16 +1,16 @@
-# Requesting a Public Certificate<a name="gs-acm-request-public"></a>
+# Requesting a public certificate<a name="gs-acm-request-public"></a>
 
 The following sections discuss how to use the ACM console or AWS CLI to request a public ACM certificate\. 
 
-If you encounter problems when requesting a certificate, see [Troubleshooting Certificate Requests](troubleshooting-cert-requests.md)\. 
+If you encounter problems when requesting a certificate, see [Troubleshooting certificate requests](troubleshooting-cert-requests.md)\. 
 
-To request a certificate for a private PKI using ACM Private CA, see [Requesting a Private Certificate](gs-acm-request-private.md)\. 
+To request a certificate for a private PKI using ACM Private CA, see [Requesting a private certificate](gs-acm-request-private.md)\. 
 
 **Topics**
-+ [Request a Public Certificate Using the Console](#request-public-console)
-+ [Request a Public Certificate Using the CLI](#request-public-cli)
++ [Request a public certificate using the console](#request-public-console)
++ [Request a public certificate using the CLI](#request-public-cli)
 
-## Request a Public Certificate Using the Console<a name="request-public-console"></a>
+## Request a public certificate using the console<a name="request-public-console"></a>
 
 **To request an ACM public certificate \(console\)**
 
@@ -30,23 +30,23 @@ When you request a wild card certificate, the asterisk \(**\***\) must be in the
 
 1. On the **Select validation method** page, choose either **DNS validation** or **Email validation**, depending on your needs\.
 **Note**  
-If you are able to edit your DNS configuration, we recommend that you use DNS domain validation rather than email validation\. DNS validation has multiple benefits over email validation\. See [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\. 
+If you are able to edit your DNS configuration, we recommend that you use DNS domain validation rather than email validation\. DNS validation has multiple benefits over email validation\. See [Option 1: DNS validationDNS validation](dns-validation.md)\. 
 
-   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request\. You can use either email validation or DNS validation\. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name\. You or an authorized representative must reply to one of these email messages\. For more information, see [Using Email to Validate Domain Ownership](gs-acm-validate-email.md)\. If you use DNS validation, you simply add a CNAME record provided by ACM to your DNS configuration\. For more information about DNS validation, see [Using DNS to Validate Domain Ownership](gs-acm-validate-dns.md)\.
+   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request\. You can use either email validation or DNS validation\. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name\. You or an authorized representative must reply to one of these email messages\. For more information, see [Option 2: Email validation](email-validation.md)\. If you use DNS validation, you simply add a CNAME record provided by ACM to your DNS configuration\. For more information about DNS validation, see [Option 1: DNS validationDNS validation](dns-validation.md)\.
 
    After choosing a validation method, choose **Next**\.
 
-1. On the **Add tags** page, you can optionally tag your certificate\. Tags are key/value pairs that serve as metadata for identifying and organizing AWS resources\. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager Certificates](tags.md)\. 
+1. On the **Add tags** page, you can optionally tag your certificate\. Tags are key/value pairs that serve as metadata for identifying and organizing AWS resources\. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager certificates](tags.md)\. 
 
    When you finish adding tags, choose **Review**\.
 
 1. If the **Review** page contains correct information about your request, choose **Confirm and request**\. A confirmation page shows that your request is being processed and that certificate domains are being validated\. Certificates awaiting validation are in the **Pending validation** state\. 
 **Important**  
-Unless you choose to opt out, your certificate will be automatically recorded in at least two public certificate transparency databases\. You cannot currently use the console to opt out\. You must use the AWS CLI or the API\. For more information, see [Opting Out of Certificate Transparency Logging](acm-bestpractices.md#best-practices-transparency)\. For general information about transparency logs, see [Certificate Transparency Logging](acm-concepts.md#concept-transparency)\.
+Unless you choose to opt out, your certificate will be automatically recorded in at least two public certificate transparency databases\. You cannot currently use the console to opt out\. You must use the AWS CLI or the API\. For more information, see [Opting out of certificate transparency logging](acm-bestpractices.md#best-practices-transparency)\. For general information about transparency logs, see [Certificate Transparency Logging](acm-concepts.md#concept-transparency)\.
 
    Choose **Continue** to return to the ACM console\.
 
-## Request a Public Certificate Using the CLI<a name="request-public-cli"></a>
+## Request a public certificate using the CLI<a name="request-public-cli"></a>
 
 Use the [request\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/request-certificate.html) command to request a new public ACM certificate on the command line\. 
 

@@ -1,4 +1,4 @@
-# Listing Certificate Tags<a name="sdk-listtag"></a>
+# Listing certificate tags<a name="sdk-listtag"></a>
 
 The following example shows how to use the [ListTagsForCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForCertificate.html) function\.
 
