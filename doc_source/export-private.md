@@ -3,7 +3,7 @@
 You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For more information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
 
 **Note**  
-You cannot export a publicly trusted ACM certificate or it private key\.
+You cannot export a publicly trusted ACM certificate or its private key\.
 
 **Topics**
 + [Exporting a private certificate \(console\)](#export-console)
