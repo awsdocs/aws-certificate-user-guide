@@ -29,14 +29,14 @@ When there is an **issuewild** CAA record present that does not include an ACM C
 In the following examples, your domain name comes first followed by the record type \(CAA\)\. The **flags** field is always 0\. The **tags** field can be **issue** or **issuewild**\. If the field is **issue** and you type the domain name of a CA server in the **value** field, the CAA record indicates that your specified server is permitted to issue your requested certificate\. If you type a semicolon ";" in the **value** field, the CAA record indicates that no CA is permitted to issue a certificate\. The configuration of CAA records varies by DNS provider\.   
 
 ```
-Domain   Record type  Flags  Tag      Value   
+Domain         Record type   Flags  Tag         Value   
 
-example.com.   CAA           0      issue   "SomeCA.com"
-example.com.   CAA           0      issue   "amazon.com"
-example.com.   CAA           0      issue   "amazontrust.com"
-example.com.   CAA           0      issue   "awstrust.com"
-example.com.   CAA           0      issue   "amazonaws.com"
-example.com    CAA           0      issue   ";"
+example.com.   CAA           0      issue       "SomeCA.com"
+example.com.   CAA           0      issue       "amazon.com"
+example.com.   CAA           0      issue       "amazontrust.com"
+example.com.   CAA           0      issue       "awstrust.com"
+example.com.   CAA           0      issue       "amazonaws.com"
+example.com.   CAA           0      issuewild   ";"
 ```
 
 For more information about how to add or modify DNS records, check with your DNS provider\. Route 53 supports CAA records\. If Route 53 is your DNS provider, see [CAA Format](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#CAAFormat) for more information about creating a record\. 
