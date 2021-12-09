@@ -1,7 +1,7 @@
 # AWS Certificate Manager User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -40,10 +40,10 @@ Amazon's trademarks and trade dress may not be used in
    + [(Optional) Configure a CAA record](setup-caa.md)
 + [Issuing and managing certificates](gs.md)
    + [Requesting a public certificate](gs-acm-request-public.md)
-   + [Requesting a private certificate](gs-acm-request-private.md)
+   + [Requesting a private PKI certificate](gs-acm-request-private.md)
    + [Validating domain ownership](domain-ownership-validation.md)
-      + [Option 1: DNS validation](dns-validation.md)
-      + [Option 2: Email validation](email-validation.md)
+      + [DNS validation](dns-validation.md)
+      + [Email validation](email-validation.md)
    + [Listing certificates managed by ACM](gs-acm-list.md)
    + [Describing ACM certificates](gs-acm-describe.md)
    + [Deleting certificates managed by ACM](gs-acm-delete.md)
@@ -51,6 +51,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Managed renewal for ACM certificates](managed-renewal.md)
    + [Renewal for domains validated by DNS](dns-renewal-validation.md)
    + [Renewal for domains validated by email](email-renewal-validation.md)
+      + [Request a domain validation email message for certificate renewal](request-domain-validation-email-for-renewal.md)
       + [Automating email validation](email-automation.md)
    + [Renewing certificates in a private PKI](renew-private-cert.md)
    + [Check a certificate's renewal status](check-certificate-renewal-status.md)
@@ -67,6 +68,10 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring and logging AWS Certificate Manager](monitoring-and-logging.md)
    + [Supported CloudWatch metrics](cloudwatch-metrics.md)
    + [Using CloudWatch Events](cloudwatch-events.md)
+      + [Amazon EventBridge support for ACM](supported-events.md)
+      + [Triggering actions with CloudWatch Events in ACM](example-actions.md)
+         + [Responding to an event with Amazon SNS](event-sns-response.md)
+         + [Responding to an event with a Lambda function](event-lambda-response.md)
    + [Using CloudTrail with AWS Certificate Manager](cloudtrail.md)
       + [ACM API actions supported in CloudTrail logging](acm-supported-actions-in-cloudtrail.md)
       + [Logging API calls for integrated services](ct-related.md)

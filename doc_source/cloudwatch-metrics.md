@@ -12,7 +12,5 @@ The `AWS/CertificateManager` namespace includes the following metric\.
 | DaysToExpiry | Number of days until a certificate expires\. ACM stops publishing this metric after a certificate expires\. | Integer | CertificateArn[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/acm/latest/userguide/cloudwatch-metrics.html) | 
 
 For more information about CloudWatch metrics, see the following topics:
-
-
 + [Using Amazon CloudWatch Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html)
 + [Creating Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html)

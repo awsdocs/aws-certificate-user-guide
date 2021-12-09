@@ -28,6 +28,7 @@ The following CloudTrail example shows the results of a call to the [AddTagsToCe
 
 ```
 {
+
    "Records":[
       {
          "eventVersion":"1.04",
@@ -70,6 +71,7 @@ The following CloudTrail example shows the results of a call to the [DeleteCerti
 
 ```
 {
+
    "Records":[
       {
          "eventVersion":"1.04",
@@ -525,6 +527,7 @@ The following CloudTrail example shows the results of a call to the [GetCertific
 
 ```
 {
+
    "Records":[
       {
          "eventVersion":"1.04",

@@ -1,9 +1,9 @@
 # Importing a certificate<a name="import-certificate-api-cli"></a>
 
-You can import a certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API\. The following topics show you how to use the AWS Management Console and the AWS CLI\. 
+You can import an externally obtained certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API\. The following topics show you how to use the AWS Management Console and the AWS CLI\. Procedures for obtaining a certificate from a non\-AWS issuer are outside the scope of this guide\.
 
-**Note**  
-The private key of an imported certificate must be no larger than 5 KB \(5,120 bytes\)\.
+**Important**  
+ Your selected signature algorithm must meet the [Prerequisites for importing certificates](import-certificate-prerequisites.md)\.
 
 **Topics**
 + [Import \(console\)](#import-certificate-api)
@@ -19,17 +19,22 @@ The following example shows how to import a certificate using the AWS Management
 
 1. Do the following:
 
-   1. For **Certificate body**, paste the PEM\-encoded certificate to import\.
+   1. For **Certificate body**, paste the PEM\-encoded certificate to import\. It should begin with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`\. 
 
-   1.  For **Certificate private key**, paste the PEM\-encoded, unencrypted private key that matches the certificate's public key\. 
-**Important**  
- Currently, [Services integrated with AWS Certificate Manager](acm-services.md) support only the `RSA_1024` and `RSA_2048` algorithms\. 
+   1.  For **Certificate private key**, paste the certificate's PEM\-encoded, unencrypted private key\. It should begin with `-----BEGIN PRIVATE KEY-----` and end with `-----END PRIVATE KEY-----`\.
 
    1. \(Optional\) For **Certificate chain**, paste the PEM\-encoded certificate chain\.
 
 1. Choose **Review and import**\.
 
-1. Review the information about your certificate, then choose **Import**\.
+1. On the **Review and import** page, check the displayed metadata about your certificate to ensure that it is what you intended\. The fields include:
+   + **Domains** — A list of fully qualified domain names \(FQDN\) authenticated by the certificate
+   + **Expires in** — The number of days until the certificate expires
+   + **Public key info** — The cryptographic algorithm used to generate the key pair
+   + **Signature algorithm** — The cryptographic algorithm used to create the certificate's signature
+   + **Can be used with** — A list of ACM [integrated services](https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html) that support the type of certificate you are importing
+
+   If everything is correct, choose **Import**\.
 
 ## Import \(AWS CLI\)<a name="import-certificate-cli"></a>
 

@@ -128,7 +128,7 @@ See [Domain Names](#concept-dn)\.
 
 Unlike [Symmetric Key Cryptography](#concept-symmetric), asymmetric cryptography uses different but mathematically related keys to encrypt and decrypt content\. One of the keys is public and is typically made available in an X\.509 v3 certificate\. The other key is private and is stored securely\. The X\.509 certificate binds the identity of a user, computer, or other resource \(the certificate subject\) to the public key\. 
 
-ACM certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM uses the your customer master key \(CMK\) to encrypt the private key\. For more information, see [ACM private key security](data-protection.md#kms)\.
+ACM certificates are X\.509 SSL/TLS certificates that bind the identity of your website and the details of your organization to the public key that is contained in the certificate\. ACM uses your AWS KMS key to encrypt the private key\. For more information, see [ACM private key security](data-protection.md#kms)\.
 
 ## Certificate Authority<a name="concept-ca"></a>
 
@@ -140,7 +140,7 @@ To guard against SSL/TLS certificates that are issued by mistake or by a comprom
 
 You can monitor the logs to make sure that only certificates you have authorized have been issued for your domain\. You can use a service such as [Certificate Search](https://crt.sh/) to check the logs\. 
 
-Before the Amazon CA issues a publicly trusted SSL/TLS certificate for your domain, it submits the certificate to at least two certificate transparency log servers\. These servers add the certificate to their public databases and return a signed certificate timestamp \(SCT\) to the Amazon CA\. The CA then embeds the SCT in the certificate, signs the certificate, and issues it to you\. The timestamps are included with other X\.509 extensions\. 
+Before the Amazon CA issues a publicly trusted SSL/TLS certificate for your domain, it submits the certificate to at least three certificate transparency log servers\. These servers add the certificate to their public databases and return a signed certificate timestamp \(SCT\) to the Amazon CA\. The CA then embeds the SCT in the certificate, signs the certificate, and issues it to you\. The timestamps are included with other X\.509 extensions\. 
 
 ```
  X509v3 extensions:
@@ -166,7 +166,7 @@ Certificate transparency logging is automatic when you request or renew a certif
 
 ## Domain Name System<a name="concept-dns"></a>
 
-The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [Option 1: DNS validationDNS validation](dns-validation.md)\. 
+The Domain Name System \(DNS\) is a hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(Internet Protocol\) addresses of the form `111.122.133.144`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with ACM you can use a CNAME record to validate that you own or control a domain when you request a certificate\. For more information, see [DNS validationDNS validation](dns-validation.md)\. 
 
 ## Domain Names<a name="concept-dn"></a>
 

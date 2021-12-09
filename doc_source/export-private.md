@@ -3,7 +3,7 @@
 You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment\. The exported file contains the certificate, the certificate chain, and the encrypted private key\. This file must be stored securely\. For more information about ACM Private CA, see [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/)\.
 
 **Note**  
-You cannot export a publicly trusted ACM certificate or it private key\.
+You cannot export a publicly trusted ACM certificate or its private key\.
 
 **Topics**
 + [Exporting a private certificate \(console\)](#export-console)
@@ -20,6 +20,8 @@ You cannot export a publicly trusted ACM certificate or it private key\.
 1. On the **Actions** menu, choose **Export \(private certificates only\)**\.
 
 1. Enter and confirm a passphrase for the private key\.
+**Note**  
+When creating your passphrase, you can use any ASCII character except \#, $, or %\.
 
 1. Choose **Generate PEM Encoding**\.
 
@@ -29,15 +31,23 @@ You cannot export a publicly trusted ACM certificate or it private key\.
 
 ## Export a private certificate \(CLI\)<a name="export-cli"></a>
 
-Use the [export\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/export-certificate.html) command to export a private certificate and private key\. You must assign the passphrase when you run the command\. For added security, store your passphrase securely in a file before using the command\. This prevents your passphrase from being stored in the command history and prevents others from seeing the passphrase as you type it in\. 
+Use the [export\-certificate](https://docs.aws.amazon.com/cli/latest/reference/acm/export-certificate.html) command to export a private certificate and private key\. You must assign a passphrase when you run the command\. For added security, use a file editor to store your passphrase in a file, and then supply the passphrase by supplying the file\. This prevents your passphrase from being stored in the command history and prevents others from seeing the passphrase as you type it in\. 
+
+**Note**  
+The file containing the passphrase must not end in a line terminator\. You can check your password file like this:   
+
+```
+$ file -k passphrase.txt
+passphrase.txt: ASCII text, with no line terminators
+```
 
 The following example pipes the command output to `jq` to apply PEM formatting\.
 
 ```
-aws acm export-certificate \
---certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase fileb://path-to-passphrase-file  \
-| jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"'
+$ aws acm export-certificate \
+     --certificate-arn arn:aws:acm:region:account:certificate/certificate_ID \
+     --passphrase fileb://path-to-passphrase-file  \
+     | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"'
 ```
 
 This outputs a base64\-encoded, PEM\-format certificate, also containing the certificate chain and encrypted private key, as in the following abbreviated example\.
@@ -76,9 +86,9 @@ Fs5kw5mvEoe5DAe3rSKsSUJ1tM4RagJj2WH+BC04SZWNH8kxfOC1E/GSLBCixv3v
 To output everything to a file, append the `>` redirector to the previous example, yielding the following\. 
 
 ```
-aws acm export-certificate \
---certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
---passphrase fileb://path-to-passphrase-file \
-| jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"' \
-> /tmp/export.txt
+$ aws acm export-certificate \
+     --certificate-arn arn:aws:acm:region:account:certificate/certificate_ID \
+     --passphrase fileb://path-to-passphrase-file \
+     | jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"' \
+     > /tmp/export.txt
 ```

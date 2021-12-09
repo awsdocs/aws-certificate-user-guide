@@ -10,6 +10,11 @@ A certificate is eligible for automatic renewal subject to the following conside
 + NOT ELIGIBLE if it is a private certificate issued by calling the ACM Private CA [https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html) API\.
 + NOT ELIGIBLE if [imported](import-certificate.md)\.
 + NOT ELIGIBLE if already expired\.
++ NOT ELIGIBLE for a certificate with a domain name that contains hyphens as its third and fourth characters\. For example, the following domain name is not permitted:
+
+  ```
+  ab--example.com
+  ```
 
 When ACM renews a certificate, the certificate's Amazon Resource Name \(ARN\) remains the same\. Also, ACM certificates are [regional resources](acm-regions.md)\. If you have certificates for the same domain name in multiple AWS Regions, each of these certificates must be renewed independently\.
 

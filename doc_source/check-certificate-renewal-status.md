@@ -1,6 +1,6 @@
 # Check a certificate's renewal status<a name="check-certificate-renewal-status"></a>
 
-You can use the AWS Certificate Manager console, the ACM API, the AWS CLI, or the Personal Health Dashboard to check the renewal status of an ACM certificate\. If you use the console, AWS CLI, or ACM API, certificate renewal can have one of the four possible status values listed below\. Similar values are displayed if you use the Personal Health Dashboard\. 
+You can use the AWS Certificate Manager console, the ACM API, the AWS CLI, or the AWS Personal Health Dashboard to check the renewal status of an ACM certificate\. If you use the console, AWS CLI, or ACM API, certificate renewal can have one of the four possible status values listed below\. Similar values are displayed if you use the AWS Personal Health Dashboard\. 
 
 **Pending automatic renewal**  
 ACM is attempting to automatically validate the domain names in the certificate\. For more information, see [Renewal for domains validated by DNS](dns-renewal-validation.md)\. No further action is required\. 
@@ -51,14 +51,14 @@ In the response, note the value in the `RenewalStatus` field\. If you don't see 
 
 ## Check the status using Personal Health Dashboard \(PHD\)<a name="check-renewal-status-phd"></a>
 
-ACM attempts to automatically renew your ACM certificate 60 days prior to expiration\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](https://docs.aws.amazon.com/health/latest/ug/)\. 
+ACM attempts to automatically renew your ACM certificate 60 days prior to expiration\. If ACM cannot automatically renew your certificate, it sends certificate renewal event notices to your AWS Personal Health Dashboard at 45 day, 30 day, 15 day, 7 day, 3 day, and 1 day intervals from expiration to inform you that you need to take action\. The AWS Personal Health Dashboard is part of the AWS Health service\. It requires no setup and can be viewed by any user that is authenticated in your account\. For more information, see [AWS Health User Guide](https://docs.aws.amazon.com/health/latest/ug/)\. 
 
 **Note**  
 ACM writes successive renewal event notices to a single event in your PHD time line\. Each notice overwrites the previous one until the renewal succeeds\.
 
-**To use the Personal Health Dashboard:**
+**To use the AWS Personal Health Dashboard:**
 
-1. Log in to the Personal Health Dashboard at [https://phd\.aws\.amazon\.com/phd/home\#/](https://phd.aws.amazon.com/phd/home#/)\.
+1. Log in to the AWS Personal Health Dashboard at [https://phd\.aws\.amazon\.com/phd/home\#/](https://phd.aws.amazon.com/phd/home#/)\.
 
 1. Choose **Event log**\.
 

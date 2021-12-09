@@ -76,7 +76,7 @@ To view this AWS managed policy in the console, go to [https://console\.aws\.ama
 
 ## ACM updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
-View details about updates to AWS managed policies for ACM since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the ACM [Document history](dochistory.md#dochistory.title) page\.
+View details about updates to AWS managed policies for ACM since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the ACM [Document history](dochistory.md) page\.
 
 
 

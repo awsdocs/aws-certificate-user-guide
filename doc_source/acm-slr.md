@@ -19,7 +19,7 @@ The role permissions policy allows ACM to complete the following actions on the 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete an SLR\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 
 **Important**  
-ACM may alert you that it cannot determine whether an SLR exists on your account\. If the required `iam:GetRole` permission has already been granted to the ACM SLR for your account, then the alert will not recur after the SLR is created\. If it does recur, then you or your account administrator may need to grant the `iam:GetRole` permission to ACM, or associate your account with the ACM managed policy `AWSCertificateManagerFullAccess`\.
+ACM might alert you that it cannot determine whether an SLR exists on your account\. If the required `iam:GetRole` permission has already been granted to the ACM SLR for your account, then the alert will not recur after the SLR is created\. If it does recur, then you or your account administrator might need to grant the `iam:GetRole` permission to ACM, or associate your account with the ACM\-managed policy `AWSCertificateManagerFullAccess`\.
 
 ## Creating the SLR for ACM<a name="create-slr"></a>
 

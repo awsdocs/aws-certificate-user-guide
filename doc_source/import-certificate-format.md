@@ -1,6 +1,6 @@
 # Certificate and key format for importing<a name="import-certificate-format"></a>
 
-The certificate, certificate chain, and private key \(if any\) are each imported separately and must be PEM–encoded\. PEM stands for Privacy Enhanced Mail\. The PEM format is often used to represent certificates, certificate requests, certificate chains, and keys\. The typical extension for a PEM–formatted file is `.pem`, but it doesn't need to be\. 
+ACM requires you to separately import the certificate, certificate chain, and private key \(if any\), and to encode each component in PEM format\. PEM stands for Privacy Enhanced Mail\. The PEM format is often used to represent certificates, certificate requests, certificate chains, and keys\. The typical extension for a PEM–formatted file is `.pem`, but it doesn't need to be\. 
 
 **Note**  
 AWS does not provide utilities for manipulating PEM files or other certificate formats\. The following examples rely on a generic text editor for simple operations\. If you need to perform more complex tasks \(such as converting file formats or extracting keys\), free and open\-source tools such as [OpenSSL](https://www.openssl.org/docs/) are readily available\.
@@ -32,7 +32,7 @@ Base64–encoded certificate
 ```
 
 **Example 3\. PEM–encoded private keys \(private certificate only\)**  
-X\.509 version 3 certificates utilize public key algorithms\. When you create an X\.509 certificate or certificate request, you specify the algorithm and the key bit size that must be used to create the private–public key pair\. The public key is placed in the certificate or request\. You must keep the associated private key secret\. Specify the private key when you import the certificate\. The key must be unencrypted\. The following example shows an RSA private key\.   
+X\.509 version 3 certificates use public key algorithms\. When you create an X\.509 certificate or certificate request, you specify the algorithm and the key bit size that must be used to create the private–public key pair\. The public key is placed in the certificate or request\. You must keep the associated private key secret\. Specify the private key when you import the certificate\. The key must be unencrypted\. The following example shows an RSA private key\.   
 
 ```
 -----BEGIN RSA PRIVATE KEY-----

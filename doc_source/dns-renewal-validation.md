@@ -4,7 +4,7 @@ Managed renewal is fully automated for ACM certificates that were originally iss
 
 At 60 days prior to expiration, ACM checks for the renewal criteria:
 + The certificate is currently in use by an AWS service\.
-+ A valid DNS record for the apex domain exists\.
++ There is a valid DNS record containing the fully qualified domain name \(FQDN\)\.
 + The required CNAME token is present and accessible in the DNS record\.
 + Each domain and subdomain that is named in the certificate is present in the DNS record\.
 

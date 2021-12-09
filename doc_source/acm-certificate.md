@@ -6,7 +6,7 @@ Public certificates provided by ACM have the characteristics described on this p
 These characteristics apply only to certificates provided by ACM\. They might not apply to [certificates that you import into ACM](import-certificate.md)\.
 
 **Domain Validation \(DV\)**  <a name="domain-validation"></a>
-ACM certificates are domain validated\. That is, the subject field of an ACM certificate identifies a domain name and nothing more\. When you request an ACM certificate, you must validate that you own or control all of the domains that you specify in your request\. You can validate ownership by using email or DNS\. For more information, see [Option 2: Email validation](email-validation.md) and [Option 1: DNS validationDNS validation](dns-validation.md)\.
+ACM certificates are domain validated\. That is, the subject field of an ACM certificate identifies a domain name and nothing more\. When you request an ACM certificate, you must validate that you own or control all of the domains that you specify in your request\. You can validate ownership by using email or DNS\. For more information, see [Email validation](email-validation.md) and [DNS validationDNS validation](dns-validation.md)\.
 
 **Validity Period**  <a name="validity"></a>
 The validity period for ACM certificates is 13 months \(395 days\)\.
@@ -44,3 +44,8 @@ Note the following:
 + You cannot request certificates for Amazon\-owned domain names such as those ending in amazonaws\.com, cloudfront\.net, or elasticbeanstalk\.com\.
 + You cannot download the private key for an ACM certificate\.
 + You cannot directly install ACM certificates on your Amazon Elastic Compute Cloud \(Amazon EC2\) website or application\. You can, however, use your certificate with any integrated service\. For more information, see [Services integrated with AWS Certificate Manager](acm-services.md)\. 
++ ACM does not support issuing or renewing certificates for domain names that contain hyphens as their third and fourth characters\. For example, the following domain name is not permitted:
+
+  ```
+  ab--example.com
+  ```

@@ -6,6 +6,9 @@ An AWS Certificate Manager command might fail for several reasons\. For informat
 
 The following exceptions can occur when you attempt to renew a private PKI certificate issued by ACM Private CA\. 
 
+**Note**  
+ACM Private CA is not supported in the China \(Beijing\) Region and the China \(Ningxia\) Region\.
+
 
 | ACM failure code | Comment | 
 | --- | --- | 

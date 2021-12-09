@@ -31,7 +31,7 @@ If you see this error and your domain is not included in the VirusTotal list, vi
 
 ## Error message: Additional Verification Required<a name="failed-additional-verification-required"></a>
 
-ACM requires additional information to process this certificate request\. This can happen as a fraud\-protection measure, such as when the domain ranks within the [Alexa top 1000 websites](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Alexa-Top-Sites/B07QK2XWNV)\. To provide the required information, use the [Support Center](https://console.aws.amazon.com/support/home) to contact AWS Support\. If you don't have a support plan, post a new thread in the [ACM Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=206)\. 
+ACM requires additional information to process this certificate request\. This can happen as a fraud\-protection measure, such as when you use email verification and your domain ranks within the [Alexa top 1000 websites](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Alexa-Top-Sites/B07QK2XWNV)\. To provide the required information, use the [Support Center](https://console.aws.amazon.com/support/home) to contact AWS Support\. If you don't have a support plan, post a new thread in the [ACM Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=206)\. 
 
 **Note**  
 You cannot request a certificate for Amazon\-owned domain names such as those ending in amazonaws\.com, cloudfront\.net, or elasticbeanstalk\.com\.

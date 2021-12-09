@@ -14,7 +14,7 @@ The first step in DNS troubleshooting is to check the current status of your dom
 + [DNS validation on GoDaddy fails](#troubleshooting-DNS-GoDaddy)
 + [Troubleshoot problems with the \.IO top\-level domain](#troubleshoot-iodomains)
 + [ACM Console does not display "Create record in Route 53" button](#troubleshooting-route53-1)
-+ [Route 53 validation fails on private domains](#troubleshooting-route53-2)
++ [Route 53 validation fails on private \(untrusted\) domains](#troubleshooting-route53-2)
 + [Validation fails for DNS server on a VPN](#troubleshooting-vpn)
 
 ## Underscores prohibited by DNS provider<a name="underscores-prohibited"></a>
@@ -66,11 +66,11 @@ ACM does, however, send validation email to the following five common system add
 To receive validation mail for an \.IO domain, make sure that you have one of the preceding five email accounts enabled\. If you do not, you will not receive validation email and you will not be issued an ACM certificate\.
 
 **Note**  
-We recommend that you use DNS validation rather than email validation\. For more information, see [Option 1: DNS validationDNS validation](dns-validation.md)\. 
+We recommend that you use DNS validation rather than email validation\. For more information, see [DNS validationDNS validation](dns-validation.md)\. 
 
 ## ACM Console does not display "Create record in Route 53" button<a name="troubleshooting-route53-1"></a>
 
-If you select Amazon Route 53 as your DNS provider, AWS Certificate Manager can interact directly with it to validation your domain ownership\. Under some circumstances, the console's **Create record in Route 53** button may not be available when you expect it\. If this happens, check for the following possible causes\.
+If you select Amazon Route 53 as your DNS provider, AWS Certificate Manager can interact directly with it to validate your domain ownership\. Under some circumstances, the console's **Create record in Route 53** button may not be available when you expect it\. If this happens, check for the following possible causes\.
 + On the **Validation** page, you did not click the down\-arrow next to your domain name\. 
 + You are not using Route 53 as your DNS provider\.
 + You are logged into ACM and Route 53 through different accounts\.
@@ -78,9 +78,11 @@ If you select Amazon Route 53 as your DNS provider, AWS Certificate Manager can
 + You or someone else has already validated the domain\.
 + The domain is not publicly addressable\.
 
-## Route 53 validation fails on private domains<a name="troubleshooting-route53-2"></a>
+## Route 53 validation fails on private \(untrusted\) domains<a name="troubleshooting-route53-2"></a>
 
-Route 53 is exclusively a *public* DNS service\. You cannot use it to host DNS records for private domains, such as those supported by ACM Private CA\. During DNS validation, ACM searches for a CNAME in a publicly hosted zone\. When it doesn't find one, it times out after 72 hours with a status of **Validation timed out**\.
+Route 53 is exclusively a *public* DNS service\. During DNS validation, ACM searches for a CNAME in a publicly hosted zone\. When it doesn't find one, it times out after 72 hours with a status of **Validation timed out**\. You cannot use it to host DNS records for private domains, such as untrusted domains in your private PKI, or self\-signed certificates\. 
+
+AWS does provide support for publicly untrusted domains through the [ACM Private CA](https://aws.amazon.com/certificate-manager/private-certificate-authority/) service\. 
 
 ## Validation fails for DNS server on a VPN<a name="troubleshooting-vpn"></a>
 
