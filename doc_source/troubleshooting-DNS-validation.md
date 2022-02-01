@@ -33,7 +33,7 @@ You can use either of the values on the right side of the table below to validat
 
 Some DNS providers add by default a trailing period to the CNAME value that you provide\. As a result, adding the period yourself causes an error\. For example, "`<random_value>.acm-validations.aws.`" is rejected while "`<random_value>.acm-validations.aws`" is accepted\.
 
-## DNS validation on GoDaddy fails<a name="troubleshooting-DNS-GoDaddy"></a>
+## DNS validation on GoDaddy or Namecheap fails<a name="troubleshooting-DNS-GoDaddy"></a>
 
 DNS validation for domains registered with Godaddy and other registries may fail unless you modify the CNAME values provided by ACM\. Taking example\.com as the domain name, the issued CNAME record has the following form:
 
