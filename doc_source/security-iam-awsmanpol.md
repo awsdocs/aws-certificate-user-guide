@@ -25,7 +25,7 @@ This policy provides read–only access to ACM certificates; it allows users to 
          "acm:ListCertificates",
          "acm:GetCertificate",
          "acm:ListTagsForCertificate",
-         “acm:GetAccountConfiguration"
+         "acm:GetAccountConfiguration"
       ],
       "Resource":"*"
    }
