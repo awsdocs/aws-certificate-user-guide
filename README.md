@@ -1,6 +1,6 @@
-## AWS Certificate User Guide
+## AWS Certificate Manager User Guide
 
-The open source version of the AWS Certificate Manager user guide.
+This is the open source version of the AWS Certificate Manager user guide. You can submit feedback and requests for changes by submitting issues in this repository or by making proposed changes and submitting a pull request.
 
 ## License Summary
 
