@@ -1,3 +1,0 @@
-# Pricing for AWS Certificate Manager<a name="acm-billing"></a>
-
-You are not subject to an additional charge for SSL/TLS certificates that you manage with AWS Certificate Manager\. You pay only for the AWS resources that you create to run your website or application\. For the latest ACM pricing information, see the [AWS Certificate Manager Service Pricing](https://aws.amazon.com/certificate-manager/pricing/) page on the AWS website\. 

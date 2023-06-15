@@ -1,5 +1,0 @@
-# API Gateway problems<a name="troubleshoot-apigateway"></a>
-
-When you deploy an *edge\-optimized* API endpoint, API Gateway sets up a CloudFront distribution for you\. The CloudFront distribution is owned by API Gateway, not by your account\. The distribution is bound to the ACM certificate that you used when deploying your API\. To remove the binding and allow ACM to delete your certificate, you must remove the API Gateway custom domain that is associated with the certificate\. 
-
-When you deploy a *regional* API endpoint, API Gateway creates an application load balancer \(ALB\) on your behalf\. The load balancer is owned by API Gateway and is not visible to you\. The ALB is bound to the ACM certificate that you used when deploying your API\. To remove the binding and allow ACM to delete your certificate, you must remove the API Gateway custom domain that is associated with the certificate\. 

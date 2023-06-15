@@ -1,3 +1,0 @@
-# Customer managed policies<a name="authen-custmanagedpolicies"></a>
-
-Customer managed policies are standalone identity–based policies that you create and which you can attach to multiple users, groups, or roles in your AWS account\. You can manage and create policies using the AWS Management Console, the AWS Command Line Interface \(AWS CLI\), or the IAM API\. For more information, see [ Customer Managed Policies ](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#customer-managed-policies)\. 
